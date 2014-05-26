@@ -1,0 +1,4 @@
+
+5/21/2014 7:30:45 PM DBPool-Catch - Procedure or function 'USP_UPDATE_EnzymeCampaign_Data' expects parameter '@P_output', which was not supplied. - USP_UPDATE_EnzymeCampaign_Data - hydpcnew00123 - 000
+
+5/21/2014 7:54:31 PM DBPool-Catch - String[34]: the Size property has an invalid size of 0. - USP_UPDATE_EnzymeCampaign_Data - hydpcnew00123 - 000

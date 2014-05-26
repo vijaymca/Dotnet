@@ -1,0 +1,14 @@
+
+5/19/2014 12:05:10 PM DBPool-Catch - The COMMIT TRANSACTION request has no corresponding BEGIN TRANSACTION. - USP_UPDATE_EnzymeCampaign_Data - hydpcnew00123 - 000
+
+5/19/2014 12:41:44 PM DBPool-Catch - Procedure or function 'USP_UPDATE_EnzymeCampaign_Data' expects parameter '@P_Distribution_ExposedInd', which was not supplied. - USP_UPDATE_EnzymeCampaign_Data - hydpcnew00123 - 000
+
+5/19/2014 1:13:01 PM DBPool-Catch - Procedure or function 'USP_DELETE_EnzymeCampaign_Data' expects parameter '@P_CampaignID', which was not supplied. - USP_DELETE_EnzymeCampaign_Data - hydpcnew00123 - 000
+
+5/19/2014 1:15:26 PM DBPool-Catch - Procedure or function 'USP_UPDATE_EnzymeCampaign_Data' expects parameter '@P_Distribution_ExposedInd', which was not supplied. - USP_UPDATE_EnzymeCampaign_Data - hydpcnew00123 - 000
+
+5/19/2014 1:26:35 PM DBPool-Catch - Procedure or function 'USP_UPDATE_EnzymeCampaign_Data' expects parameter '@P_Distribution_ExposedInd', which was not supplied. - USP_UPDATE_EnzymeCampaign_Data - hydpcnew00123 - 000
+
+5/19/2014 1:29:40 PM DBPool-Catch - Procedure or function 'USP_UPDATE_EnzymeCampaign_Data' expects parameter '@P_Distribution_ExposedInd', which was not supplied. - USP_UPDATE_EnzymeCampaign_Data - hydpcnew00123 - 000
+
+5/19/2014 1:37:03 PM DBPool-Catch - Procedure or function 'USP_UPDATE_EnzymeCampaign_Data' expects parameter '@P_Distribution_ExposedInd', which was not supplied. - USP_UPDATE_EnzymeCampaign_Data - hydpcnew00123 - 000

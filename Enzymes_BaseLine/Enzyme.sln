@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnzymeWeb", "EnzymeWeb\EnzymeWeb.csproj", "{ADDBF387-BEF7-4AEE-9371-5090984F9A94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnzymeDAL", "EnzymeDAL\EnzymeDAL.csproj", "{3957EAAF-983C-45DA-84F6-FD2A750EC365}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnzymeBAL", "EnzymeBAL\EnzymeBAL.csproj", "{CBE40E18-C081-4771-B03C-2182B480C170}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnzymeDBPool", "EnzymeDBPool\EnzymeDBPool.csproj", "{5B0F935F-01E1-438D-B70F-D0FE1C734624}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnzymeCommon", "EnzymeCommon\EnzymeCommon.csproj", "{6CD98B2B-60C4-4FAC-A3DE-32372FCB704C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnzymeErrorLog", "EnzymeErrorLog\EnzymeErrorLog.csproj", "{0BA14847-4BB3-454B-B9C0-E7E00CA33303}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnzymeEntities", "EnzymeEntities\EnzymeEntities.csproj", "{8B353424-4245-4BE7-BD7C-9981C0D13432}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 8
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = EnzymeBAL\\EnzymeBAL.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = EnzymeBAL\\
+		SccProjectUniqueName2 = EnzymeCommon\\EnzymeCommon.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = EnzymeCommon\\
+		SccProjectUniqueName3 = EnzymeDAL\\EnzymeDAL.csproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = EnzymeDAL\\
+		SccProjectUniqueName4 = EnzymeDBPool\\EnzymeDBPool.csproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = EnzymeDBPool\\
+		SccProjectUniqueName5 = EnzymeWeb\\EnzymeWeb.csproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = EnzymeWeb\\
+		SccProjectUniqueName6 = EnzymeErrorLog\\EnzymeErrorLog.csproj
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = EnzymeErrorLog\\
+		SccProjectUniqueName7 = EnzymeEntities\\EnzymeEntities.csproj
+		SccLocalPath7 = .
+		SccProjectFilePathRelativizedFromConnection7 = EnzymeEntities\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADDBF387-BEF7-4AEE-9371-5090984F9A94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADDBF387-BEF7-4AEE-9371-5090984F9A94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADDBF387-BEF7-4AEE-9371-5090984F9A94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADDBF387-BEF7-4AEE-9371-5090984F9A94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3957EAAF-983C-45DA-84F6-FD2A750EC365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3957EAAF-983C-45DA-84F6-FD2A750EC365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3957EAAF-983C-45DA-84F6-FD2A750EC365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3957EAAF-983C-45DA-84F6-FD2A750EC365}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBE40E18-C081-4771-B03C-2182B480C170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE40E18-C081-4771-B03C-2182B480C170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE40E18-C081-4771-B03C-2182B480C170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE40E18-C081-4771-B03C-2182B480C170}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B0F935F-01E1-438D-B70F-D0FE1C734624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B0F935F-01E1-438D-B70F-D0FE1C734624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B0F935F-01E1-438D-B70F-D0FE1C734624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B0F935F-01E1-438D-B70F-D0FE1C734624}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CD98B2B-60C4-4FAC-A3DE-32372FCB704C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CD98B2B-60C4-4FAC-A3DE-32372FCB704C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CD98B2B-60C4-4FAC-A3DE-32372FCB704C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CD98B2B-60C4-4FAC-A3DE-32372FCB704C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BA14847-4BB3-454B-B9C0-E7E00CA33303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BA14847-4BB3-454B-B9C0-E7E00CA33303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BA14847-4BB3-454B-B9C0-E7E00CA33303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BA14847-4BB3-454B-B9C0-E7E00CA33303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B353424-4245-4BE7-BD7C-9981C0D13432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B353424-4245-4BE7-BD7C-9981C0D13432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B353424-4245-4BE7-BD7C-9981C0D13432}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B353424-4245-4BE7-BD7C-9981C0D13432}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

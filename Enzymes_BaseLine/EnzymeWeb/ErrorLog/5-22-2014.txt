@@ -1,0 +1,11 @@
+
+5/22/2014 7:56:56 PM DBPool-Catch - String[34]: the Size property has an invalid size of 0. - USP_UPDATE_EnzymeCampaign_Data - hydpcnew00123 - 000
+
+5/22/2014 8:00:04 PM DBPool-Catch - String[34]: the Size property has an invalid size of 0. - USP_UPDATE_EnzymeCampaign_Data - hydpcnew00123 - 000
+
+5/22/2014 8:07:25 PM DBPool-Catch - String[34]: the Size property has an invalid size of 0. - USP_UPDATE_EnzymeCampaign_Data - hydpcnew00123 - 000
+
+5/22/2014 8:08:35 PM DBPool-Catch - String[34]: the Size property has an invalid size of 0. - USP_UPDATE_EnzymeCampaign_Data - hydpcnew00123 - 000
+
+5/22/2014 8:21:40 PM DBPool-Catch - The SqlParameterCollection only accepts non-null SqlParameter type objects.
+Parameter name: value - USP_UPDATE_EnzymeCampaign_Data - hydpcnew00123 - 000

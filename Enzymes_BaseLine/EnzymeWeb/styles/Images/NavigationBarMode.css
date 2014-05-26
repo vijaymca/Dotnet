@@ -1,0 +1,125 @@
+﻿.OptionsTable
+{
+    margin-bottom: 5px;
+}
+/* ASPxImagreSlider styles */
+.dxisControl .dxis-nbBottom
+{
+    padding: 0 50px;
+}
+.dxisControl .dxis-nbItem
+{
+    width: 130px;
+    height: 150px;
+    background-color: transparent;
+}
+.dxisControl .dxis-nbSelectedItem, .dxisControl .dxis-nbSelectedItem > div
+{
+    display: none; /* Hide Selection Frame */
+}
+
+.dxisControl .dxis-prevBtnHorWrapper, .dxisControl .dxis-nextBtnHorWrapper
+{
+    background-color: transparent;
+}
+.dxisControl > .dxis-nbBottom > .dxis-prevBtnHorWrapper, .dxisControl > .dxis-nbBottom > .dxis-nextBtnHorWrapper
+{
+    height: auto;
+    margin-top: 41px;
+}
+.dxWeb_isPrevPageBtnHor, .dxWeb_isNextPageBtnHor, .dxWeb_isPrevPageBtnHorDisabled, .dxWeb_isNextPageBtnHorDisabled
+{
+    width: 48px;
+    height: 69px;
+}
+.dxisControl .dxis-prevPageBtnHor, .dxisControl .dxis-nextPageBtnHor
+{
+    margin: 0;
+    background-image: url('../images/Arrows.png');
+}
+.dxWeb_isPrevPageBtnHor
+{
+    background-position: 0 0 !important;
+}
+.dxWeb_isPrevPageBtnHorHover
+{
+    background-position: 0 -70px !important;
+}
+.dxWeb_isPrevPageBtnHorDisabled
+{
+    background-position: 0 -140px !important;
+}
+.dxWeb_isNextPageBtnHor
+{
+    background-position: -49px -0px !important;
+}
+.dxWeb_isNextPageBtnHorHover
+{
+    background-position: -49px -70px !important;
+}
+.dxWeb_isNextPageBtnHorDisabled
+{
+    background-position: -49px -140px !important;
+}
+.dxisControl .dxis-prevBtnVertPressed, .dxisControl .dxis-nextBtnVertPressed, .dxisControl .dxis-nextBtnHorPressed, .dxisControl .dxis-prevBtnHorPressed, .dxisControl .dxis-prevPageBtnVertPressed, .dxisControl .dxis-nextPageBtnVertPressed, .dxisControl .dxis-prevPageBtnHorPressed, .dxisControl .dxis-nextPageBtnHorPressed, .dxisControl .dxis-prevBtnVertDisabled, .dxisControl .dxis-nextBtnVertDisabled, .dxisControl .dxis-nextBtnHorDisabled, .dxisControl .dxis-prevBtnHorDisabled, .dxisControl .dxis-prevPageBtnVertDisabled, .dxisControl .dxis-nextPageBtnVertDisabled, .dxisControl .dxis-prevPageBtnHorDisabled, .dxisControl .dxis-nextPageBtnHorDisabled
+{
+    opacity: 1;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Style=0, Opacity=100);
+}
+
+/* Template styles */
+.url
+{
+    height: 103px;
+    display: block;
+    color: #0068bb;
+    line-height: 1.2;
+    border: 1px solid #ffffff;
+    padding: 20px 25px 25px 25px;
+    text-align: center;
+}
+.url:visited
+{
+    color: #660066;
+}
+.url:hover
+{
+    color: #dd0000;
+    border: 1px solid #dddddd;
+    background-color: #f8f8f8;
+}
+.name
+{
+    font-size: 13px;
+    white-space: normal;
+    font-family: helvetica, arial, sans-serif;
+    font-family: 'Segoe UI' , Helvetica, Tahoma, Geneva, sans-serif;
+}
+
+.nextbutton
+{
+    cursor: pointer;
+    width: 13px;
+    height: 16px;
+    background-image: url(../images/next_btn.jpg);
+    background-repeat: no-repeat;
+}
+
+.previousbutton
+{
+    cursor: pointer;
+    width: 13px;
+    height: 16px;
+    background-image: url('../images/prev_btn.jpg');
+    background-repeat: no-repeat;
+   
+}
+
+.viewMoreButton
+{
+    cursor: pointer;
+    width: 13px;
+    height: 16px;
+    background-image: url('../images/prev_btn.jpg');
+    background-repeat: no-repeat;
+}

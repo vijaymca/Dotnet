@@ -1,0 +1,27 @@
+
+5/15/2014 4:32:33 PM DBPool-Catch - Failed to convert parameter value from a String to a Int32. - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000
+
+5/15/2014 4:47:09 PM DBPool-Catch - Failed to convert parameter value from a String to a Int32. - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000
+
+5/15/2014 4:47:55 PM DBPool-Catch - Failed to convert parameter value from a String to a Int32. - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000
+
+5/15/2014 4:50:18 PM DBPool-Catch - Failed to convert parameter value from a String to a Int32. - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000
+
+5/15/2014 5:08:16 PM DBPool-Catch - Implicit conversion from data type varchar to varbinary(max) is not allowed. Use the CONVERT function to run this query. - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000
+
+5/15/2014 5:17:38 PM DBPool-Catch - Procedure or function USP_INSERT_EnzymeDemographic_Campaign_Data has too many arguments specified. - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000
+
+5/15/2014 5:22:39 PM DBPool-Catch - The SqlParameterCollection only accepts non-null SqlParameter type objects.
+Parameter name: value - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000
+
+5/15/2014 5:44:03 PM DBPool-Catch - The SqlParameterCollection only accepts non-null SqlParameter type objects.
+Parameter name: value - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000
+
+5/15/2014 5:47:18 PM DBPool-Catch - The SqlParameterCollection only accepts non-null SqlParameter type objects.
+Parameter name: value - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000
+
+5/15/2014 5:49:09 PM DBPool-Catch - The SqlParameterCollection only accepts non-null SqlParameter type objects.
+Parameter name: value - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000
+
+5/15/2014 5:51:00 PM DBPool-Catch - The SqlParameterCollection only accepts non-null SqlParameter type objects.
+Parameter name: value - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000

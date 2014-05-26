@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ADDBF387-BEF7-4AEE-9371-5090984F9A94}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EnzymeWeb</RootNamespace>
+    <AssemblyName>EnzymeWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Forms\DemographicDataView.aspx" />
+    <Content Include="Forms\Enzyme.aspx" />
+    <Content Include="Forms\Home.aspx" />
+    <Content Include="Forms\NewDemographicData.aspx" />
+    <Content Include="Scripts\jquery-1.8.3.min.js" />
+    <Content Include="Scripts\clientEvents.js" />
+    <Content Include="Scripts\validations.js" />
+    <Content Include="styles\Images\add_personnel_list_blu.gif" />
+    <Content Include="styles\Images\administration_blu.gif" />
+    <Content Include="styles\Images\Appearence.css" />
+    <Content Include="styles\Images\attachtb.gif" />
+    <Content Include="styles\Images\category.jpg" />
+    <Content Include="styles\Images\Country.gif" />
+    <Content Include="styles\Images\EditHske.gif" />
+    <Content Include="styles\Images\edit_icon.gif" />
+    <Content Include="styles\Images\edit_review_gms_blu.gif" />
+    <Content Include="styles\Images\edit_review_hsData_blu.gif" />
+    <Content Include="styles\Images\edit_review_hske_auditor_orng.gif" />
+    <Content Include="styles\Images\edit_review_hske_orng.gif" />
+    <Content Include="styles\Images\GBU.gif" />
+    <Content Include="styles\Images\global healthnet homepage.gif" />
+    <Content Include="styles\Images\gms_reports_blu.gif" />
+    <Content Include="styles\Images\gssmenuStyle.css" />
+    <Content Include="styles\Images\gssStyles.css" />
+    <Content Include="styles\Images\header_bg.jpg" />
+    <Content Include="styles\Images\hsReports_blu.gif" />
+    <Content Include="styles\Images\Input-Old-HSKE-Data.gif" />
+    <Content Include="styles\Images\inputHSDATA_blu.gif" />
+    <Content Include="styles\Images\inputHSKE_orng.gif" />
+    <Content Include="styles\Images\input_gms_data.gif" />
+    <Content Include="styles\Images\input_hske_auditor_orng.gif" />
+    <Content Include="styles\Images\NavigationBarMode.css" />
+    <Content Include="styles\Images\oldHSKE_reports_blu.gif" />
+    <Content Include="styles\Images\person.gif" />
+    <Content Include="styles\Images\Personallisting.gif" />
+    <Content Include="styles\Images\PG_Medical.jpg" />
+    <Content Include="styles\Images\rect.gif" />
+    <Content Include="styles\Images\Region.gif" />
+    <Content Include="styles\Images\sector.gif" />
+    <Content Include="styles\Images\Site.gif" />
+    <Content Include="styles\Images\top_header.jpg" />
+    <Content Include="styles\Site.css" />
+    <Content Include="styles\SlideShow.css" />
+    <Content Include="test.aspx" />
+    <Content Include="UserControls\Header.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\DemographicDataView.aspx.cs">
+      <DependentUpon>DemographicDataView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DemographicDataView.aspx.designer.cs">
+      <DependentUpon>DemographicDataView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Enzyme.aspx.cs">
+      <DependentUpon>Enzyme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Enzyme.aspx.designer.cs">
+      <DependentUpon>Enzyme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\EnzymeMain.Master.cs">
+      <DependentUpon>EnzymeMain.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\EnzymeMain.Master.designer.cs">
+      <DependentUpon>EnzymeMain.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewDemographicData.aspx.cs">
+      <DependentUpon>NewDemographicData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\NewDemographicData.aspx.designer.cs">
+      <DependentUpon>NewDemographicData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\EnzymeMain.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EnzymeBAL\EnzymeBAL.csproj">
+      <Project>{CBE40E18-C081-4771-B03C-2182B480C170}</Project>
+      <Name>EnzymeBAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EnzymeEntities\EnzymeEntities.csproj">
+      <Project>{8B353424-4245-4BE7-BD7C-9981C0D13432}</Project>
+      <Name>EnzymeEntities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49556</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,8 @@
+
+5/16/2014 12:28:06 PM DBPool-Catch - Procedure or function 'USP_INSERT_EnzymeCampaign_Data' expects parameter '@P_CreatedBy', which was not supplied. - USP_INSERT_EnzymeCampaign_Data - hydpcnew00123 - 000
+
+5/16/2014 6:36:26 PM DBPool-Catch - The SqlParameterCollection only accepts non-null SqlParameter type objects.
+Parameter name: value - USP_UPDATE_EnzymeDemographicData - hydpcnew00123 - 000
+
+5/16/2014 6:38:06 PM DBPool-Catch - The SqlParameterCollection only accepts non-null SqlParameter type objects.
+Parameter name: value - USP_UPDATE_EnzymeDemographicData - hydpcnew00123 - 000

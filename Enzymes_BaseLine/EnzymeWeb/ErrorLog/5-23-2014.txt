@@ -1,0 +1,59 @@
+
+5/23/2014 4:25:52 PM DBPool-Catch - Procedure or function 'USP_INSERT_Enzyme_Data' expects parameter '@P_EnzymeName', which was not supplied. - USP_INSERT_Enzyme_Data - hydpcnew00123 - 000
+
+5/23/2014 4:27:06 PM DBPool-Catch - Procedure or function 'USP_INSERT_Enzyme_Data' expects parameter '@P_EnzymeName', which was not supplied. - USP_INSERT_Enzyme_Data - hydpcnew00123 - 000
+
+5/23/2014 4:28:51 PM DBPool-Catch - Cannot insert the value NULL into column 'Active_indcr', table 'HealthNet.dbo.Enzyme'; column does not allow nulls. INSERT fails.
+The statement has been terminated. - USP_INSERT_Enzyme_Data - hydpcnew00123 - 000
+
+5/23/2014 4:30:17 PM DBPool-Catch - Cannot insert the value NULL into column 'Active_indcr', table 'HealthNet.dbo.Enzyme'; column does not allow nulls. INSERT fails.
+The statement has been terminated. - USP_INSERT_Enzyme_Data - hydpcnew00123 - 000
+
+5/23/2014 4:48:46 PM DBPool-Catch - Cannot insert the value NULL into column 'Active_indcr', table 'HealthNet.dbo.Enzyme'; column does not allow nulls. INSERT fails.
+The statement has been terminated. - USP_INSERT_Enzyme_Data - hydpcnew00123 - 000
+
+5/23/2014 4:51:48 PM DBPool-Catch - Procedure or function 'USP_UPDATE_Enzyme_Data' expects parameter '@p_Enzyme_ID', which was not supplied. - USP_UPDATE_Enzyme_Data - hydpcnew00123 - 000
+
+5/23/2014 4:52:48 PM DBPool-Catch - Procedure or function 'USP_UPDATE_Enzyme_Data' expects parameter '@p_Enzyme_ID', which was not supplied. - USP_UPDATE_Enzyme_Data - hydpcnew00123 - 000
+
+5/23/2014 5:06:57 PM DBPool-Catch - Procedure or function 'USP_INSERT_EnzymeDemographic_Campaign_Data' expects parameter '@P_DemographicName', which was not supplied. - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000
+
+5/23/2014 5:35:25 PM DBPool-Catch - Failed to convert parameter value from a String to a Int32. - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000
+
+5/23/2014 6:47:43 PM DBPool-Catch - Failed to convert parameter value from a String to a Int32. - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000
+
+5/23/2014 6:59:24 PM DBPool-Catch - Failed to convert parameter value from a String to a Int32. - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000
+
+5/23/2014 7:10:02 PM DBPool-Catch - Failed to convert parameter value from a String to a Int32. - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000
+
+5/23/2014 7:18:26 PM DBPool-Catch - The INSERT statement conflicted with the FOREIGN KEY constraint "FK_EnzymeDemographic_PrincipalReporter_ID". The conflict occurred in database "HealthNet", table "dbo.lst_HSUPersons", column 'HSUPersons_ID'.
+The statement has been terminated.
+Record Not Inserted - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000
+
+5/23/2014 7:22:31 PM DBPool-Catch - Cannot insert the value NULL into column 'Active_indcr', table 'HealthNet.dbo.EnzymeCampaign'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+Record Not Inserted - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000
+
+5/23/2014 7:25:07 PM DBPool-Catch - The INSERT statement conflicted with the FOREIGN KEY constraint "FK_EnzymeCampaign_EnzymeID". The conflict occurred in database "HealthNet", table "dbo.Enzyme", column 'Enzyme_ID'.
+The statement has been terminated.
+Record Not Inserted - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000
+
+5/23/2014 7:25:49 PM DBPool-Catch - The INSERT statement conflicted with the FOREIGN KEY constraint "FK_EnzymeCampaign_EnzymeID". The conflict occurred in database "HealthNet", table "dbo.Enzyme", column 'Enzyme_ID'.
+The statement has been terminated.
+Record Not Inserted - USP_INSERT_EnzymeDemographic_Campaign_Data - hydpcnew00123 - 000
+
+5/23/2014 8:07:50 PM DBPool-Catch - Procedure or function 'USP_UPDATE_EnzymeDemographicData' expects parameter '@P_DemographicName', which was not supplied. - USP_UPDATE_EnzymeDemographicData - hydpcnew00123 - 000
+
+5/23/2014 8:24:33 PM DBPool-Catch - Procedure or function 'USP_INSERT_EnzymeCampaign_Data' expects parameter '@P_EnzymeName_ID', which was not supplied. - USP_INSERT_EnzymeCampaign_Data - hydpcnew00123 - 000
+
+5/23/2014 9:19:05 PM DBPool-Catch - Procedure or function 'USP_INSERT_EnzymeCampaign_Data' expects parameter '@P_OUTPUT', which was not supplied. - USP_INSERT_EnzymeCampaign_Data - hydpcnew00123 - 000
+
+5/23/2014 9:20:24 PM DBPool-Catch - Procedure or function 'USP_INSERT_EnzymeCampaign_Data' expects parameter '@P_OUTPUT', which was not supplied. - USP_INSERT_EnzymeCampaign_Data - hydpcnew00123 - 000
+
+5/23/2014 9:23:21 PM DBPool-Catch - Cannot insert the value NULL into column 'Active_indcr', table 'HealthNet.dbo.EnzymeCampaign'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+Record Not Inserted - USP_INSERT_EnzymeCampaign_Data - hydpcnew00123 - 000
+
+5/23/2014 9:29:08 PM DBPool-Catch - Cannot insert the value NULL into column 'Active_indcr', table 'HealthNet.dbo.EnzymeCampaign'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+Record Not Inserted - USP_INSERT_EnzymeCampaign_Data - hydpcnew00123 - 000

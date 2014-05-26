@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/MasterPages/EnzymeMain.Master.cs" Inherits="EnzymeWeb.EnzymeMain" %>
+
+<%@ Register src="../UserControls/Header.ascx" tagname="Header" tagprefix="uc1" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../styles/Site.css" rel="stylesheet" type="text/css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table align="center"><tr><td>
+            
+            <uc1:Header ID="Header1" runat="server" />
+            
+           </td></tr>
+        <tr><td>
+        <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">
+        </asp:ContentPlaceHolder>
+        </td></tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
