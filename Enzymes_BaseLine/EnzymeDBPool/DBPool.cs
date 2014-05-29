@@ -71,7 +71,7 @@ namespace EnzymeDBPool
                     }
                     else
                     {
-                        _adoConnection = new OracleConnection(ConnectionString);
+                        //_adoConnection = new OracleConnection(ConnectionString);
                     }
 
                     _adoConnection.Open();
@@ -171,8 +171,8 @@ namespace EnzymeDBPool
             }
             else
             {
-                cmd = _adoTransaction == null ? new OracleCommand(sqlQuery, (OracleConnection)_adoConnection) :
-                                               new OracleCommand(sqlQuery, (OracleConnection)_adoConnection, (OracleTransaction)_adoTransaction);
+               // cmd = _adoTransaction == null ? new OracleCommand(sqlQuery, (OracleConnection)_adoConnection) :
+                                              // new OracleCommand(sqlQuery, (OracleConnection)_adoConnection, (OracleTransaction)_adoTransaction);
             }
         }
 
@@ -222,7 +222,7 @@ namespace EnzymeDBPool
                 }
                 else
                 {
-                    da = new OracleDataAdapter((OracleCommand)cmd);
+                   // da = new OracleDataAdapter((OracleCommand)cmd);
                 }
 
                 resultSet = new DataSet();
@@ -867,6 +867,80 @@ namespace EnzymeDBPool
                 CloseConnection();
             }
         }
+
+		/// <summary>
+		/// Execury Stored Procedure by passing parameters and getting return values as output
+		/// </summary>
+		/// <param name="spName"></param>
+		/// <param name="inParams"></param>
+		/// <param name="retValues"></param>
+		/// <param name="isNonQuery"></param>
+		/// <returns>bool</returns>
+
+		public bool SPQueryDatasetNoParams ( string strConn , string strSP , ref DataSet objDS )
+		{
+			try
+			{
+				//  if (OpenConnection("Password=ghost5;Persist Security Info=True;User ID=GClass_admin;Initial Catalog=CCT;Data Source=bdc-sqld023.na.pg.com\\devnt2322"))
+				if ( OpenConnection () )
+				{
+					bool bReturn = false;
+					SqlCommand cmd = null;
+					
+					//bool bReturn = false;
+					//SqlCommand cmd = null;
+					SqlDataAdapter objDA = default ( SqlDataAdapter );
+					try
+					{
+						if ( ( _adoConnection == null ) )
+						{
+							_strLastError = ErrorMessage . DbConnectionNotOpened;
+							return false;
+						}
+
+						//Create Command Instance with respective SQLQuery or SPName
+						CreateCmdInstanceSql ( strSP , ref cmd );
+
+						cmd . CommandType = CommandType . StoredProcedure;
+						cmd . CommandTimeout = intTimeOut; // increased the timeout for SQL Queries
+						
+						objDS = new DataSet ( );
+						objDA = new SqlDataAdapter ( ( SqlCommand ) cmd );
+						objDA . Fill ( objDS );
+						bReturn = true;
+					}
+					catch ( Exception ex )
+					{
+						_objCommon = new Common ( );
+
+						_objCommon . WriteToFile ( _objCommon . GetLogPath ( ) ,
+												string . Format ( "{0} DBPool-Catch - {1} - {2} - {3} - 000" ,
+												Convert . ToString ( DateTime . Now ) , ex . Message , strSP ,
+												System . Net . Dns . GetHostName ( ) ) , true );
+
+						_strLastError = ex . Message;
+					}
+					finally
+					{
+						cmd = null;
+						_objCommon = null;
+					}
+
+					return bReturn;
+				}
+				else
+				{ return false; }
+			}
+			catch ( Exception )
+			{
+
+				throw;
+			}
+			finally
+			{
+				CloseConnection ( );
+			}
+		}
 
         #endregion
     }

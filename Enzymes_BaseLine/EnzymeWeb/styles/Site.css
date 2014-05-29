@@ -1,11 +1,11 @@
 ﻿/* DEFAULTS
 ----------------------------------------------------------*/
 
-body   
+body
 {
     background: #b6b7bc;
     font-size: .80em;
-    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    font-family: "Helvetica Neue" , "Lucida Grande" , "Segoe UI" , Arial, Helvetica, Verdana, sans-serif;
     margin: 0px;
     padding: 0px;
     color: #696969;
@@ -88,7 +88,7 @@ first child of the left and right table columns */
 
 .page
 {
-    width: 960px;
+    width: 100%;
     background-color: #fff;
     margin: 20px auto 0px auto;
     border: 1px solid #496077;
@@ -144,8 +144,8 @@ first child of the left and right table columns */
 
 div.hideSkiplink
 {
-    background-color:#3a4f63;
-    width:100%;
+    background-color: #3a4f63;
+    width: 100%;
 }
 
 div.menu
@@ -197,7 +197,7 @@ fieldset
     border: 1px solid #ccc;
 }
 
-fieldset p 
+fieldset p
 {
     margin: 2px 12px 10px 10px;
 }
@@ -207,25 +207,25 @@ fieldset.login label, fieldset.register label, fieldset.changePassword label
     display: block;
 }
 
-fieldset label.inline 
+fieldset label.inline
 {
     display: inline;
 }
 
-legend 
+legend
 {
     font-size: 1.1em;
     font-weight: 600;
     padding: 2px 4px 8px 4px;
 }
 
-input.textEntry 
+input.textEntry
 {
     width: 320px;
     border: 1px solid #ccc;
 }
 
-input.passwordEntry 
+input.passwordEntry
 {
     width: 320px;
     border: 1px solid #ccc;
@@ -292,69 +292,149 @@ div.accountInfo
     text-align: right;
     padding-right: 10px;
 }
-.sitetitle 
+.sitetitle
 {
-    
-    
     line-height: normal;
-    font-family : Verdana;
-    font-size :11pt;
-    font-style : normal;
-    font-weight :bold;
-    text-decoration :none;
-    
-    }
-    .standardheader {
-	TEXT-ALIGN: left; MARGIN: 0em; COLOR: #525252; FONT-SIZE: 1em
+    font-family: Verdana;
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
 }
-.formbody {
-	PADDING-BOTTOM: 4px;
-	 PADDING-LEFT: 3px; 
-	 PADDING-RIGHT: 6px;
-	  FONT-FAMILY: verdana;
-	   BACKGROUND: #ebf3ff; 
-	   FONT-SIZE: 0.7em; VERTICAL-ALIGN: top;
-	    BORDER-TOP: #d8d8d8 1px solid; PADDING-TOP: 3px;
-	    
+.standardheader
+{
+    text-align: left;
+    margin: 0em;
+    color: #525252;
+    font-size: 1em;
 }
-.formlabel {
-	TEXT-ALIGN: left; PADDING-BOTTOM: 6px; PADDING-RIGHT: 8px; FONT-FAMILY: verdana; COLOR: #525252; FONT-SIZE: 0.7em; BORDER-TOP: #d8d8d8 1px solid; FONT-WEIGHT: bold; PADDING-TOP: 3px
+.formbody
+{
+    padding-bottom: 4px;
+    padding-left: 3px;
+    padding-right: 6px;
+    font-family: verdana;
+    background: #ebf3ff;
+    font-size: 0.7em;
+    vertical-align: top;
+    border-top: #d8d8d8 1px solid;
+    padding-top: 3px;
 }
-.bodyareaframe {
-	PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 10px
+.formlabel
+{
+    text-align: left;
+    padding-bottom: 6px;
+    padding-right: 8px;
+    font-family: verdana;
+    color: #525252;
+    font-size: 0.7em;
+    border-top: #d8d8d8 1px solid;
+    font-weight: bold;
+    padding-top: 3px;
 }
-.bodyareaframe {
-	BORDER-LEFT: #6f9dd9 1px solid; BACKGROUND-COLOR: #ffffff; WIDTH: 100%; HEIGHT: 100%; VERTICAL-ALIGN: top; BORDER-TOP: #6f9dd9 1px solid; BORDER-RIGHT: #6f9dd9 1px solid
+.bodyareaframe
+{
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
 }
-.formbody {
-	PADDING-BOTTOM: 4px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; FONT-FAMILY: verdana; BACKGROUND: #ebf3ff; FONT-SIZE: 0.7em; VERTICAL-ALIGN: top; BORDER-TOP: #d8d8d8 1px solid; PADDING-TOP: 3px
+.bodyareaframe
+{
+    border-left: #6f9dd9 1px solid;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    border-top: #6f9dd9 1px solid;
+    border-right: #6f9dd9 1px solid;
 }
-.standardheader {
-	TEXT-ALIGN: left; MARGIN: 0em; COLOR: #525252; FONT-SIZE: 1em
+.formbody
+{
+    padding-bottom: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-family: verdana;
+    background: #ebf3ff;
+    font-size: 0.7em;
+    vertical-align: top;
+    border-top: #d8d8d8 1px solid;
+    padding-top: 3px;
 }
-.ButtonHeightWidth {
-	PADDING-BOTTOM: 0.4em; WIDTH: 7.5em; FONT: 8pt tahoma; HEIGHT: 2.1em; PADDING-TOP: 0.1em
+.standardheader
+{
+    text-align: left;
+    margin: 0em;
+    color: #525252;
+    font-size: 1em;
+}
+.ButtonHeightWidth
+{
+    padding-bottom: 0.4em;
+    width: 7.5em;
+    font: 8pt tahoma;
+    height: 2.1em;
+    padding-top: 0.1em;
 }
 
 .enHeader
 {
-background-image:url('../styles/Images/header_bg.jpg');
-height:34px;
-background-repeat: repeat-x;
-background-attachment:scroll;
-font-weight:bold;
-padding:0px 30px 0px 30px;
-
+    background-image: url('../styles/Images/header_bg.jpg');
+    height: 34px;
+    background-repeat: repeat-x;
+    background-attachment: scroll;
+    font-weight: bold;
+    padding: 0px 10px 0px 10px;
 }
 
 
-.top-header{
-	background:url('../styles/Images/top_header.jpg') repeat-y top right;
-	height:100px;
+.top-header
+{
+    background: url('../styles/Images/top_header.jpg') repeat-y top right;
+    height: 100px;
+    width: 100%;
 }
-	
-	
+
+
 .tplink
 {
-    text-decoration:none;
+    text-decoration: none;
+}
+
+.clsmandtr
+{
+    color: Red;
+}
+
+.clsCampaignhdr
+{
+    background-image: url('../styles/Images/header_sub_bg.jpg');
+    font-weight: bold;
+    height: 34px;
+    background-repeat: repeat-x;
+    padding-left: 10px;
+}
+
+.clsModule
+{
+    background-image: url('../styles/Images/header_sub_sub_bg.jpg');
+    font-weight: bold;
+    height: 33px;
+    background-repeat: repeat-x;
+    padding-left: 10px;
+    color:Black;
+    width:100%;
+}
+
+.clsModule td
+{
+    padding-left:10px;
+    border:0;
+    }
+
+
+.moduleCont
+{
+    background-image: url('../styles/Images/content_bg.jpg');
+    width:100%;
     }

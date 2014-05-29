@@ -166,15 +166,6 @@ namespace EnzymeWeb {
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtReporter;
         
         /// <summary>
-        /// hdnReporter control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdnReporter;
-        
-        /// <summary>
         /// btnPersonalListing control.
         /// </summary>
         /// <remarks>
@@ -182,6 +173,15 @@ namespace EnzymeWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxEditors.ASPxButton btnPersonalListing;
+        
+        /// <summary>
+        /// ASPxCallbackPanel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxCallbackPanel.ASPxCallbackPanel ASPxCallbackPanel1;
         
         /// <summary>
         /// btnAddEnzyme control.

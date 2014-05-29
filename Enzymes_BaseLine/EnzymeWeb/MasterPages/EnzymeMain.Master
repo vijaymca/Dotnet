@@ -15,9 +15,9 @@
     
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-        <table align="center"><tr><td>
+    <form id="form1" runat="server" style="width:100%">
+    <div style="height:90%;width:100%" >
+        <table align="center" style="width:100%"><tr><td>
             
             <uc1:Header ID="Header1" runat="server" />
             

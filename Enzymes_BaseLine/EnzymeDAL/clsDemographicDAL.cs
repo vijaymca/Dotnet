@@ -17,6 +17,9 @@ namespace EnzymeDAL
         SqlParameter[] paramIn = null;
         SqlParameter[] paramOut = null;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public clsDemographicDAL()
         {
             objDBPool = new DBPool();
@@ -51,6 +54,12 @@ namespace EnzymeDAL
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="regID"></param>
+        /// <param name="objDS"></param>
+        /// <returns></returns>
         public bool getCountryDetailsDAL(int regID, ref DataSet objDS)
         {
             try
@@ -70,6 +79,12 @@ namespace EnzymeDAL
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="siteID"></param>
+        /// <param name="objDS"></param>
+        /// <returns></returns>
         public bool getBsnsCatSectrDAL(int siteID, ref DataSet objDS)
         {
             try
@@ -89,6 +104,12 @@ namespace EnzymeDAL
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="CompId"></param>
+        /// <param name="objDS"></param>
+        /// <returns></returns>
         public bool getCompaignInfoDAL(int CompId, ref DataSet objDS)
         {
             try
@@ -107,6 +128,11 @@ namespace EnzymeDAL
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="objDS"></param>
+        /// <returns></returns>
         public bool getRegionDetailsDAL(ref DataSet objDS)
         {
             try
@@ -123,6 +149,13 @@ namespace EnzymeDAL
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="regID"></param>
+        /// <param name="cntryID"></param>
+        /// <param name="objDS"></param>
+        /// <returns></returns>
         public bool getSiteNameDetailsDAL(int regID, int cntryID, ref DataSet objDS)
         {
             try
@@ -146,6 +179,11 @@ namespace EnzymeDAL
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="objDS"></param>
+        /// <returns></returns>
         public bool getDemographicDetailsDAL(ref DataSet objDS)
         {
             try
@@ -161,6 +199,11 @@ namespace EnzymeDAL
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="objDS"></param>
+        /// <returns></returns>
         public bool getEnzymeDetailsDAL(ref DataSet objDS)
         {
             try
@@ -176,6 +219,12 @@ namespace EnzymeDAL
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="demogrId"></param>
+        /// <param name="objDS"></param>
+        /// <returns></returns>
         public bool getEnzymeDetailsDAL(int demogrId, ref DataSet objDS)
         {
             try
@@ -195,6 +244,13 @@ namespace EnzymeDAL
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="demogrpahic"></param>
+        /// <param name="strout"></param>
+        /// <param name="objDS"></param>
+        /// <returns></returns>
         public bool InsertDemographicAndEnzymeDAL(DemographicInfo demogrpahic,ref string strout,  ref DataSet objDS)
         {
             bool tmp = false;
@@ -339,7 +395,7 @@ namespace EnzymeDAL
                 paramIn[47].Value = demogrpahic.Num_of_non_participants_Other;
 
                 paramOut = new SqlParameter[1];
-                paramOut[0] = new SqlParameter("@p_output", SqlDbType.VarChar, 50);
+                paramOut[0] = new SqlParameter("@p_output", SqlDbType.VarChar, 200);
 
 
                 if (objDBPool.SpQueryOutputParam("USP_INSERT_EnzymeDemographic_Campaign_Data", paramIn,ref paramOut,true,ref objDS))
@@ -359,6 +415,13 @@ namespace EnzymeDAL
             return tmp;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="demogrpahic"></param>
+        /// <param name="strout"></param>
+        /// <param name="objDS"></param>
+        /// <returns></returns>
         public bool InsertCompaignDAL(DemographicInfo demogrpahic, ref string strout ,ref DataSet objDS)
         {
             bool tmp = false;
@@ -459,7 +522,7 @@ namespace EnzymeDAL
 
 
                 paramOut = new SqlParameter[1];
-                paramOut[0] = new SqlParameter("@P_OUTPUT", SqlDbType.VarChar, 50);
+                paramOut[0] = new SqlParameter("@P_OUTPUT", SqlDbType.VarChar, 200);
                 
 
                 if (objDBPool.SpQueryOutputParam("USP_INSERT_EnzymeCampaign_Data", paramIn, ref paramOut, true))
@@ -477,6 +540,15 @@ namespace EnzymeDAL
             return tmp;
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="demogrpahic"></param>
+        /// <param name="IsOther"></param>
+        /// <param name="strout"></param>
+        /// <param name="objDS"></param>
+        /// <returns></returns>
         public bool UpdateDemographicDAL(DemographicInfo demogrpahic, bool IsOther,ref string strout, ref DataSet objDS)
         {
             bool tmp = false;
@@ -553,6 +625,13 @@ namespace EnzymeDAL
             return tmp;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="demogrpahic"></param>
+        /// <param name="strout"></param>
+        /// <param name="objDS"></param>
+        /// <returns></returns>
         public bool UpdateCompaignDAL(DemographicInfo demogrpahic, ref string strout, ref DataSet objDS)
         {
             bool tmp = false;
@@ -669,8 +748,17 @@ namespace EnzymeDAL
             return tmp;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <param name="ModifiedBy"></param>
+        /// <param name="strout"></param>
+        /// <param name="objDS"></param>
+        /// <returns></returns>
         public bool DeteteCampaignDAL(int ID, string ModifiedBy, ref string strout, ref DataSet objDS)
         {
+            bool tmp = false;
             try
             {
                 paramIn = new SqlParameter[2];
@@ -684,8 +772,8 @@ namespace EnzymeDAL
                 paramOut[0] = new SqlParameter("@p_output", SqlDbType.VarChar, 50);
 
                 if (objDBPool.SpQueryOutputParam("USP_DELETE_EnzymeCampaign_Data", paramIn, ref paramOut,true,ref objDS))
-                    return true;
-                else return false;
+                    tmp= true;
+                else tmp = false;
 
                 strout = paramOut[0].Value.ToString();
             }
@@ -694,8 +782,14 @@ namespace EnzymeDAL
             {
                 objDBPool = null;
             }
+            return tmp;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="objDS"></param>
+        /// <returns></returns>
         public bool getEnzynmeDataDAL(ref DataSet objDS)
         {
             try
@@ -711,6 +805,14 @@ namespace EnzymeDAL
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <param name="Title"></param>
+        /// <param name="CreatedBy"></param>
+        /// <param name="objDS"></param>
+        /// <returns></returns>
         public bool UpdateEnzymeDataDAL(int Id, string Title, string CreatedBy, ref DataSet objDS)
         {
             try
@@ -741,6 +843,13 @@ namespace EnzymeDAL
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <param name="CreatedBy"></param>
+        /// <param name="outputparam"></param>
+        /// <returns></returns>
         public bool DeleteEnzymeDataDAL(int Id, string CreatedBy, int outputparam)
         {
             try
@@ -773,6 +882,13 @@ namespace EnzymeDAL
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Title"></param>
+        /// <param name="CreatedBy"></param>
+        /// <param name="Outputparameter"></param>
+        /// <returns></returns>
         public bool InsertEnzymeDataDAL(string Title, string CreatedBy, int Outputparameter)
         {
             try
@@ -801,6 +917,13 @@ namespace EnzymeDAL
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <param name="ModifiedBy"></param>
+        /// <param name="objDS"></param>
+        /// <returns></returns>
         public bool DeteteDemographicDetailsDAL(int ID, string ModifiedBy, ref DataSet objDS)
         {
             try
@@ -825,6 +948,11 @@ namespace EnzymeDAL
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="objDS"></param>
+        /// <returns></returns>
         public bool getFiscalYrDAL(ref DataSet objDS)
         {
             try

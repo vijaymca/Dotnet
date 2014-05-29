@@ -1,0 +1,6 @@
+
+5/28/2014 3:57:24 PM DBPool-Catch - The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_EnzymeDemographic_PrincipalReporter_ID". The conflict occurred in database "HealthNet", table "dbo.lst_HSUPersons", column 'HSUPersons_ID'.
+The statement has been terminated. - USP_UPDATE_EnzymeDemographicData - hydpcnew00123 - 000
+
+5/28/2014 4:08:55 PM DBPool-Catch - The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_EnzymeDemographic_PrincipalReporter_ID". The conflict occurred in database "HealthNet", table "dbo.lst_HSUPersons", column 'HSUPersons_ID'.
+The statement has been terminated. - USP_UPDATE_EnzymeDemographicData - hydpcnew00123 - 000

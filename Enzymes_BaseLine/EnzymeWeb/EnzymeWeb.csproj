@@ -63,10 +63,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Default.aspx" />
     <Content Include="Forms\DemographicDataView.aspx" />
     <Content Include="Forms\Enzyme.aspx" />
     <Content Include="Forms\Home.aspx" />
     <Content Include="Forms\NewDemographicData.aspx" />
+    <Content Include="Forms\PersonnelListingNew.aspx" />
     <Content Include="Scripts\jquery-1.8.3.min.js" />
     <Content Include="Scripts\clientEvents.js" />
     <Content Include="Scripts\validations.js" />
@@ -75,7 +77,9 @@
     <Content Include="styles\Images\Appearence.css" />
     <Content Include="styles\Images\attachtb.gif" />
     <Content Include="styles\Images\category.jpg" />
+    <Content Include="styles\Images\content_bg.jpg" />
     <Content Include="styles\Images\Country.gif" />
+    <Content Include="styles\Images\Create-New-Demographic-Data.jpg" />
     <Content Include="styles\Images\EditHske.gif" />
     <Content Include="styles\Images\edit_icon.gif" />
     <Content Include="styles\Images\edit_review_gms_blu.gif" />
@@ -88,6 +92,8 @@
     <Content Include="styles\Images\gssmenuStyle.css" />
     <Content Include="styles\Images\gssStyles.css" />
     <Content Include="styles\Images\header_bg.jpg" />
+    <Content Include="styles\Images\header_sub_bg.jpg" />
+    <Content Include="styles\Images\header_sub_sub_bg.jpg" />
     <Content Include="styles\Images\hsReports_blu.gif" />
     <Content Include="styles\Images\Input-Old-HSKE-Data.gif" />
     <Content Include="styles\Images\inputHSDATA_blu.gif" />
@@ -98,12 +104,14 @@
     <Content Include="styles\Images\oldHSKE_reports_blu.gif" />
     <Content Include="styles\Images\person.gif" />
     <Content Include="styles\Images\Personallisting.gif" />
+    <Content Include="styles\Images\Personallisting.jpg" />
     <Content Include="styles\Images\PG_Medical.jpg" />
     <Content Include="styles\Images\rect.gif" />
     <Content Include="styles\Images\Region.gif" />
     <Content Include="styles\Images\sector.gif" />
     <Content Include="styles\Images\Site.gif" />
     <Content Include="styles\Images\top_header.jpg" />
+    <Content Include="styles\Images\View-Existing-Demographic-Data.jpg" />
     <Content Include="styles\Site.css" />
     <Content Include="styles\SlideShow.css" />
     <Content Include="test.aspx" />
@@ -117,6 +125,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DemographicDataView.aspx.cs">
       <DependentUpon>DemographicDataView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -130,6 +145,13 @@
     </Compile>
     <Compile Include="Forms\Enzyme.aspx.designer.cs">
       <DependentUpon>Enzyme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonnelListingNew.aspx.cs">
+      <DependentUpon>PersonnelListingNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonnelListingNew.aspx.designer.cs">
+      <DependentUpon>PersonnelListingNew.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPages\EnzymeMain.Master.cs">
       <DependentUpon>EnzymeMain.Master</DependentUpon>

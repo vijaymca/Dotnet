@@ -17,8 +17,8 @@ namespace EnzymeErrorLog
         /// </summary>
         public static string m_strLastError;
 
-        public static string strSqlCon = ConfigurationSettings.AppSettings["dbConnString"].ToString();
-
+        public static string strSqlCon = System.Configuration.ConfigurationManager.ConnectionStrings["EnzymeConn"].ToString();
+        
         public enum LogMessageType
         {
             LogError,

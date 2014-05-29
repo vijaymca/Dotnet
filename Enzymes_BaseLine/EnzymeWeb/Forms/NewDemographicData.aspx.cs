@@ -9,7 +9,11 @@ using EnzymeBAL;
 using System.Data;
 using EnzymeEntities.Entity;
 
+using DevExpress.Web.ASPxCallback;
 using DevExpress.XtraEditors.Repository;
+using DevExpress.Web.ASPxClasses;
+
+//ClientScript.RegisterStartupScript(this.GetType(), "Alert", "alert('HTML content is not uploaded into database!');", true);
 
 namespace EnzymeWeb
 {
@@ -23,7 +27,6 @@ namespace EnzymeWeb
         static bool IsonlyCampaign = false;
         static bool IsExit = false;
         static string compid;
-
         //static bool IsUpdate = false;
 
         //Constant lables
@@ -51,6 +54,10 @@ namespace EnzymeWeb
                         fillEnzymeAndDemographic();
                         btnAddEnzyme.Visible = true;
                         IsExit = true;
+
+                        btnSaveExit.Text = UPDATEEXIT;
+                        btnSaveNew.Text = UPDATE;
+                        Page.Title = "Edit Demographic Information";
                     }
                     else
                     {
@@ -70,11 +77,16 @@ namespace EnzymeWeb
                         }
                         txtTotalSitePop.Text = "0";
                         txtMedicalMonitor.Text = "0";
-                    }
-                    btnSaveExit.Text = SAVEEXIT;
-                    btnSaveNew.Text = SAVENEW;
-                }
 
+                        btnSaveExit.Text = SAVEEXIT;
+                        btnSaveNew.Text = SAVENEW;
+                        Page.Title = "New Demographic Information";
+                    }
+                }
+                else
+                {
+
+                }
             }
             // catch{Exception ex){}
             finally { }
@@ -95,7 +107,7 @@ namespace EnzymeWeb
                 {
                     drpRegion.DataSource = objDS.Tables[0];
                     drpRegion.DataBind();
-                    drpRegion.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select a Region"));
+                    drpRegion.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select a Region", "0"));
                     drpRegion.SelectedIndex = 0;
                 }
 
@@ -108,8 +120,10 @@ namespace EnzymeWeb
                 {
                     drpFiscalYear.DataSource = objDS.Tables[0];
                     drpFiscalYear.DataBind();
-                    drpFiscalYear.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select Fiscal Year"));
+                    drpFiscalYear.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select Fiscal Year", "0"));
+
                     drpFiscalYear.SelectedIndex = 0;
+
                 }
 
                 objDS.Dispose();
@@ -260,8 +274,16 @@ namespace EnzymeWeb
 
                 if (objDS.Tables.Count > 0)
                 {
-                    grdEnzymes.DataSource = objDS.Tables[0];
-                    grdEnzymes.DataBind();
+                    if (string.IsNullOrEmpty(objDS.Tables[0].Rows[0]["CampaignID"].ToString()))
+                    {
+                        grdEnzymes.Visible = false;
+                    }
+                    else
+                    {
+                        grdEnzymes.DataSource = objDS.Tables[0];
+                        grdEnzymes.DataBind();
+                    }
+
 
                     lblCategory.Text = objDS.Tables[0].Rows[0]["Category"] == null ? string.Empty : objDS.Tables[0].Rows[0]["Category"].ToString();
                     hdnCategory.Value = objDS.Tables[0].Rows[0]["Category_ID"] == null ? string.Empty : objDS.Tables[0].Rows[0]["Category_ID"].ToString();
@@ -310,25 +332,6 @@ namespace EnzymeWeb
 
                     string fiscalYear = objDS.Tables[0].Rows[0]["FiscalYear"] == null ? "0" : objDS.Tables[0].Rows[0]["FiscalYear_ID"].ToString();
 
-
-                    //if (fiscalYear == "FY 12-13")
-                    //{
-                    //    drpFiscalYear.Items[1].Selected = true;
-                    //}
-                    //else if (fiscalYear == "FY 13-14")
-                    //{
-                    //    drpFiscalYear.Items[2].Selected = true;
-                    //}
-                    //else if (fiscalYear == "FY 14-15")
-                    //{
-                    //    drpFiscalYear.Items[3].Selected = true;
-                    //}
-                    //else
-                    //{
-                    //    drpFiscalYear.Items[0].Selected = true;
-                    //}
-
-
                     drpFiscalYear.Items.FindByValue(fiscalYear).Selected = true;
 
 
@@ -352,8 +355,6 @@ namespace EnzymeWeb
                     }
 
 
-
-
                     string totalSitePopulation = objDS.Tables[0].Rows[0]["TotalSitePopulation"] == null ? string.Empty : objDS.Tables[0].Rows[0]["TotalSitePopulation"].ToString();
                     txtTotalSitePop.Text = totalSitePopulation;
 
@@ -362,6 +363,10 @@ namespace EnzymeWeb
 
                     string principalreporter = objDS.Tables[0].Rows[0]["PrincipalReporter"] == null ? string.Empty : objDS.Tables[0].Rows[0]["PrincipalReporter"].ToString();
                     txtReporter.Text = principalreporter;
+
+                    string PrincipalReporterId = objDS.Tables[0].Rows[0]["PrincipalReporter_ID"] == null ? "0" : objDS.Tables[0].Rows[0]["PrincipalReporter_ID"].ToString();
+                    // hdnReporter.Value = PrincipalReporterId;
+                    Session["PrincipalReporterID"] = Convert.ToInt32(PrincipalReporterId);
 
 
 
@@ -474,8 +479,6 @@ namespace EnzymeWeb
             drpEnzyme.Visible = true;
             lblEnzyme.Visible = false;
 
-            IsonlyCampaign = true;
-
             ControlCollection ctrls = pnlCompaign.Controls;
 
             foreach (var ctrl in ctrls)
@@ -485,13 +488,14 @@ namespace EnzymeWeb
                     ((DevExpress.Web.ASPxEditors.ASPxTextBox)ctrl).Text = "0";
                 }
             }
-
-            Session["Mode"] = CREATENEWCAMP;
-
-            IsExit = false;
+            
+            fillEnzymeAndDemographic();
 
             btnSaveExit.Text = SAVEEXIT;
             btnSaveNew.Text = SAVENEW;
+            Session["Mode"] = CREATENEWCAMP;
+            IsonlyCampaign = true;
+            IsExit = false;
         }
 
         protected void btnSaveExit_Click(object sender, EventArgs e)
@@ -521,6 +525,7 @@ namespace EnzymeWeb
                     InsertDemoGraphicCampaign();
                     fillEnzymeAndDemographic();
                     pnlCompaign.Visible = false;
+                    clearCancel();
                     break;
             }
             if (IsExit)
@@ -534,6 +539,9 @@ namespace EnzymeWeb
             compid = e.KeyValue.ToString();
             Session["CampID"] = compid;
             displayEnzyme();
+
+            btnSaveExit.Text = UPDATEEXIT;
+            btnSaveNew.Text = UPDATE;
         }
 
         protected void displayEnzyme()
@@ -652,20 +660,26 @@ namespace EnzymeWeb
                 }
 
                 demographics.EmpployeeStatus = rdEmpStatus.SelectedItem.Text;
-                demographics.FiscalYr = Convert.ToInt32(drpFiscalYear.SelectedItem.Value);
+
+                if (drpFiscalYear.SelectedItem.Value != "0")
+                {
+                    demographics.FiscalYr = Convert.ToInt32(drpFiscalYear.SelectedItem.Value);
+                }
+
                 demographics.Campaign = rdCompaign.SelectedItem.Text;
                 demographics.TotalSitePop = Convert.ToInt32(txtTotalSitePop.Value);
                 demographics.NumMedicalMoniProg = Convert.ToInt32(txtMedicalMonitor.Text);
                 // demographics.PrincipalReporter = Convert.ToInt32(txtReporter.Text);
-                demographics.PrincipalReporter = 1;
+                demographics.PrincipalReporter = Session["PrincipalReporterID"] != null ? (int)Session["PrincipalReporterID"] : 0;
 
                 demographics.DemographicID = Convert.ToInt32(demographicid);
 
                 string strout = string.Empty;
 
-                objclsDemographicBAL.UpdateDemographic_BAL(demographics, IsOther,ref strout, ref objDS);
-                
-                lblReturnStatus.Text = strout;
+                objclsDemographicBAL.UpdateDemographic_BAL(demographics, IsOther, ref strout, ref objDS);
+
+                //lblReturnStatus.Text = strout;
+                ClientScript.RegisterStartupScript(this.GetType(), "Alert", "alert('" + strout + "');", true);
 
             }
             finally
@@ -707,7 +721,7 @@ namespace EnzymeWeb
                     demographics.TotalSitePop = Convert.ToInt32(txtTotalSitePop.Value);
                     demographics.NumMedicalMoniProg = Convert.ToInt32(txtMedicalMonitor.Value);
                     //demographics.PrincipalReporter = txtReporter.Text;
-                    demographics.PrincipalReporter = 1;
+                    demographics.PrincipalReporter = Session["PrincipalReporterID"] != null ? (int)Session["PrincipalReporterID"] : 0;
                 }
                 else
                 {
@@ -762,10 +776,11 @@ namespace EnzymeWeb
                 objclsDemographicBAL = new clsDemographicBAL();
                 DataSet objDS = new DataSet();
 
-                string strout =string.Empty;
+                string strout = string.Empty;
                 objclsDemographicBAL.InsertInsertDemographicAndEnzyme_BAL(demographics, IsonlyCampaign, ref strout, ref objDS);
 
-                lblReturnStatus.Text = strout;
+                //lblReturnStatus.Text = strout;
+                ClientScript.RegisterStartupScript(this.GetType(), "Alert", "alert('" + strout + "');", true);
             }
             finally
             {
@@ -838,7 +853,8 @@ namespace EnzymeWeb
 
                 UpdateDemographInfo();
 
-                lblReturnStatus.Text = strout;
+                //lblReturnStatus.Text = strout;
+                ClientScript.RegisterStartupScript(this.GetType(), "Alert", "alert('" + strout + "');", true);
 
             }
             finally
@@ -858,7 +874,7 @@ namespace EnzymeWeb
             DataSet objDS = new DataSet();
             string strout = string.Empty;
 
-            objclsDemographicBAL.DeteteCampaign_BAL(id, ModifiedBy,ref strout, ref objDS);
+            objclsDemographicBAL.DeteteCampaign_BAL(id, ModifiedBy, ref strout, ref objDS);
 
             objclsDemographicBAL = new clsDemographicBAL();
 
@@ -872,7 +888,8 @@ namespace EnzymeWeb
             }
             //ApplyLayout(0);
             e.Cancel = true;
-            lblReturnStatus.Text = strout;
+            //lblReturnStatus.Text = strout;
+            ClientScript.RegisterStartupScript(this.GetType(), "Alert", "alert('" + strout + "');", true);
         }
 
         protected void btnSaveNew_Click(object sender, EventArgs e)
@@ -887,28 +904,42 @@ namespace EnzymeWeb
                 Response.Redirect("DemographicDataView.aspx");
             else
             {
-                pnlCompaign.Visible = false;
-                drpRegion.Enabled = true;
-                drpCountry.Enabled = true;
-                drpSiteName.Enabled = true;
-                rdPlatform.Enabled = true;
-                drpFiscalYear.Enabled = true;
-                rdEmpStatus.Enabled = true;
-                rdCompaign.Enabled = true;
-                txtTotalSitePop.Enabled = true;
-                txtMedicalMonitor.Enabled = true;
-                txtReporter.Enabled = true;
-                btnPersonalListing.Enabled = true;
-
-                drpEnzyme.Visible = false;
-                lblEnzyme.Visible = true;
-
-                IsonlyCampaign = false;
-
-                btnSaveExit.Text = UPDATEEXIT;
-                btnSaveNew.Text = UPDATE;
+                clearCancel();
                 IsExit = true;
             }
         }
+
+        protected void clearCancel()
+        {
+            pnlCompaign.Visible = false;
+            drpRegion.Enabled = true;
+            drpCountry.Enabled = true;
+            drpSiteName.Enabled = true;
+            rdPlatform.Enabled = true;
+            drpFiscalYear.Enabled = true;
+            rdEmpStatus.Enabled = true;
+            rdCompaign.Enabled = true;
+            txtTotalSitePop.Enabled = true;
+            txtMedicalMonitor.Enabled = true;
+            txtReporter.Enabled = true;
+            btnPersonalListing.Enabled = true;
+
+            drpEnzyme.Visible = false;
+            lblEnzyme.Visible = true;
+
+            IsonlyCampaign = false;
+
+            btnSaveExit.Text = UPDATEEXIT;
+            btnSaveNew.Text = UPDATE;
+        }
+
+        #region PersonalListing
+        protected void PersonalListingCallBack_Callback(object sender, CallbackEventArgsBase e)
+        {
+            string strParam = e.Parameter;
+            if (!(string.IsNullOrEmpty(strParam)))
+                Session["PrincipalReporterID"] = Convert.ToInt32(strParam);
+        }
+        #endregion
     }
 }

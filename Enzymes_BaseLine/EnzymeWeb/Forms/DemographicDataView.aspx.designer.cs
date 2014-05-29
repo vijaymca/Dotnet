@@ -13,13 +13,13 @@ namespace EnzymeWeb {
     public partial class DemographicDataView {
         
         /// <summary>
-        /// ASPxLabel1 control.
+        /// btnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxLabel ASPxLabel1;
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
         
         /// <summary>
         /// gvDemographicData control.
@@ -29,14 +29,5 @@ namespace EnzymeWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridView.ASPxGridView gvDemographicData;
-        
-        /// <summary>
-        /// btnSubmit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
     }
 }

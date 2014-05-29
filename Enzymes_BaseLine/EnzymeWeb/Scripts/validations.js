@@ -150,7 +150,7 @@ function chkMedical() {
     var Grade1MedicalMonitor = parseInt($('#PlaceHolderMain_txtMedicalMonitor_I').val());
 
     if (TotalSitePopulation < Grade1MedicalMonitor) {
-        alert('Number of Individuals In Grade 1 Medical Monitoring Program can\'t be exceed Total Site Population');
+        alert('Number of Individuals In Grade 1 Medical Monitoring Program can not exceed Total Site Population');
 
         $('#PlaceHolderMain_txtMedicalMonitor_I').focus();
     }

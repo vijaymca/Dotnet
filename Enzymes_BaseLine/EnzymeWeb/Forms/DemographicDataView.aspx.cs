@@ -17,6 +17,12 @@ namespace EnzymeWeb
     public partial class DemographicDataView : System.Web.UI.Page
     {
         clsDemographicBAL objclsDemographicBAL = null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
             objclsDemographicBAL = new clsDemographicBAL();
@@ -36,6 +42,9 @@ namespace EnzymeWeb
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void BindData()
         {
 
@@ -46,6 +55,11 @@ namespace EnzymeWeb
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void OnRowUpdating(object sender, ASPxDataUpdatingEventArgs e)
         {
             var x = e.Keys[0];
@@ -53,6 +67,11 @@ namespace EnzymeWeb
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void OnRowDeleting(object sender, ASPxDataDeletingEventArgs e)
         {
             int id = Convert.ToInt32(e.Keys[0]);
@@ -73,6 +92,10 @@ namespace EnzymeWeb
             e.Cancel = true;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="layoutIndex"></param>
         protected void ApplyLayout(int layoutIndex)
         {
             gvDemographicData.BeginUpdate();
@@ -98,6 +121,11 @@ namespace EnzymeWeb
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void RowEditing(object sender, ASPxStartRowEditingEventArgs e)
         {
             int id = Convert.ToInt32(e.EditingKeyValue);
@@ -108,6 +136,11 @@ namespace EnzymeWeb
                 Response.Redirect("NewDemographicData.aspx?divid=22&&ID=" + id);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             if (Page.IsCallback)

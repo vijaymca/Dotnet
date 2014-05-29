@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Header.ascx.cs" Inherits="EnzymeWeb.UserControls.Header" %>
 <div style="background-color:White">
-<table width="998" border="0" cellspacing="0" cellpadding="0" class="top-header">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="top-header">
     <tr>
         <td>
             <table>
