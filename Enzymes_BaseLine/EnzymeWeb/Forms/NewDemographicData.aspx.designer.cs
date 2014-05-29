@@ -211,15 +211,6 @@ namespace EnzymeWeb {
         protected global::DevExpress.Web.ASPxPanel.ASPxPanel pnlCompaign;
         
         /// <summary>
-        /// drpEnzyme control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxComboBox drpEnzyme;
-        
-        /// <summary>
         /// lblEnzyme control.
         /// </summary>
         /// <remarks>
@@ -227,6 +218,15 @@ namespace EnzymeWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxEditors.ASPxLabel lblEnzyme;
+        
+        /// <summary>
+        /// drpEnzyme control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxComboBox drpEnzyme;
         
         /// <summary>
         /// txtTotalnumberofexposedindividuals control.

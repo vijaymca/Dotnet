@@ -55,7 +55,12 @@
                 </td>
                 <td>
                     <dx:ASPxComboBox ID="drpRegion" runat="server" TextField="Region_Name" ValueField="Region_ID"
-                        AutoPostBack="True" OnSelectedIndexChanged="drpRegion_SelectedIndexChanged">
+                        EnableIncrementalFiltering="False" IncrementalFilteringMode="StartsWith" AutoPostBack="True"
+                        OnSelectedIndexChanged="drpRegion_SelectedIndexChanged" NullText="- Select Region -" >
+                        <ValidationSettings SetFocusOnError="true" ErrorDisplayMode="ImageWithTooltip" ValidationGroup="valStudyInfo">
+                            <RequiredField IsRequired="True" ErrorText="Please select Region" />
+                            <RequiredField IsRequired="True"></RequiredField>
+                        </ValidationSettings>
                     </dx:ASPxComboBox>
                 </td>
             </tr>
@@ -65,7 +70,12 @@
                 </td>
                 <td>
                     <dx:ASPxComboBox ID="drpCountry" runat="server" TextField="Country_Name" ValueField="Country_ID"
-                        AutoPostBack="True" OnSelectedIndexChanged="drpCountry_SelectedIndexChanged">
+                        IncrementalFilteringMode="StartsWith" EnableIncrementalFiltering="False" AutoPostBack="True"
+                        OnSelectedIndexChanged="drpCountry_SelectedIndexChanged" NullText="- Select Country-">
+                        <ValidationSettings SetFocusOnError="true" ErrorDisplayMode="ImageWithTooltip" ValidationGroup="valStudyInfo">
+                            <RequiredField IsRequired="True" ErrorText="Please select Country" />
+                            <RequiredField IsRequired="True"></RequiredField>
+                        </ValidationSettings>
                     </dx:ASPxComboBox>
                 </td>
             </tr>
@@ -75,7 +85,12 @@
                 </td>
                 <td>
                     <dx:ASPxComboBox ID="drpSiteName" runat="server" TextField="SiteName" ValueField="Site_ID"
-                        AutoPostBack="True" OnSelectedIndexChanged="drpSiteName_SelectedIndexChanged">
+                        IncrementalFilteringMode="StartsWith" EnableIncrementalFiltering="False" AutoPostBack="True"
+                        OnSelectedIndexChanged="drpSiteName_SelectedIndexChanged" NullText="- Select Site-">
+                        <ValidationSettings SetFocusOnError="true" ErrorDisplayMode="ImageWithTooltip" ValidationGroup="valStudyInfo">
+                            <RequiredField IsRequired="True" ErrorText="Please select Site Name" />
+                            <RequiredField IsRequired="True"></RequiredField>
+                        </ValidationSettings>
                     </dx:ASPxComboBox>
                 </td>
             </tr>
@@ -126,9 +141,10 @@
                                         <dx:ListEditItem Text="Soluble Unit Dose [Pods]" Value="2" />
                                         <dx:ListEditItem Text="Other (includes Distribution Module)" Value="3" />
                                     </Items>
-                                    <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
-                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
-                                                                </ValidationSettings>
+                                    <ValidationSettings SetFocusOnError="true" ErrorDisplayMode="ImageWithTooltip" ValidationGroup="valStudyInfo">
+                            <RequiredField IsRequired="True" ErrorText="Please select Platform" />
+                            <RequiredField IsRequired="True"></RequiredField>
+                        </ValidationSettings>
                                 </dx:ASPxRadioButtonList>
                             </td>
                             <td>
@@ -150,9 +166,10 @@
                             <dx:ListEditItem Text="PG Employees" Value="PG Employees" />
                             <dx:ListEditItem Text="Contractors" Value="Contractors" />
                         </Items>
-                        <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
-                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
-                                                                </ValidationSettings>
+                        <ValidationSettings SetFocusOnError="true" ErrorDisplayMode="ImageWithTooltip" ValidationGroup="valStudyInfo">
+                            <RequiredField IsRequired="True" ErrorText="Please select Employment Status" />
+                            <RequiredField IsRequired="True"></RequiredField>
+                        </ValidationSettings>
                     </dx:ASPxRadioButtonList>
                 </td>
             </tr>
@@ -162,7 +179,11 @@
                 </td>
                 <td>
                     <dx:ASPxComboBox TextField="FiscalYear" ValueField="FiscalYear_ID" ID="drpFiscalYear"
-                        runat="server" SelectedIndex="0">
+                        runat="server" EnableIncrementalFiltering="False" IncrementalFilteringMode="StartsWith" NullText="- Select Fiscal Year-">
+                        <ValidationSettings SetFocusOnError="true" ErrorDisplayMode="ImageWithTooltip" ValidationGroup="valStudyInfo">
+                            <RequiredField IsRequired="True" ErrorText="Please select Fiscal Year" />
+                            <RequiredField IsRequired="True"></RequiredField>
+                        </ValidationSettings>
                     </dx:ASPxComboBox>
                 </td>
             </tr>
@@ -179,9 +200,10 @@
                             <dx:ListEditItem Text="Annual" Value="2" />
                             <dx:ListEditItem Text="Special" Value="3" />
                         </Items>
-                        <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
-                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
-                                                                </ValidationSettings>
+                       <ValidationSettings SetFocusOnError="true" ErrorDisplayMode="ImageWithTooltip" ValidationGroup="valStudyInfo">
+                            <RequiredField IsRequired="True" ErrorText="Please select Campaign" />
+                            <RequiredField IsRequired="True"></RequiredField>
+                        </ValidationSettings>
                     </dx:ASPxRadioButtonList>
                 </td>
             </tr>
@@ -237,6 +259,10 @@
                             <td>
                                 <dx:ASPxTextBox ID="txtReporter" runat="server" Width="170px" ClientInstanceName="txtReporter"
                                     ReadOnly="true">
+                                    <ValidationSettings SetFocusOnError="true" ErrorDisplayMode="ImageWithTooltip" ValidationGroup="valStudyInfo">
+                                        <RequiredField IsRequired="True" ErrorText="Please select tissue type" />
+                                        <RequiredField IsRequired="True"></RequiredField>
+                                    </ValidationSettings>
                                 </dx:ASPxTextBox>
                             </td>
                             <td>
@@ -278,7 +304,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <dx:ASPxGridView ID="grdEnzymes" ClientInstanceName="grdEnzymes" runat="server" KeyFieldName="CampaignID"
+                                <%--                                <dx:ASPxGridView ID="grdEnzymes" ClientInstanceName="grdEnzymes" runat="server" KeyFieldName="CampaignID"
                                     Width="100%" AutoGenerateColumns="False" OnStartRowEditing="RowEditing" OnRowDeleting="OnRowDeleting"
                                     OnRowCommand="rowcommand">
                                     <Columns>
@@ -288,6 +314,28 @@
                                         </dx:GridViewCommandColumn>
                                         <dx:GridViewCommandColumn ShowDeleteButton="true" VisibleIndex="5" Caption="Delete"
                                             CellStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" />
+                                        <dx:GridViewDataColumn FieldName="EnzymeName" VisibleIndex="1" />
+                                        <dx:GridViewDataColumn FieldName="CreatedBy" VisibleIndex="2" Caption="Created" />
+                                        <dx:GridViewDataColumn FieldName="CreatedDate" VisibleIndex="3" />
+                                    </Columns>
+                                    <SettingsBehavior ConfirmDelete="true" />
+                                    <SettingsText ConfirmDelete="Are you sure you want to delete" />
+                                </dx:ASPxGridView>--%>
+                                <dx:ASPxGridView ID="grdEnzymes" ClientInstanceName="grdEnzymes" runat="server" KeyFieldName="CampaignID"
+                                    Width="100%" AutoGenerateColumns="False" OnStartRowEditing="RowEditing" OnRowDeleting="OnRowDeleting"
+                                    OnRowCommand="rowcommand">
+                                    <Columns>
+                                        <dx:GridViewDataColumn VisibleIndex="4" Name="Edit" Caption="Edit" CellStyle-HorizontalAlign="Center">
+                                            <DataItemTemplate>
+                                                <dx:ASPxButton HorizontalAlign="Center" ID="btnEdit" OnClick="btnEdit_Click" runat="server"
+                                                    AutoPostBack="false" CausesValidation="false" ToolTip="Edit" EnableDefaultAppearance="false"
+                                                    Image-Url="~/styles/Images/edit_icon.gif">
+                                                </dx:ASPxButton>
+                                            </DataItemTemplate>
+                                            <HeaderStyle Wrap="True" HorizontalAlign="Center" />
+                                        </dx:GridViewDataColumn>
+                                        <dx:GridViewCommandColumn ShowDeleteButton="true" VisibleIndex="5" Caption="Delete"
+                                            HeaderStyle-HorizontalAlign="Center" />
                                         <dx:GridViewDataColumn FieldName="EnzymeName" VisibleIndex="1" />
                                         <dx:GridViewDataColumn FieldName="CreatedBy" VisibleIndex="2" Caption="Created" />
                                         <dx:GridViewDataColumn FieldName="CreatedDate" VisibleIndex="3" />
@@ -312,22 +360,24 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td width="400px">
                                             Antigen Number and Enzyme Name <span class="clsmandtr">*</span>
+                                            
                                         </td>
-                                        <td colspan="3">
+                                        <td >
+                                        <dx:ASPxLabel ID="lblEnzyme" Visible="false" runat="server" Text="ASPxLabel">
+                                            </dx:ASPxLabel>
                                             <dx:ASPxComboBox SelectedIndex="0" ID="drpEnzyme" Width="300" TextField="EnzymeName"
                                                 ValueField="Enzyme_ID" runat="server" ValueType="System.String">
                                             </dx:ASPxComboBox>
-                                            <dx:ASPxLabel ID="lblEnzyme" Visible="false" runat="server" Text="ASPxLabel">
-                                            </dx:ASPxLabel>
+                                            
                                         </td>
                                     </tr>
                                     <tr>
                                         <td colspan="3">
                                             <div class="moduleCont">
                                                 <table width="100%">
-                                                 <tr class="clsModule">
+                                                    <tr class="clsModule">
                                                         <td width="300px">
                                                             Module:
                                                         </td>
@@ -697,11 +747,13 @@
                     <table>
                         <tr>
                             <td>
-                                <dx:ASPxButton ID="btnSaveExit" runat="server" Text="Save & Exit" OnClick="btnSaveExit_Click">
+                                <dx:ASPxButton ID="btnSaveExit" runat="server" Text="Save & Exit" OnClick="btnSaveExit_Click"
+                                    ValidationGroup="valStudyInfo">
                                 </dx:ASPxButton>
                             </td>
                             <td>
-                                <dx:ASPxButton ID="btnSaveNew" runat="server" Text="Save & Create New" OnClick="btnSaveNew_Click">
+                                <dx:ASPxButton ID="btnSaveNew" runat="server" Text="Save & Create New" OnClick="btnSaveNew_Click"
+                                    ValidationGroup="valStudyInfo">
                                 </dx:ASPxButton>
                             </td>
                             <td>

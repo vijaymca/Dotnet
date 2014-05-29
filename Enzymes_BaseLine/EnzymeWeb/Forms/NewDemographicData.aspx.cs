@@ -107,8 +107,8 @@ namespace EnzymeWeb
                 {
                     drpRegion.DataSource = objDS.Tables[0];
                     drpRegion.DataBind();
-                    drpRegion.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select a Region", "0"));
-                    drpRegion.SelectedIndex = 0;
+                    //drpRegion.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select a Region", "-1"));
+                    //drpRegion.SelectedIndex = 0;
                 }
 
                 objDS.Dispose();
@@ -120,9 +120,9 @@ namespace EnzymeWeb
                 {
                     drpFiscalYear.DataSource = objDS.Tables[0];
                     drpFiscalYear.DataBind();
-                    drpFiscalYear.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select Fiscal Year", "0"));
+                   // drpFiscalYear.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select Fiscal Year", "-1"));
 
-                    drpFiscalYear.SelectedIndex = 0;
+                   // drpFiscalYear.SelectedIndex = 0;
 
                 }
 
@@ -134,15 +134,15 @@ namespace EnzymeWeb
                 {
                     drpEnzyme.DataSource = objDS.Tables[0];
                     drpEnzyme.DataBind();
-                    drpEnzyme.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select a Enzyme Name and Antigen Number"));
+                    drpEnzyme.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select a Enzyme Name and Antigen Number", "-1"));
                     drpEnzyme.SelectedIndex = 0;
                 }
 
-                drpCountry.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select a Country"));
-                drpCountry.SelectedIndex = 0;
+                // drpCountry.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select a Country","-1"));
+                // drpCountry.SelectedIndex = 0;
 
-                drpSiteName.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select a Site"));
-                drpSiteName.SelectedIndex = 0;
+                // drpSiteName.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select a Site","-1"));
+                //drpSiteName.SelectedIndex = 0;
             }
             finally
             {
@@ -154,7 +154,7 @@ namespace EnzymeWeb
         {
             try
             {
-                if (drpRegion.SelectedIndex != 0)
+                //  if (drpRegion.SelectedIndex != 0)
                 {
                     objclsDemographicBAL = new clsDemographicBAL();
                     DataSet objDS = new DataSet();
@@ -166,8 +166,8 @@ namespace EnzymeWeb
                     {
                         drpCountry.DataSource = objDS.Tables[0];
                         drpCountry.DataBind();
-                        drpCountry.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select a Country"));
-                        drpCountry.SelectedIndex = 0;
+                        //drpCountry.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select a Country","-1"));
+                        //drpCountry.SelectedIndex = 0;
                     }
                 }
             }
@@ -196,8 +196,8 @@ namespace EnzymeWeb
                     {
                         drpSiteName.DataSource = objDS.Tables[0];
                         drpSiteName.DataBind();
-                        drpSiteName.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select a Site"));
-                        drpSiteName.SelectedIndex = 0;
+                        // drpSiteName.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select a Site","-1"));
+                        // drpSiteName.SelectedIndex = 0;
                     }
                 }
                 lblBusinessUnit.Text = string.Empty;
@@ -214,7 +214,7 @@ namespace EnzymeWeb
         {
             try
             {
-                if (drpSiteName.SelectedIndex != 0)
+                // if (drpSiteName.SelectedIndex != 0)
                 {
                     objclsDemographicBAL = new clsDemographicBAL();
                     DataSet objDS = new DataSet();
@@ -244,12 +244,12 @@ namespace EnzymeWeb
                         lblSector.Text = string.Empty;
                     }
                 }
-                else
-                {
-                    lblBusinessUnit.Text = string.Empty;
-                    lblCategory.Text = string.Empty;
-                    lblSector.Text = string.Empty;
-                }
+                //else
+                //{
+                //    lblBusinessUnit.Text = string.Empty;
+                //    lblCategory.Text = string.Empty;
+                //    lblSector.Text = string.Empty;
+                //}
             }
             finally
             {
@@ -282,6 +282,7 @@ namespace EnzymeWeb
                     {
                         grdEnzymes.DataSource = objDS.Tables[0];
                         grdEnzymes.DataBind();
+                        grdEnzymes.Visible = true;
                     }
 
 
@@ -475,6 +476,7 @@ namespace EnzymeWeb
             txtMedicalMonitor.Enabled = false;
             txtReporter.Enabled = false;
             btnPersonalListing.Enabled = false;
+            drpEnzyme.SelectedIndex = 0;
 
             drpEnzyme.Visible = true;
             lblEnzyme.Visible = false;
@@ -488,7 +490,7 @@ namespace EnzymeWeb
                     ((DevExpress.Web.ASPxEditors.ASPxTextBox)ctrl).Text = "0";
                 }
             }
-            
+
             fillEnzymeAndDemographic();
 
             btnSaveExit.Text = SAVEEXIT;
@@ -510,7 +512,18 @@ namespace EnzymeWeb
             switch (mode)
             {
                 case NEW:
-                    InsertDemoGraphicCampaign();
+                    if (drpEnzyme.SelectedIndex != 0)
+                    {
+                        InsertDemoGraphicCampaign();
+                        fillEnzymeAndDemographic();
+                        clearCancel();
+                        btnAddEnzyme.Visible = true;
+                    }
+                    else
+                    {
+                        drpEnzyme.Focus();
+                        ClientScript.RegisterStartupScript(this.GetType(), "Alert", "alert('Please select Enzyme');", true);
+                    }
                     break;
 
                 case DEMOGRAPHICUPDATE:
@@ -522,10 +535,17 @@ namespace EnzymeWeb
                     break;
 
                 case CREATENEWCAMP:
-                    InsertDemoGraphicCampaign();
-                    fillEnzymeAndDemographic();
-                    pnlCompaign.Visible = false;
-                    clearCancel();
+                    if (drpEnzyme.SelectedIndex != 0)
+                    {
+                        InsertDemoGraphicCampaign();
+                        fillEnzymeAndDemographic();
+                        clearCancel();
+                    }
+                    else
+                    {
+                        drpEnzyme.Focus();
+                        ClientScript.RegisterStartupScript(this.GetType(), "Alert", "alert('Please select Enzyme');", true);
+                    }
                     break;
             }
             if (IsExit)
@@ -539,7 +559,7 @@ namespace EnzymeWeb
             compid = e.KeyValue.ToString();
             Session["CampID"] = compid;
             displayEnzyme();
-
+            IsExit = false;
             btnSaveExit.Text = UPDATEEXIT;
             btnSaveNew.Text = UPDATE;
         }
@@ -780,6 +800,16 @@ namespace EnzymeWeb
                 objclsDemographicBAL.InsertInsertDemographicAndEnzyme_BAL(demographics, IsonlyCampaign, ref strout, ref objDS);
 
                 //lblReturnStatus.Text = strout;
+
+                if (strout.IndexOf("Record Saved successfully And Demographic ID is : ") != -1)
+                {
+                    //strout.Substring(strout.IndexOf("Record Saved successfully And Demographic ID is : "),0);
+                    char[] separators = { ' ', ':' };
+                    string[] words = strout.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+                    demographicid = words[7];
+                }
+
+
                 ClientScript.RegisterStartupScript(this.GetType(), "Alert", "alert('" + strout + "');", true);
             }
             finally
