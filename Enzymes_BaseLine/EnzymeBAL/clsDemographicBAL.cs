@@ -5,6 +5,8 @@ using System.Text;
 using EnzymeDAL;
 using System.Data;
 using EnzymeEntities.Entity;
+using EnzymeErrorLog;
+
 
 namespace EnzymeBAL
 {
@@ -512,31 +514,35 @@ namespace EnzymeBAL
             return bReturn;
         }
 
-        public bool getFiscalYr_BAL(ref DataSet objDS)
-        {
-            bool bReturn = false;
-            string m_strLastError;
-            try
-            {
-                objAdminGBUSelectionDO = new clsDemographicDAL();
-                //Call the data access function here
+        //public bool getFiscalYr_BAL(ref DataSet objDS)
+        //{
+        //    bool bReturn = false;
+        //    string m_strLastError;
+        //    try
+        //    {
+        //        objAdminGBUSelectionDO = new clsDemographicDAL();
+        //        //Call the data access function here
 
-                if (objAdminGBUSelectionDO.getFiscalYrDAL(ref objDS))
-                    bReturn = true;
-                else
-                {
-                    //Get the last error from DA class here.
-                    //m_strLastError = objAdminGBUSelectionDO.GetLastError();
-                }
-            }
-            catch (Exception ex)
-            {
-                //Set the error to this variable
-                m_strLastError = ex.StackTrace;
-            }
-            //Return the status here
-            return bReturn;
+        //        if (objAdminGBUSelectionDO.getFiscalYrDAL(ref objDS))
+        //            bReturn = true;
+        //        else
+        //        {
+        //            //Get the last error from DA class here.
+        //            //m_strLastError = objAdminGBUSelectionDO.GetLastError();
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        //Set the error to this variable
+        //        m_strLastError = ex.StackTrace;
+        //    }
+        //    //Return the status here
+        //    return bReturn;
+        //}
+
+        public DataTable GetDropDownValuesBAL(MyLookup.Dropdowns drpName,ref bool flagStatus) {
+            objAdminGBUSelectionDO = new clsDemographicDAL();
+            return objAdminGBUSelectionDO.GetDropDownValuesDAL(drpName, ref flagStatus);
         }
-
     }
 }

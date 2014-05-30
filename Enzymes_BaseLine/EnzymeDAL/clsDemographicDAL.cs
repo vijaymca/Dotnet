@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using EnzymeDBPool;
 using System.Data;
 using EnzymeEntities.Entity;
+using EnzymeErrorLog;
 
 namespace EnzymeDAL
 {
@@ -197,6 +198,27 @@ namespace EnzymeDAL
             {
                 objDBPool = null;
             }
+        }
+
+        private string GetStoreprocName(MyLookup.Dropdowns dropdownName)
+        {
+            string spName = string.Empty;
+            switch (dropdownName)
+            {
+                case MyLookup.Dropdowns.EnzymeDetails :
+                    spName = "USP_GET_Enzyme_Data";
+                    break;
+                case MyLookup.Dropdowns.FiscalYear :
+                    spName = "USP_GET_FiscalYear";
+                    break;
+                case MyLookup.Dropdowns.Region :
+                    spName = "USp_GET_Region";
+                    break;
+                default :
+                    spName = "";
+                    break;
+            }
+            return spName;
         }
 
         /// <summary>
@@ -953,19 +975,34 @@ namespace EnzymeDAL
         /// </summary>
         /// <param name="objDS"></param>
         /// <returns></returns>
-        public bool getFiscalYrDAL(ref DataSet objDS)
+        public DataTable GetDropDownValuesDAL(MyLookup.Dropdowns drpName,ref bool flagStatus)
         {
+            DataTable dt = new DataTable();
             try
             {
-                if (objDBPool.SpQueryDataset("USP_GET_FiscalYear", ref objDS))
-                    return true;
-                else return false;
+                DataSet objDS = new DataSet();
+                if (objDBPool.SpQueryDataset(GetStoreprocName(drpName), ref objDS))
+                {
+                    if (objDS != null)
+                    {
+                        if (objDS.Tables.Count > 0)
+                        {
+                            dt = objDS.Tables[0];
+                            flagStatus = true;
+                        }
+                    }
+                }
+               
             }
-
+            catch (Exception ex)
+            {
+                ErrorLog.SaveErrorLog("", "DALC Error", ex.ToString(), GetStoreprocName(drpName), "", "",                       ErrorLog.LogMessageType.LogError);
+            }
             finally
             {
                 objDBPool = null;
             }
+            return dt;
         }
     }
 }

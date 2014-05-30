@@ -238,141 +238,6 @@ namespace EnzymeWeb {
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtTotalnumberofexposedindividuals;
         
         /// <summary>
-        /// txt_tot_num_of_exp_ind_distr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_tot_num_of_exp_ind_distr;
-        
-        /// <summary>
-        /// txtTotalNumberofPreviousPositivesStillWorking control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtTotalNumberofPreviousPositivesStillWorking;
-        
-        /// <summary>
-        /// txt_tot_num_pre_pos_st_wrk_distr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_tot_num_pre_pos_st_wrk_distr;
-        
-        /// <summary>
-        /// txtTot_Num_Basline_Pos_Ind control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtTot_Num_Basline_Pos_Ind;
-        
-        /// <summary>
-        /// txt_tot_num_of_base_pos_ind_distr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_tot_num_of_base_pos_ind_distr;
-        
-        /// <summary>
-        /// txtTot_Ava_for_testing control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtTot_Ava_for_testing;
-        
-        /// <summary>
-        /// txt_tot_not_ava_for_test_distr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_tot_not_ava_for_test_distr;
-        
-        /// <summary>
-        /// txtTot_tobe_Tested control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtTot_tobe_Tested;
-        
-        /// <summary>
-        /// txt_tot_to_be_test_distr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_tot_to_be_test_distr;
-        
-        /// <summary>
-        /// txt_Tot_new_pos_wit_prior_nega_skin_tes control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_Tot_new_pos_wit_prior_nega_skin_tes;
-        
-        /// <summary>
-        /// txt_tot_new_pos_wit_pri_neg_skin_test_distr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_tot_new_pos_wit_pri_neg_skin_test_distr;
-        
-        /// <summary>
-        /// txt_num_skin_test_neg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_num_skin_test_neg;
-        
-        /// <summary>
-        /// txt_num_of_skin_test_neg_distr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_num_of_skin_test_neg_distr;
-        
-        /// <summary>
-        /// txtNum_non_participants control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtNum_non_participants;
-        
-        /// <summary>
-        /// txt_num_of_non_part_distr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_num_of_non_part_distr;
-        
-        /// <summary>
         /// txt2Tot_num_f_exp_ind control.
         /// </summary>
         /// <remarks>
@@ -380,6 +245,15 @@ namespace EnzymeWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt2Tot_num_f_exp_ind;
+        
+        /// <summary>
+        /// txt_tot_num_of_exp_ind_distr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_tot_num_of_exp_ind_distr;
         
         /// <summary>
         /// txt_tot_num_of_exp_ind_Other control.
@@ -391,6 +265,15 @@ namespace EnzymeWeb {
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_tot_num_of_exp_ind_Other;
         
         /// <summary>
+        /// txtTotalNumberofPreviousPositivesStillWorking control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtTotalNumberofPreviousPositivesStillWorking;
+        
+        /// <summary>
         /// txt2_tot_num_f_pre_pos_sti_wor control.
         /// </summary>
         /// <remarks>
@@ -398,6 +281,15 @@ namespace EnzymeWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt2_tot_num_f_pre_pos_sti_wor;
+        
+        /// <summary>
+        /// txt_tot_num_pre_pos_st_wrk_distr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_tot_num_pre_pos_st_wrk_distr;
         
         /// <summary>
         /// tot_num_of_pre_pos_stil_work_other control.
@@ -409,6 +301,15 @@ namespace EnzymeWeb {
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox tot_num_of_pre_pos_stil_work_other;
         
         /// <summary>
+        /// txtTot_Num_Basline_Pos_Ind control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtTot_Num_Basline_Pos_Ind;
+        
+        /// <summary>
         /// txt2_num_f_bas_pos_ind control.
         /// </summary>
         /// <remarks>
@@ -416,6 +317,15 @@ namespace EnzymeWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt2_num_f_bas_pos_ind;
+        
+        /// <summary>
+        /// txt_tot_num_of_base_pos_ind_distr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_tot_num_of_base_pos_ind_distr;
         
         /// <summary>
         /// txt_tot_num_of_base_pos_ind_other control.
@@ -427,6 +337,15 @@ namespace EnzymeWeb {
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_tot_num_of_base_pos_ind_other;
         
         /// <summary>
+        /// txtTot_Ava_for_testing control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtTot_Ava_for_testing;
+        
+        /// <summary>
         /// txt2_tot_avai_f_test control.
         /// </summary>
         /// <remarks>
@@ -434,6 +353,15 @@ namespace EnzymeWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt2_tot_avai_f_test;
+        
+        /// <summary>
+        /// txt_tot_not_ava_for_test_distr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_tot_not_ava_for_test_distr;
         
         /// <summary>
         /// txt_tot_not_avai_for_test_Other control.
@@ -445,6 +373,15 @@ namespace EnzymeWeb {
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_tot_not_avai_for_test_Other;
         
         /// <summary>
+        /// txtTot_tobe_Tested control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtTot_tobe_Tested;
+        
+        /// <summary>
         /// txt2_tot_tob_test control.
         /// </summary>
         /// <remarks>
@@ -452,6 +389,15 @@ namespace EnzymeWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt2_tot_tob_test;
+        
+        /// <summary>
+        /// txt_tot_to_be_test_distr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_tot_to_be_test_distr;
         
         /// <summary>
         /// txt_tot_to_be_test_Other control.
@@ -463,6 +409,15 @@ namespace EnzymeWeb {
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_tot_to_be_test_Other;
         
         /// <summary>
+        /// txt_Tot_new_pos_wit_prior_nega_skin_tes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_Tot_new_pos_wit_prior_nega_skin_tes;
+        
+        /// <summary>
         /// txt2_tot_new_pos_wt_pri_neg_skintest control.
         /// </summary>
         /// <remarks>
@@ -470,6 +425,15 @@ namespace EnzymeWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt2_tot_new_pos_wt_pri_neg_skintest;
+        
+        /// <summary>
+        /// txt_tot_new_pos_wit_pri_neg_skin_test_distr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_tot_new_pos_wit_pri_neg_skin_test_distr;
         
         /// <summary>
         /// txt_tot_new_pos_wit_pri_neg_ski_test_Other control.
@@ -481,6 +445,15 @@ namespace EnzymeWeb {
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_tot_new_pos_wit_pri_neg_ski_test_Other;
         
         /// <summary>
+        /// txt_num_skin_test_neg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_num_skin_test_neg;
+        
+        /// <summary>
         /// txt2num_f_ski_tes_neg control.
         /// </summary>
         /// <remarks>
@@ -488,6 +461,15 @@ namespace EnzymeWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt2num_f_ski_tes_neg;
+        
+        /// <summary>
+        /// txt_num_of_skin_test_neg_distr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_num_of_skin_test_neg_distr;
         
         /// <summary>
         /// txt_num_of_ski_neg_Other control.
@@ -499,6 +481,15 @@ namespace EnzymeWeb {
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_num_of_ski_neg_Other;
         
         /// <summary>
+        /// txtNum_non_participants control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtNum_non_participants;
+        
+        /// <summary>
         /// txt2num_f_non_participants control.
         /// </summary>
         /// <remarks>
@@ -506,6 +497,15 @@ namespace EnzymeWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt2num_f_non_participants;
+        
+        /// <summary>
+        /// txt_num_of_non_part_distr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txt_num_of_non_part_distr;
         
         /// <summary>
         /// txt_num_non_parti_other control.

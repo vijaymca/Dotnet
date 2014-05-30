@@ -13,6 +13,9 @@ using DevExpress.Web.ASPxCallback;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.Web.ASPxClasses;
 
+using EnzymeErrorLog;
+using DevExpress.Web.ASPxEditors;
+
 //ClientScript.RegisterStartupScript(this.GetType(), "Alert", "alert('HTML content is not uploaded into database!');", true);
 
 namespace EnzymeWeb
@@ -99,34 +102,20 @@ namespace EnzymeWeb
             {
                 objclsDemographicBAL = new clsDemographicBAL();
                 DataSet objDS = new DataSet();
+                DataTable dt = new DataTable();
+
+                bool flagStatus = false;
 
                 //Fill Regions
-                objclsDemographicBAL.getRegionsDetails_BAL(ref objDS);
+                dt = objclsDemographicBAL.GetDropDownValuesBAL(MyLookup.Dropdowns.Region, ref flagStatus);
+                clsUtils.BindDropDown(drpRegion, dt, "Region_ID", "Region_Name");
 
-                if (objDS.Tables.Count > 0)
-                {
-                    drpRegion.DataSource = objDS.Tables[0];
-                    drpRegion.DataBind();
-                    //drpRegion.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select a Region", "-1"));
-                    //drpRegion.SelectedIndex = 0;
-                }
-
-                objDS.Dispose();
 
                 //Fill FiscalYear
-                objclsDemographicBAL.getFiscalYr_BAL(ref objDS);
+                dt = objclsDemographicBAL.GetDropDownValuesBAL(MyLookup.Dropdowns.FiscalYear, ref flagStatus);
+                clsUtils.BindDropDown(drpFiscalYear, dt, "FiscalYear_ID", "FiscalYear");
 
-                if (objDS.Tables.Count > 0)
-                {
-                    drpFiscalYear.DataSource = objDS.Tables[0];
-                    drpFiscalYear.DataBind();
-                   // drpFiscalYear.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select Fiscal Year", "-1"));
-
-                   // drpFiscalYear.SelectedIndex = 0;
-
-                }
-
-                objDS.Dispose();
+                
                 //Fill Enzyme
                 objclsDemographicBAL.getEnzymeDetails_BAL(ref objDS);
 
@@ -138,11 +127,7 @@ namespace EnzymeWeb
                     drpEnzyme.SelectedIndex = 0;
                 }
 
-                // drpCountry.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select a Country","-1"));
-                // drpCountry.SelectedIndex = 0;
 
-                // drpSiteName.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select a Site","-1"));
-                //drpSiteName.SelectedIndex = 0;
             }
             finally
             {
@@ -162,13 +147,13 @@ namespace EnzymeWeb
 
                     objclsDemographicBAL.getCountryDetails_BAL(regID, ref objDS);
 
-                    if (objDS.Tables.Count > 0)
-                    {
-                        drpCountry.DataSource = objDS.Tables[0];
-                        drpCountry.DataBind();
-                        //drpCountry.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select a Country","-1"));
-                        //drpCountry.SelectedIndex = 0;
-                    }
+                    //if (objDS.Tables.Count > 0)
+                    //{
+                    //    drpCountry.DataSource = objDS.Tables[0];
+                    //    drpCountry.DataBind();
+                    //}
+
+                    clsUtils.BindDropDown(drpCountry, objDS.Tables[0], "Country_ID", "Country_Name");
                 }
             }
             finally
@@ -192,13 +177,14 @@ namespace EnzymeWeb
 
                     objclsDemographicBAL.getSiteNameDetails_BAL(regID, cntryID, ref objDS);
 
-                    if (objDS.Tables.Count > 0)
-                    {
-                        drpSiteName.DataSource = objDS.Tables[0];
-                        drpSiteName.DataBind();
-                        // drpSiteName.Items.Insert(0, new DevExpress.Web.ASPxEditors.ListEditItem("Select a Site","-1"));
-                        // drpSiteName.SelectedIndex = 0;
-                    }
+                    //if (objDS.Tables.Count > 0)
+                    //{
+                    //    drpSiteName.DataSource = objDS.Tables[0];
+                    //    drpSiteName.DataBind();
+                    //}
+
+                    clsUtils.BindDropDown(drpSiteName, objDS.Tables[0], "Site_ID", "SiteName");
+
                 }
                 lblBusinessUnit.Text = string.Empty;
                 lblCategory.Text = string.Empty;
@@ -300,6 +286,8 @@ namespace EnzymeWeb
 
                     string pltform = objDS.Tables[0].Rows[0]["Platform"] == null ? string.Empty : objDS.Tables[0].Rows[0]["Platform"].ToString();
 
+
+
                     if (pltform == "Liquid")
                     {
                         rdPlatform.Items[0].Selected = true;
@@ -320,6 +308,7 @@ namespace EnzymeWeb
                         IsOther = true;
                     }
 
+
                     string empStatus = objDS.Tables[0].Rows[0]["EmploymentStatus"] == null ? string.Empty : objDS.Tables[0].Rows[0]["EmploymentStatus"].ToString();
                     if (empStatus == "Contractors")
                     {
@@ -333,11 +322,18 @@ namespace EnzymeWeb
 
                     string fiscalYear = objDS.Tables[0].Rows[0]["FiscalYear"] == null ? "0" : objDS.Tables[0].Rows[0]["FiscalYear_ID"].ToString();
 
-                    drpFiscalYear.Items.FindByValue(fiscalYear).Selected = true;
+                    //ListEditItem li = drpFiscalYear.Items.FindByValue(fiscalYear);
+                    //if (li != null)
+                    //{
+                    //    li.Selected = true;
+                    //}
+                    clsUtils.SetDropdown(drpFiscalYear, fiscalYear);
+                    //drpFiscalYear.Items.FindByValue(fiscalYear).Selected = true;
 
 
                     string campaign = objDS.Tables[0].Rows[0]["Campaign"] == null ? string.Empty : objDS.Tables[0].Rows[0]["Campaign"].ToString();
-
+                    
+                    
                     if (campaign == "Spring")
                     {
                         rdCompaign.Items[0].Selected = true;

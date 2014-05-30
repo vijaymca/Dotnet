@@ -62,6 +62,10 @@
       <Project>{8B353424-4245-4BE7-BD7C-9981C0D13432}</Project>
       <Name>EnzymeEntities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EnzymeErrorLog\EnzymeErrorLog.csproj">
+      <Project>{0BA14847-4BB3-454B-B9C0-E7E00CA33303}</Project>
+      <Name>EnzymeErrorLog</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

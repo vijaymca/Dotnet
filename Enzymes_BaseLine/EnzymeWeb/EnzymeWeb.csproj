@@ -125,6 +125,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsUtils.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -204,6 +205,10 @@
     <ProjectReference Include="..\EnzymeEntities\EnzymeEntities.csproj">
       <Project>{8B353424-4245-4BE7-BD7C-9981C0D13432}</Project>
       <Name>EnzymeEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EnzymeErrorLog\EnzymeErrorLog.csproj">
+      <Project>{0BA14847-4BB3-454B-B9C0-E7E00CA33303}</Project>
+      <Name>EnzymeErrorLog</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

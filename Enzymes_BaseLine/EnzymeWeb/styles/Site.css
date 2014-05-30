@@ -438,3 +438,8 @@ div.accountInfo
     background-image: url('../styles/Images/content_bg.jpg');
     width:100%;
     }
+
+.readOnly
+{
+    background-color:Gray;
+    }

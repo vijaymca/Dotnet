@@ -34,8 +34,6 @@
                 return false;
             }
         }
-
-	
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PlaceHolderMain" runat="server">
@@ -367,7 +365,7 @@
                                         <td >
                                         <dx:ASPxLabel ID="lblEnzyme" Visible="false" runat="server" Text="ASPxLabel">
                                             </dx:ASPxLabel>
-                                            <dx:ASPxComboBox SelectedIndex="0" ID="drpEnzyme" Width="300" TextField="EnzymeName"
+                                            <dx:ASPxComboBox TabIndex="25" SelectedIndex="0" ID="drpEnzyme" Width="300" TextField="EnzymeName"
                                                 ValueField="Enzyme_ID" runat="server" ValueType="System.String">
                                             </dx:ASPxComboBox>
                                             
@@ -378,14 +376,20 @@
                                             <div class="moduleCont">
                                                 <table width="100%">
                                                     <tr class="clsModule">
-                                                        <td width="300px">
+                                                        <td width="400px">
                                                             Module:
                                                         </td>
-                                                        <td width="250px">
+                                                        <td width="150px">
                                                             MAKING
                                                         </td>
-                                                        <td width="500px">
+                                                        <td width="150px">
+                                                            PACKING
+                                                        </td>
+                                                        <td width="150px">
                                                             DISTRIBUTION
+                                                        </td>
+                                                        <td width="300px">
+                                                            OTHERS
                                                             <div style="font-weight: normal; float: right; padding-right: 5px">
                                                                 Note: Enter Numeric values only</div>
                                                         </td>
@@ -403,9 +407,24 @@
                                                             </dx:ASPxTextBox>
                                                         </td>
                                                         <td>
-                                                            <dx:ASPxTextBox TabIndex="6" ID="txt_tot_num_of_exp_ind_distr" runat="server" Width="170px"
+                                                         <dx:ASPxTextBox TabIndex="7" Number="0" ID="txt2Tot_num_f_exp_ind" runat="server"
+                                                                Width="170px">
+                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
+                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
+                                                                </ValidationSettings>
+                                                            </dx:ASPxTextBox>
+                                                        </td>
+                                                        <td>
+                                                            <dx:ASPxTextBox TabIndex="13" ID="txt_tot_num_of_exp_ind_distr" runat="server" Width="170px"
                                                                 Number="0">
                                                                 <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
+                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
+                                                                </ValidationSettings>
+                                                            </dx:ASPxTextBox>
+                                                        </td>
+                                                        <td>
+                                                           <dx:ASPxTextBox TabIndex="19" ID="txt_tot_num_of_exp_ind_Other" runat="server" Width="170px">
+                                                            <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
                                                                     <RequiredField IsRequired="true" ErrorText="Please enter Value" />
                                                                 </ValidationSettings>
                                                             </dx:ASPxTextBox>
@@ -417,14 +436,30 @@
                                                         </td>
                                                         <td>
                                                             <dx:ASPxTextBox SpinButtons-ShowIncrementButtons="false" Number="0" ID="txtTotalNumberofPreviousPositivesStillWorking"
-                                                                runat="server" Width="170px" TabIndex="1">
+                                                                runat="server" Width="170px" TabIndex="2">
                                                                 <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
                                                                     <RequiredField IsRequired="true" ErrorText="Please enter Value" />
                                                                 </ValidationSettings>
                                                             </dx:ASPxTextBox>
                                                         </td>
                                                         <td>
-                                                            <dx:ASPxTextBox TabIndex="7" ID="txt_tot_num_pre_pos_st_wrk_distr" runat="server"
+                                                            <dx:ASPxTextBox TabIndex="8" Number="0" ID="txt2_tot_num_f_pre_pos_sti_wor" runat="server"
+                                                                Width="170px">
+                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
+                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
+                                                                </ValidationSettings>
+                                                            </dx:ASPxTextBox>
+                                                        </td>
+                                                        <td>
+                                                            <dx:ASPxTextBox TabIndex="14" ID="txt_tot_num_pre_pos_st_wrk_distr" runat="server"
+                                                                Width="170px">
+                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
+                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
+                                                                </ValidationSettings>
+                                                            </dx:ASPxTextBox>
+                                                        </td>
+                                                        <td>
+                                                            <dx:ASPxTextBox TabIndex="20" ID="tot_num_of_pre_pos_stil_work_other" runat="server"
                                                                 Width="170px">
                                                                 <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
                                                                     <RequiredField IsRequired="true" ErrorText="Please enter Value" />
@@ -436,15 +471,30 @@
                                                         <td>
                                                             Total Number of Baseline Positive Individuals<span class="clsmandtr">*</span>
                                                         </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox TabIndex="2" ID="txtTot_Num_Basline_Pos_Ind" runat="server" Width="170px">
+                                                       <td>
+                                                            <dx:ASPxTextBox TabIndex="3" ID="txtTot_Num_Basline_Pos_Ind" runat="server" Width="170px">
                                                                 <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
                                                                     <RequiredField IsRequired="true" ErrorText="Please enter Value" />
                                                                 </ValidationSettings>
                                                             </dx:ASPxTextBox>
                                                         </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox TabIndex="8" ID="txt_tot_num_of_base_pos_ind_distr" runat="server"
+                                                       <td>
+                                                            <dx:ASPxTextBox TabIndex="9" ID="txt2_num_f_bas_pos_ind" runat="server" Width="170px">
+                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
+                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
+                                                                </ValidationSettings>
+                                                            </dx:ASPxTextBox>
+                                                        </td>
+                                                       <td>
+                                                            <dx:ASPxTextBox TabIndex="15" ID="txt_tot_num_of_base_pos_ind_distr" runat="server"
+                                                                Width="170px">
+                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
+                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
+                                                                </ValidationSettings>
+                                                            </dx:ASPxTextBox>
+                                                        </td>
+                                                       <td>
+                                                            <dx:ASPxTextBox TabIndex="21" ID="txt_tot_num_of_base_pos_ind_other" runat="server"
                                                                 Width="170px">
                                                                 <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
                                                                     <RequiredField IsRequired="true" ErrorText="Please enter Value" />
@@ -457,14 +507,29 @@
                                                             Total not available for testing<span class="clsmandtr">*</span>
                                                         </td>
                                                         <td>
-                                                            <dx:ASPxTextBox TabIndex="3" ID="txtTot_Ava_for_testing" runat="server" Width="170px">
+                                                            <dx:ASPxTextBox TabIndex="4" ID="txtTot_Ava_for_testing" runat="server" Width="170px">
                                                                 <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
                                                                     <RequiredField IsRequired="true" ErrorText="Please enter Value" />
                                                                 </ValidationSettings>
                                                             </dx:ASPxTextBox>
                                                         </td>
                                                         <td>
-                                                            <dx:ASPxTextBox TabIndex="9" ID="txt_tot_not_ava_for_test_distr" runat="server" Width="170px">
+                                                            <dx:ASPxTextBox TabIndex="10" ID="txt2_tot_avai_f_test" runat="server" Width="170px">
+                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
+                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
+                                                                </ValidationSettings>
+                                                            </dx:ASPxTextBox>
+                                                        </td>
+                                                        <td>
+                                                            <dx:ASPxTextBox TabIndex="16" ID="txt_tot_not_ava_for_test_distr" runat="server" Width="170px">
+                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
+                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
+                                                                </ValidationSettings>
+                                                            </dx:ASPxTextBox>
+                                                        </td>
+                                                        <td>
+                                                            <dx:ASPxTextBox TabIndex="22" ID="txt_tot_not_avai_for_test_Other" runat="server"
+                                                                Width="170px">
                                                                 <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
                                                                     <RequiredField IsRequired="true" ErrorText="Please enter Value" />
                                                                 </ValidationSettings>
@@ -476,7 +541,7 @@
                                                             Total to be Tested<span class="clsmandtr">*</span>
                                                         </td>
                                                         <td>
-                                                            <dx:ASPxTextBox SpinButtons-ShowIncrementButtons="false" ReadOnly="true" Number="0"
+                                                            <dx:ASPxTextBox BackColor="LightGray" SpinButtons-ShowIncrementButtons="false" ReadOnly="true" Number="0"
                                                                 ID="txtTot_tobe_Tested" runat="server" Width="170px">
                                                                 <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
                                                                     <RequiredField IsRequired="true" ErrorText="Please enter Value" />
@@ -484,8 +549,24 @@
                                                             </dx:ASPxTextBox>
                                                         </td>
                                                         <td>
-                                                            <dx:ASPxTextBox SpinButtons-ShowIncrementButtons="false" ReadOnly="true" Number="0"
+                                                            <dx:ASPxTextBox BackColor="LightGray" SpinButtons-ShowIncrementButtons="false" MinValue="0" ReadOnly="true"
+                                                                Number="0" ID="txt2_tot_tob_test" runat="server" Width="170px">
+                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
+                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
+                                                                </ValidationSettings>
+                                                            </dx:ASPxTextBox>
+                                                        </td>
+                                                        <td>
+                                                            <dx:ASPxTextBox BackColor="LightGray" SpinButtons-ShowIncrementButtons="false" ReadOnly="true" Number="0"
                                                                 ID="txt_tot_to_be_test_distr" runat="server" Width="170px">
+                                                            </dx:ASPxTextBox>
+                                                        </td>
+                                                        <td>
+                                                            <dx:ASPxTextBox BackColor="LightGray" SpinButtons-ShowIncrementButtons="false" MinValue="0" ReadOnly="true"
+                                                                Number="0" ID="txt_tot_to_be_test_Other" runat="server" Width="170px">
+                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
+                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
+                                                                </ValidationSettings>
                                                             </dx:ASPxTextBox>
                                                         </td>
                                                     </tr>
@@ -493,16 +574,32 @@
                                                         <td>
                                                             Total New positives with prior negative skin test<span class="clsmandtr">*</span>
                                                         </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox TabIndex="4" ID="txt_Tot_new_pos_wit_prior_nega_skin_tes" runat="server"
+                                                       <td>
+                                                            <dx:ASPxTextBox TabIndex="5" ID="txt_Tot_new_pos_wit_prior_nega_skin_tes" runat="server"
                                                                 Width="170px">
                                                                 <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
                                                                     <RequiredField IsRequired="true" ErrorText="Please enter Value" />
                                                                 </ValidationSettings>
                                                             </dx:ASPxTextBox>
                                                         </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox TabIndex="10" ID="txt_tot_new_pos_wit_pri_neg_skin_test_distr" runat="server"
+                                                       <td>
+                                                            <dx:ASPxTextBox TabIndex="11" ID="txt2_tot_new_pos_wt_pri_neg_skintest" runat="server"
+                                                                Width="170px">
+                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
+                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
+                                                                </ValidationSettings>
+                                                            </dx:ASPxTextBox>
+                                                        </td>
+                                                       <td>
+                                                            <dx:ASPxTextBox TabIndex="17" ID="txt_tot_new_pos_wit_pri_neg_skin_test_distr" runat="server"
+                                                                Width="170px">
+                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
+                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
+                                                                </ValidationSettings>
+                                                            </dx:ASPxTextBox>
+                                                        </td>
+                                                       <td>
+                                                            <dx:ASPxTextBox TabIndex="23" ID="txt_tot_new_pos_wit_pri_neg_ski_test_Other" runat="server"
                                                                 Width="170px">
                                                                 <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
                                                                     <RequiredField IsRequired="true" ErrorText="Please enter Value" />
@@ -514,16 +611,30 @@
                                                         <td>
                                                             Number of Skin Test Negatives<span class="clsmandtr">*</span>
                                                         </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox TabIndex="5" ID="txt_num_skin_test_neg" runat="server" Width="170px">
+                                                       <td>
+                                                            <dx:ASPxTextBox TabIndex="6" ID="txt_num_skin_test_neg" runat="server" Width="170px">
                                                                 <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
                                                                     <RequiredField IsRequired="true" ErrorText="Please enter Value" />
                                                                 </ValidationSettings>
                                                             </dx:ASPxTextBox>
                                                         </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox TabIndex="11" ID="txt_num_of_skin_test_neg_distr" runat="server"
+                                                       <td>
+                                                            <dx:ASPxTextBox TabIndex="12" ID="txt2num_f_ski_tes_neg" runat="server" Width="170px">
+                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
+                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
+                                                                </ValidationSettings>
+                                                            </dx:ASPxTextBox>
+                                                        </td>
+                                                       <td>
+                                                            <dx:ASPxTextBox TabIndex="18" ID="txt_num_of_skin_test_neg_distr" runat="server"
                                                                 Width="170px">
+                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
+                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
+                                                                </ValidationSettings>
+                                                            </dx:ASPxTextBox>
+                                                        </td>
+                                                       <td>
+                                                            <dx:ASPxTextBox TabIndex="24" ID="txt_num_of_ski_neg_Other" runat="server" Width="170px">
                                                                 <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
                                                                     <RequiredField IsRequired="true" ErrorText="Please enter Value" />
                                                                 </ValidationSettings>
@@ -535,7 +646,7 @@
                                                             Number of non-participants (available but not tested)<span class="clsmandtr">*</span>
                                                         </td>
                                                         <td>
-                                                            <dx:ASPxTextBox ReadOnly="true" Number="0" ID="txtNum_non_participants" runat="server"
+                                                            <dx:ASPxTextBox BackColor="LightGray" ReadOnly="true" Number="0" ID="txtNum_non_participants" runat="server"
                                                                 Width="170px">
                                                                 <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
                                                                     <RequiredField IsRequired="true" ErrorText="Please enter Value" />
@@ -543,8 +654,24 @@
                                                             </dx:ASPxTextBox>
                                                         </td>
                                                         <td>
-                                                            <dx:ASPxTextBox SpinButtons-ShowIncrementButtons="false" ReadOnly="true" Number="0"
+                                                            <dx:ASPxTextBox BackColor="LightGray" SpinButtons-ShowIncrementButtons="false" MinValue="0" ReadOnly="true"
+                                                                Number="0" ID="txt2num_f_non_participants" runat="server" Width="170px">
+                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
+                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
+                                                                </ValidationSettings>
+                                                            </dx:ASPxTextBox>
+                                                        </td>
+                                                        <td>
+                                                            <dx:ASPxTextBox BackColor="LightGray" SpinButtons-ShowIncrementButtons="false" ReadOnly="true" Number="0"
                                                                 ID="txt_num_of_non_part_distr" runat="server" Width="170px">
+                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
+                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
+                                                                </ValidationSettings>
+                                                            </dx:ASPxTextBox>
+                                                        </td>
+                                                        <td>
+                                                            <dx:ASPxTextBox BackColor="LightGray" SpinButtons-ShowIncrementButtons="false" MinValue="0" ReadOnly="true"
+                                                                Number="0" ID="txt_num_non_parti_other" runat="server" Width="170px" ValidationSettings-ValidateOnLeave="true">
                                                                 <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
                                                                     <RequiredField IsRequired="true" ErrorText="Please enter Value" />
                                                                 </ValidationSettings>
@@ -555,7 +682,7 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr>
+                                   <%-- <tr>
                                         <td colspan="3">
                                             <div class="moduleCont">
                                                 <table width="100%">
@@ -577,165 +704,63 @@
                                                             Total number of exposed individuals<span class="clsmandtr">*</span>
                                                         </td>
                                                         <td>
-                                                            <dx:ASPxTextBox TabIndex="12" Number="0" ID="txt2Tot_num_f_exp_ind" runat="server"
-                                                                Width="170px">
-                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
-                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
-                                                                </ValidationSettings>
-                                                            </dx:ASPxTextBox>
                                                         </td>
                                                         <td>
-                                                            <dx:ASPxTextBox TabIndex="18" ID="txt_tot_num_of_exp_ind_Other" runat="server" Width="170px">
-                                                            </dx:ASPxTextBox>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             Total Number of Previous Positives Still Working<span class="clsmandtr">*</span>
                                                         </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox TabIndex="13" Number="0" ID="txt2_tot_num_f_pre_pos_sti_wor" runat="server"
-                                                                Width="170px">
-                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
-                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
-                                                                </ValidationSettings>
-                                                            </dx:ASPxTextBox>
-                                                        </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox TabIndex="19" ID="tot_num_of_pre_pos_stil_work_other" runat="server"
-                                                                Width="170px">
-                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
-                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
-                                                                </ValidationSettings>
-                                                            </dx:ASPxTextBox>
-                                                        </td>
+                                                        
+                                                      
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             Total Number of Baseline Positive Individuals<span class="clsmandtr">*</span>
                                                         </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox TabIndex="14" ID="txt2_num_f_bas_pos_ind" runat="server" Width="170px">
-                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
-                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
-                                                                </ValidationSettings>
-                                                            </dx:ASPxTextBox>
-                                                        </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox TabIndex="20" ID="txt_tot_num_of_base_pos_ind_other" runat="server"
-                                                                Width="170px">
-                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
-                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
-                                                                </ValidationSettings>
-                                                            </dx:ASPxTextBox>
-                                                        </td>
+                                                       
+                                                        
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             Total not available for testing<span class="clsmandtr">*</span>
                                                         </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox TabIndex="15" ID="txt2_tot_avai_f_test" runat="server" Width="170px">
-                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
-                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
-                                                                </ValidationSettings>
-                                                            </dx:ASPxTextBox>
-                                                        </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox TabIndex="21" ID="txt_tot_not_avai_for_test_Other" runat="server"
-                                                                Width="170px">
-                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
-                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
-                                                                </ValidationSettings>
-                                                            </dx:ASPxTextBox>
-                                                        </td>
+                                                       
+                                                        
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             Total to be Tested<span class="clsmandtr">*</span>
                                                         </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox SpinButtons-ShowIncrementButtons="false" MinValue="0" ReadOnly="true"
-                                                                Number="0" ID="txt2_tot_tob_test" runat="server" Width="170px">
-                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
-                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
-                                                                </ValidationSettings>
-                                                            </dx:ASPxTextBox>
-                                                        </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox SpinButtons-ShowIncrementButtons="false" MinValue="0" ReadOnly="true"
-                                                                Number="0" ID="txt_tot_to_be_test_Other" runat="server" Width="170px">
-                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
-                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
-                                                                </ValidationSettings>
-                                                            </dx:ASPxTextBox>
-                                                        </td>
+                                                      
+                                                        
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             Total New positives with prior negative skin test<span class="clsmandtr">*</span>
                                                         </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox TabIndex="16" ID="txt2_tot_new_pos_wt_pri_neg_skintest" runat="server"
-                                                                Width="170px">
-                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
-                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
-                                                                </ValidationSettings>
-                                                            </dx:ASPxTextBox>
-                                                        </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox TabIndex="22" ID="txt_tot_new_pos_wit_pri_neg_ski_test_Other" runat="server"
-                                                                Width="170px">
-                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
-                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
-                                                                </ValidationSettings>
-                                                            </dx:ASPxTextBox>
-                                                        </td>
+                                                      
+                                                     
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             Number of Skin Test Negatives<span class="clsmandtr">*</span>
                                                         </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox TabIndex="17" ID="txt2num_f_ski_tes_neg" runat="server" Width="170px">
-                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
-                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
-                                                                </ValidationSettings>
-                                                            </dx:ASPxTextBox>
-                                                        </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox TabIndex="23" ID="txt_num_of_ski_neg_Other" runat="server" Width="170px">
-                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
-                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
-                                                                </ValidationSettings>
-                                                            </dx:ASPxTextBox>
-                                                        </td>
+                                                    
+                                                  
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             Number of non-participants (available but not tested)<span class="clsmandtr">*</span>
                                                         </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox SpinButtons-ShowIncrementButtons="false" MinValue="0" ReadOnly="true"
-                                                                Number="0" ID="txt2num_f_non_participants" runat="server" Width="170px">
-                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
-                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
-                                                                </ValidationSettings>
-                                                            </dx:ASPxTextBox>
-                                                        </td>
-                                                        <td>
-                                                            <dx:ASPxTextBox SpinButtons-ShowIncrementButtons="false" MinValue="0" ReadOnly="true"
-                                                                Number="0" ID="txt_num_non_parti_other" runat="server" Width="170px" ValidationSettings-ValidateOnLeave="true">
-                                                                <ValidationSettings Display="Dynamic" ErrorDisplayMode="ImageWithTooltip">
-                                                                    <RequiredField IsRequired="true" ErrorText="Please enter Value" />
-                                                                </ValidationSettings>
-                                                            </dx:ASPxTextBox>
-                                                        </td>
+                                                       
+                                                       
                                                     </tr>
                                                 </table>
                                             </div>
                                         </td>
-                                    </tr>
+                                    </tr>--%>
                                 </table>
                             </dx:PanelContent>
                         </PanelCollection>

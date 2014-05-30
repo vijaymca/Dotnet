@@ -25,7 +25,7 @@ $(document).ready(function () {
 	        if (String.fromCharCode(e.keyCode).match(/[^0-9]/g))
 	            return false;
 	    });
-	   // $(this).val('0');
+
 	});
 
     //Medical in Demographic
@@ -152,7 +152,8 @@ function chkMedical() {
     if (TotalSitePopulation < Grade1MedicalMonitor) {
         alert('Number of Individuals In Grade 1 Medical Monitoring Program can not exceed Total Site Population');
 
-        $('#PlaceHolderMain_txtMedicalMonitor_I').focus();
+        $('#PlaceHolderMain_txtMedicalMonitor_I').val('0');
+        $('#PlaceHolderMain_txtTotalSitePop_I').focus();
     }
 }
 
