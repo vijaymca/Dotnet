@@ -1,0 +1,29 @@
+﻿
+<Advertisements>
+    <Ad>
+        <ImageUrl>http://blogs.technet.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-80-54-metablogapi/2605.logo_5F00_245CD70A.png</ImageUrl>
+        <NavigateUrl>https://www.bing.com</NavigateUrl>
+        <AlternateText>ASP.NET Logo</AlternateText>
+        <Keyword>A</Keyword>
+        <Impressions>Technology</Impressions>
+        <Caption>This is the caption for Ad#1</Caption> 
+    </Ad>
+
+   <Ad>
+        <ImageUrl>http://blog.cardinalscholars.com/wp-content/uploads/2013/05/Google_wordmark.gif</ImageUrl>
+        <NavigateUrl>https://www.bing.com</NavigateUrl>
+        <AlternateText>ASP.NET Logo</AlternateText>
+        <Keyword>A</Keyword>
+        <Impressions>Technology</Impressions>
+        <Caption>This is the caption for Ad#1</Caption> 
+    </Ad>
+
+   <Ad>
+        <ImageUrl>http://netdna.webdesignerdepot.com/uploads/2013/02/featured35@wdd2x.jpg</ImageUrl>
+        <NavigateUrl>http://www.yahoo.com</NavigateUrl>
+        <AlternateText>ASP.NET Logo</AlternateText>
+        <Keyword>A</Keyword>
+        <Impressions>Technology</Impressions>
+        <Caption>This is the caption for Ad#1</Caption> 
+    </Ad>
+</Advertisements>
