@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8B702F02-C7C8-485D-8359-20FD60A25F32}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shell.SharePoint.DWB.UserInterfaceLayer</RootNamespace>
+    <AssemblyName>Shell.SharePoint.DWB.UserInterfaceLayer</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\Shell.SharePoint.DREAM.Strongname.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Publishing, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files\Microsoft Office Servers\12.0\Bin\Microsoft.SharePoint.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="Telerik.Web.UI, Version=2010.1.415.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dev Folder\Telerik Updated DLLs\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GlobalAssemblyInfo.cs">
+      <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="BatchImportLongRunningProcess.cs" />
+    <Compile Include="User Controls\EditStaffPrivilege.ascx.cs">
+      <DependentUpon>EditStaffPrivilege.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\EditStaffPrivilege.ascx.designer.cs">
+      <DependentUpon>EditStaffPrivilege.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\eWBBookViewer.ascx.cs">
+      <DependentUpon>eWBBookViewer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\eWBBookViewer.ascx.designer.cs">
+      <DependentUpon>eWBBookViewer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\BatchImport.ascx.cs">
+      <DependentUpon>BatchImport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\BatchImport.ascx.designer.cs">
+      <DependentUpon>BatchImport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\BatchImportConfiguration.ascx.cs">
+      <DependentUpon>BatchImportConfiguration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\BatchImportConfiguration.ascx.designer.cs">
+      <DependentUpon>BatchImportConfiguration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\BatchImportConfirmation.ascx.cs">
+      <DependentUpon>BatchImportConfirmation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\BatchImportConfirmation.ascx.designer.cs">
+      <DependentUpon>BatchImportConfirmation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\BatchImportStatus.ascx.cs">
+      <DependentUpon>BatchImportStatus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\BatchImportStatus.ascx.designer.cs">
+      <DependentUpon>BatchImportStatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\ChapterMaintenance.ascx.cs">
+      <DependentUpon>ChapterMaintenance.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\ChapterMaintenance.ascx.designer.cs">
+      <DependentUpon>ChapterMaintenance.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\ExceptionControl.ascx.cs">
+      <DependentUpon>ExceptionControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\ExceptionControl.ascx.designer.cs">
+      <DependentUpon>ExceptionControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\PageAuditTrail.ascx.cs">
+      <DependentUpon>PageAuditTrail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\PageAuditTrail.ascx.designer.cs">
+      <DependentUpon>PageAuditTrail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\PDFListViwer.ascx.cs">
+      <DependentUpon>PDFListViwer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\PDFListViwer.ascx.designer.cs">
+      <DependentUpon>PDFListViwer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\RankStaff.ascx.cs">
+      <DependentUpon>RankStaff.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\RankStaff.ascx.designer.cs">
+      <DependentUpon>RankStaff.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\AddRemovePrivileges.ascx.cs">
+      <DependentUpon>AddRemovePrivileges.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\AddRemovePrivileges.ascx.designer.cs">
+      <DependentUpon>AddRemovePrivileges.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\AlterPageSequence.ascx.cs">
+      <DependentUpon>AlterPageSequence.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\AlterPageSequence.ascx.designer.cs">
+      <DependentUpon>AlterPageSequence.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UIHelper.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\AddChapter.ascx.cs">
+      <DependentUpon>AddChapter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\AddChapter.ascx.designer.cs">
+      <DependentUpon>AddChapter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\ChangePageOwner.ascx.cs">
+      <DependentUpon>ChangePageOwner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\ChangePageOwner.ascx.designer.cs">
+      <DependentUpon>ChangePageOwner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\ChapterPage.ascx.cs">
+      <DependentUpon>ChapterPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\ChapterPage.ascx.designer.cs">
+      <DependentUpon>ChapterPage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\PublishedDocument.ascx.cs">
+      <DependentUpon>PublishedDocument.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\PublishedDocument.ascx.designer.cs">
+      <DependentUpon>PublishedDocument.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\MasterPages.ascx.cs">
+      <DependentUpon>MasterPages.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\MasterPages.ascx.designer.cs">
+      <DependentUpon>MasterPages.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User Controls\PageComments.ascx.cs">
+      <DependentUpon>PageComments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\PageComments.ascx.designer.cs">
+      <DependentUpon>PageComments.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\PageNarrative.ascx.cs">
+      <DependentUpon>PageNarrative.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\PageNarrative.ascx.designer.cs">
+      <DependentUpon>PageNarrative.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\PageStoryBoard.ascx.cs">
+      <DependentUpon>PageStoryBoard.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\PageStoryBoard.ascx.designer.cs">
+      <DependentUpon>PageStoryBoard.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\StoryBoardConfirmation.ascx.cs">
+      <DependentUpon>StoryBoardConfirmation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\StoryBoardConfirmation.ascx.designer.cs">
+      <DependentUpon>StoryBoardConfirmation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\TeamRegistration.ascx.cs">
+      <DependentUpon>TeamRegistration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\TeamRegistration.ascx.designer.cs">
+      <DependentUpon>TeamRegistration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\Template.ascx.cs">
+      <DependentUpon>Template.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\Template.ascx.designer.cs">
+      <DependentUpon>Template.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\TemplatePages.ascx.cs">
+      <DependentUpon>TemplatePages.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\TemplatePages.ascx.designer.cs">
+      <DependentUpon>TemplatePages.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UploadDocument.ascx.cs">
+      <DependentUpon>UploadDocument.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\UploadDocument.ascx.designer.cs">
+      <DependentUpon>UploadDocument.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UserRegistration.ascx.cs">
+      <DependentUpon>UserRegistration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\UserRegistration.ascx.designer.cs">
+      <DependentUpon>UserRegistration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UserUploaded.ascx.cs">
+      <DependentUpon>UserUploaded.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\UserUploaded.ascx.designer.cs">
+      <DependentUpon>UserUploaded.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\WellBook.ascx.cs">
+      <DependentUpon>WellBook.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\WellBook.ascx.designer.cs">
+      <DependentUpon>WellBook.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\WellBookPublishConfirmation.ascx.cs">
+      <DependentUpon>WellBookPublishConfirmation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\WellBookPublishConfirmation.ascx.designer.cs">
+      <DependentUpon>WellBookPublishConfirmation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\WellBookSummary.ascx.cs">
+      <DependentUpon>WellBookSummary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Controls\WellBookSummary.ascx.designer.cs">
+      <DependentUpon>WellBookSummary.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="User Controls\EditStaffPrivilege.ascx" />
+    <Content Include="User Controls\eWBBookViewer.ascx" />
+    <Content Include="Images\ARRDOWN.GIF" />
+    <Content Include="Images\ARRUP.GIF" />
+    <Content Include="layoutfiles\DWBPrint.htm" />
+    <Content Include="Styles\DWBPrinterStyles.css" />
+    <Content Include="User Controls\BatchImport.ascx" />
+    <Content Include="User Controls\BatchImportConfiguration.ascx" />
+    <Content Include="User Controls\BatchImportConfirmation.ascx" />
+    <Content Include="User Controls\BatchImportStatus.ascx" />
+    <Content Include="User Controls\ChapterMaintenance.ascx" />
+    <Content Include="Images\DWBAdminbullets.gif" />
+    <Content Include="Images\Gray3D-1Lh.gif" />
+    <Content Include="Images\Gray3D-1Rh.GIF" />
+    <Content Include="Images\Gray3D-2Fh.gif" />
+    <Content Include="Images\Gray3D-2Lh.GIF" />
+    <Content Include="Images\Gray3D-2Rh.GIF" />
+    <Content Include="Java Scripts\jquery-1.3.2.min.js" />
+    <Content Include="layoutfiles\AccessDenied.html" />
+    <Content Include="layoutfiles\Audit.htm" />
+    <Content Include="layoutfiles\UserRegistration.html" />
+    <Content Include="User Controls\ExceptionControl.ascx" />
+    <Content Include="User Controls\PageAuditTrail.ascx" />
+    <Content Include="User Controls\PDFListViwer.ascx" />
+    <Content Include="User Controls\RankStaff.ascx" />
+    <Content Include="Styles\DWBHistoryReport.css" />
+    <Content Include="Styles\DWBTab.css" />
+    <Content Include="Styles\WellHistoryStyle.css" />
+    <Content Include="User Controls\AddRemovePrivileges.ascx" />
+    <Content Include="User Controls\AlterPageSequence.ascx" />
+    <Content Include="Java Scripts\DualListScript.js" />
+    <Content Include="Java Scripts\DWBJavascriptFunctionRel2_0.js" />
+    <Content Include="Java Scripts\DynamicListBoxScript.js" />
+    <Content Include="Styles\DWBReportLayout.css" />
+    <Content Include="Styles\DWBStyleSheetRel2_0.css" />
+    <Content Include="User Controls\AddChapter.ascx" />
+    <Content Include="User Controls\ChangePageOwner.ascx" />
+    <Content Include="User Controls\ChapterPage.ascx" />
+    <Content Include="User Controls\PublishedDocument.ascx" />
+    <Content Include="User Controls\MasterPages.ascx" />
+    <Content Include="User Controls\PageComments.ascx" />
+    <Content Include="User Controls\PageNarrative.ascx" />
+    <Content Include="User Controls\PageStoryBoard.ascx" />
+    <Content Include="User Controls\StoryBoardConfirmation.ascx" />
+    <Content Include="User Controls\TeamRegistration.ascx" />
+    <Content Include="User Controls\Template.ascx" />
+    <Content Include="User Controls\TemplatePages.ascx" />
+    <Content Include="User Controls\UploadDocument.ascx" />
+    <Content Include="User Controls\UserRegistration.ascx" />
+    <Content Include="User Controls\UserUploaded.ascx" />
+    <Content Include="User Controls\WellBook.ascx" />
+    <Content Include="User Controls\WellBookPublishConfirmation.ascx" />
+    <Content Include="User Controls\WellBookSummary.ascx" />
+    <Content Include="XSL Files\EPCatalog_Results.xsl" />
+    <Content Include="XSL Files\List Viewer DWBHome.xsl" />
+    <Content Include="XSL Files\List Viewer.xsl" />
+    <Content Include="XSL Files\PDFTabular Results.xsl" />
+    <Content Include="XSL Files\WellSummary.xsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shell.SharePoint.DREAM.Business.Entities\Shell.SharePoint.DREAM.Business.Entities.csproj">
+      <Project>{14301520-F0C1-4C41-8343-2DBA0574C40A}</Project>
+      <Name>Shell.SharePoint.DREAM.Business.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shell.SharePoint.DREAM.Controller\Shell.SharePoint.DREAM.Controller.csproj">
+      <Project>{7CBF91B2-36F2-47AB-9ABA-09479D4458F7}</Project>
+      <Name>Shell.SharePoint.DREAM.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shell.SharePoint.DREAM.CustomDataGrid\Shell.SharePoint.DREAM.CustomDataGrid.csproj">
+      <Project>{3292ABC8-AFCB-4857-A312-F0B43023946F}</Project>
+      <Name>Shell.SharePoint.DREAM.CustomDataGrid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shell.SharePoint.DREAM.Utilities\Shell.SharePoint.DREAM.Utilities.csproj">
+      <Project>{46EB578D-8395-4B8D-96B9-23398ABB1C71}</Project>
+      <Name>Shell.SharePoint.DREAM.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shell.SharePoint.DWB.Business.DataObjects\Shell.SharePoint.DWB.Business.DataObjects.csproj">
+      <Project>{C32F2834-279D-45BF-AB8B-E0691AF215C6}</Project>
+      <Name>Shell.SharePoint.DWB.Business.DataObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shell.SharePoint.DWB.BusinessLogicLayer\Shell.SharePoint.DWB.BusinessLogicLayer.csproj">
+      <Project>{E5F73FAD-BCF4-43C9-8ED7-E3619C63672C}</Project>
+      <Name>Shell.SharePoint.DWB.BusinessLogicLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shell.SharePoint.DWB.DualListControl\Shell.SharePoint.DWB.DualListControl.csproj">
+      <Project>{B180731B-C4AF-4753-BF41-29646F92C21B}</Project>
+      <Name>Shell.SharePoint.DWB.DualListControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shell.SharePoint.WebParts.DREAM.UserControlContainer\Shell.SharePoint.WebParts.DREAM.UserControlContainer.csproj">
+      <Project>{E862FD60-4851-43F9-9800-E94A6A6A158D}</Project>
+      <Name>Shell.SharePoint.WebParts.DREAM.UserControlContainer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shell.SharePoint.WebParts.DWB.WellBookViewer\Shell.SharePoint.WebParts.DWB.TreeViewControl.csproj">
+      <Project>{3F3791B3-5E5D-47C0-A023-7D8335185F84}</Project>
+      <Name>Shell.SharePoint.WebParts.DWB.TreeViewControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Shell.SharePoint.DREAM.Strongname.snk">
+      <Link>Shell.SharePoint.DREAM.Strongname.snk</Link>
+    </None>
+    <None Include="ItemTemplatesCache" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4828</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties BuildVersion_UseGlobalSettings="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>Copy "$(TargetDir)Shell.SharePoint.DWB.UserInterfaceLayer.dll" "%25Dependencies%25"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

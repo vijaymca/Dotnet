@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Audit Trail</title>
+    <link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/spshell.css" />
+    <script language="javascript" src="/_layouts/DREAM/Javascript/DWBJavascriptFunctionRel2_0.js"></script>
+    <link rel="stylesheet" type="text/css" href="/_layouts/DREAM/styles/DWBHistoryReport.css" />
+   <link rel="stylesheet" type="text/css" href="/_layouts/DREAM/styles/DWBReportLayout.css" /> 
+   <link rel="stylesheet" type="text/css" href="/_layouts/DREAM/styles/DWBStyleSheetRel2_0.css" /> 
+
+
+</head>
+<body onclick ="javascript:return false;">
+<table width="98%" height="100%">
+<tr>
+<td id="tdHeader" style=" font-weight :bold; font-size :small; text-align :left">
+
+</td>
+</tr>
+<tr>
+<td>
+<div id="tdContent" style="clear: both;overflow-y:auto;overflow-x:hidden; position:relative;width:100%;max-height:344px;height:expression(this.scrollHeight>344?'344px':'auto');">
+</div>    
+</td></tr>
+</table> 
+
+    <script type="text/JavaScript" language="javascript">
+    var fullURL = parent.document.URL;
+     fullURL = decode(fullURL);
+    var reportName = fullURL.substring(fullURL.indexOf('&reportName=')+12, fullURL.length);
+        tdHeader.innerHTML = "Audit Trail : " + reportName;
+
+        var div = document.createElement('div');        
+        var id = fullURL.substring(fullURL.indexOf('?id=')+4, fullURL.indexOf('&reportName='));        
+        var table =window.opener.document.getElementById(id);
+
+        var cTR = table.getElementsByTagName('TR');  //collection of rows	
+        for (i = 0; i < cTR.length; i++)
+        { 	      
+            var tr = cTR.item(i);	
+
+            tr.cells[0].style.width = "35%";
+            tr.cells[1].style.width = "30%";    
+            tr.cells[2].style.width = "35%";          
+        }
+        div.innerHTML = window.opener.document.getElementById(id).firstChild.firstChild.innerHTML;
+        tdContent.innerHTML = div.innerHTML;
+        
+        function decode(encoded) 
+        {	    	    
+	     var decoded = decodeURIComponent(encoded.replace(/\+/g,  " "));
+	     return decoded;
+        }
+        
+        function encode(url1)
+        {        
+	    var encoded = encodeURIComponent(url1);
+	    return encoded;
+        }
+    </script>
+</body>
+</html>

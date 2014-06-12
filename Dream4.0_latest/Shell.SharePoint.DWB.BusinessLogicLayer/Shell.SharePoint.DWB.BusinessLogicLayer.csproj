@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E5F73FAD-BCF4-43C9-8ED7-E3619C63672C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shell.SharePoint.DWB.BusinessLogicLayer</RootNamespace>
+    <AssemblyName>Shell.SharePoint.DWB.BusinessLogicLayer</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\Shell.SharePoint.DREAM.Strongname.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="vjslib" />
+    <Reference Include="wnvpdfcreator, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5b5f377bc08a4d32, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\wnvpdfcreator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GlobalAssemblyInfo.cs">
+      <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="BatchImportBLL.cs" />
+    <Compile Include="BatchImportXmlGeneratotorBLL.cs" />
+    <Compile Include="ChapterBLL.cs" />
+    <Compile Include="CommonBLL.cs" />
+    <Compile Include="ListViewerXMLGeneratorBLL.cs" />
+    <Compile Include="AdminBLL.cs" />
+    <Compile Include="MasterPageBLL.cs" />
+    <Compile Include="PdfBLL.cs" />
+    <Compile Include="PDFListVwrBLL.cs" />
+    <Compile Include="PDFServiceSPProxy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TeamStaffRegistrationBLL.cs" />
+    <Compile Include="TemplateDetailBLL.cs" />
+    <Compile Include="UserRegistrationBLL.cs" />
+    <Compile Include="WellBookBLL.cs" />
+    <Compile Include="WellBookTreeXMLGeneratorBLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shell.SharePoint.DREAM.Business.Entities\Shell.SharePoint.DREAM.Business.Entities.csproj">
+      <Project>{14301520-F0C1-4C41-8343-2DBA0574C40A}</Project>
+      <Name>Shell.SharePoint.DREAM.Business.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shell.SharePoint.DREAM.Controller\Shell.SharePoint.DREAM.Controller.csproj">
+      <Project>{7CBF91B2-36F2-47AB-9ABA-09479D4458F7}</Project>
+      <Name>Shell.SharePoint.DREAM.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shell.SharePoint.DREAM.CustomSOAPHeader\Shell.SharePoint.DREAM.CustomSOAPHeader.csproj">
+      <Project>{8BE0881D-5FED-44C9-AF62-984CC1DCF510}</Project>
+      <Name>Shell.SharePoint.DREAM.CustomSOAPHeader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shell.SharePoint.DREAM.SearchHelper\Shell.SharePoint.DREAM.SearchHelper.csproj">
+      <Project>{8F7144EC-FD1F-4AD1-A356-E8E74E88FEB8}</Project>
+      <Name>Shell.SharePoint.DREAM.SearchHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shell.SharePoint.DREAM.Utilities\Shell.SharePoint.DREAM.Utilities.csproj">
+      <Project>{46EB578D-8395-4B8D-96B9-23398ABB1C71}</Project>
+      <Name>Shell.SharePoint.DREAM.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shell.SharePoint.DWB.Business.DataObjects\Shell.SharePoint.DWB.Business.DataObjects.csproj">
+      <Project>{C32F2834-279D-45BF-AB8B-E0691AF215C6}</Project>
+      <Name>Shell.SharePoint.DWB.Business.DataObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shell.SharePoint.DWB.DataAccessLayer\Shell.SharePoint.DWB.DataAccessLayer.csproj">
+      <Project>{4F4033AB-F7F0-42C2-889D-0D30D4EA9269}</Project>
+      <Name>Shell.SharePoint.DWB.DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Shell.SharePoint.DREAM.Strongname.snk">
+      <Link>Shell.SharePoint.DREAM.Strongname.snk</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>Copy "$(TargetDir)Shell.SharePoint.DWB.BusinessLogicLayer.dll"  "%25Dependencies%25"</PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_UseGlobalSettings="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

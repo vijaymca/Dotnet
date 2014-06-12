@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+	<webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+		<metaData>
+			<type name="Shell.SharePoint.WebParts.DREAM.ContextSearch, Shell.SharePoint.WebParts.DREAM.ContextSearch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=91b27ee2ad3fe7fd" />
+			<importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+		</metaData>
+		<data>
+			<properties>
+				<property name="Title" type="string">Context Search Results</property>
+			</properties>
+		</data>
+	</webPart>
+</webParts>

@@ -1,0 +1,11 @@
+﻿<solution  id="9da30dca-392c-43c0-bb08-5449db6c2df7" name="Shell.SharePoint.WebParts.DREAM.TopNavigation" >
+  <features>
+    <feature  id="39e1c4c6-9ddb-49d8-91eb-1f6dcd6a0063" name="TopNavigation" title="TopNavigation" description="" version="1.0.0.0" scope="Site" hidden="False" defaultresourcefile="core" >
+      <element  id="39e1c4c6-9ddb-49d8-91eb-1f6dcd6a0063" title="TopNavigation Web Part" description="" importerrormessage="Cannot import TopNavigation Web Part." />
+    </feature>
+  </features>
+  <templates>
+  </templates>
+  <sitedefinitions>
+  </sitedefinitions>
+</solution>

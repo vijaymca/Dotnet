@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B584F8CE-DFB5-4780-82E1-2D00A9FFD00F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shell.SharePoint.WebParts.DWB.CustomListViewer</RootNamespace>
+    <AssemblyName>Shell.SharePoint.WebParts.DWB.CustomListViewer</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\Shell.SharePoint.DREAM.Strongname.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GlobalAssemblyInfo.cs">
+      <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AdminPanel.cs" />
+    <Compile Include="CustomListViewer.cs" />
+    <Compile Include="CustomListViewerHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shell.SharePoint.DREAM.Business.Entities\Shell.SharePoint.DREAM.Business.Entities.csproj">
+      <Project>{14301520-F0C1-4C41-8343-2DBA0574C40A}</Project>
+      <Name>Shell.SharePoint.DREAM.Business.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shell.SharePoint.DREAM.Utilities\Shell.SharePoint.DREAM.Utilities.csproj">
+      <Project>{46EB578D-8395-4B8D-96B9-23398ABB1C71}</Project>
+      <Name>Shell.SharePoint.DREAM.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shell.SharePoint.DWB.Business.DataObjects\Shell.SharePoint.DWB.Business.DataObjects.csproj">
+      <Project>{C32F2834-279D-45BF-AB8B-E0691AF215C6}</Project>
+      <Name>Shell.SharePoint.DWB.Business.DataObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shell.SharePoint.DWB.BusinessLogicLayer\Shell.SharePoint.DWB.BusinessLogicLayer.csproj">
+      <Project>{E5F73FAD-BCF4-43C9-8ED7-E3619C63672C}</Project>
+      <Name>Shell.SharePoint.DWB.BusinessLogicLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Shell.SharePoint.DREAM.Strongname.snk">
+      <Link>Shell.SharePoint.DREAM.Strongname.snk</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>Copy "$(TargetDir)Shell.SharePoint.WebParts.DWB.CustomListViewer.dll"   "%25Dependencies%25"</PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_UseGlobalSettings="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

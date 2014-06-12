@@ -1,0 +1,11 @@
+﻿<solution  id="639de7bf-d3c1-470a-8d8e-b0f782fb1ee2" name="Shell.SharePoint.WebParts.DREAM.DetailReport" >
+  <features>
+    <feature  id="97a1aa6c-e9fa-4931-8ac9-4bb161f8163a" name="DetailReport" title="DetailReport" description="" version="1.0.0.0" scope="Site" hidden="False" defaultresourcefile="core" >
+      <element  id="97a1aa6c-e9fa-4931-8ac9-4bb161f8163a" title="DetailReport Web Part" description="" importerrormessage="Cannot import DetailReport Web Part." />
+    </feature>
+  </features>
+  <templates>
+  </templates>
+  <sitedefinitions>
+  </sitedefinitions>
+</solution>

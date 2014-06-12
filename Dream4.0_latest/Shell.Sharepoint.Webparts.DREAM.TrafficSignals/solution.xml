@@ -1,0 +1,11 @@
+﻿<solution  id="8e794b26-df7a-42c7-8bd1-c65d7f84effb" name="Shell.Sharepoint.Webparts.DREAM.TrafficSignals" >
+  <features>
+    <feature  id="c4897f3d-6cff-4a8c-b82e-d2cc5fcf776b" name="ResourceStatus" title="ResourceStatus" description="" version="1.0.0.0" scope="Site" hidden="False" defaultresourcefile="core" >
+      <element  id="c4897f3d-6cff-4a8c-b82e-d2cc5fcf776b" title="ResourceStatus Web Part" description="" importerrormessage="Cannot import ResourceStatus Web Part." />
+    </feature>
+  </features>
+  <templates>
+  </templates>
+  <sitedefinitions>
+  </sitedefinitions>
+</solution>

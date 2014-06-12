@@ -1,0 +1,18 @@
+Changed Files in DWB Solution
+
+Shell.SharePoint.DWB.UserInterfaceLayer
+
+UIHelper.cs
+MasterPages.ascx.cs
+Template.ascx.cs
+ChapterPage.ascx.cs
+TemplatePages.ascx.cs
+
+Shell.SharePoint.WebParts.DWB.CustomListViewer
+
+AdminPanel.cs
+CustomListViewer.cs
+CustomListViewerHelper.cs
+
+Shell.SharePoint.DWB.BusinessLogicLayer
+MasterPageBLL.cs

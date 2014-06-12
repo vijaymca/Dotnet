@@ -1,0 +1,82 @@
+﻿<html>
+<head>
+    <title>Busy Box</title>
+    <script language="javascript" src="/_layouts/DREAM/JavaScript/DREAMJavaScriptFunctionsRel2_1.js"></script>               
+    <style type="text/css">
+        .title 
+        {         
+         FONT-WEIGHT: bold; Z-INDEX: 1;         
+         FLOAT: left;                  
+         COLOR: #210000;
+         font-family:verdana;
+         font-size:11px;
+		 background-image:url(/_layouts/DREAM/images/progress_bg_1.gif);
+		 background-repeat:repeat-x;
+		 height:20px;
+		 padding-left:5px;
+        }
+        .messege
+        {
+        FONT-WEIGHT: bold;
+        COLOR: #210000;
+        font-family:verdana;
+        font-size:11px;
+        padding-left:5px;
+        padding-bottom:5px
+        }
+        .text 
+        { 
+         COLOR: #004d69;
+         font-family:verdana;
+         font-size:11px;
+		 padding:0px 25px 0px 5px;
+        }
+        
+        input
+        {
+         BORDER-RIGHT: #114263 1px solid; 
+         PADDING-RIGHT: 0px; 
+         BORDER-TOP: #114263 1px solid; 
+         PADDING-LEFT: 0px; 
+         FONT-WEIGHT: normal; 
+         FONT-FAMILY:Verdana;
+         FONT-SIZE: 11px; 
+         FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,startColorstr=#c7dcf2,endColorstr=#ffffff); 
+         PADDING-BOTTOM: 0px; 
+         BORDER-LEFT: #114263 1px solid; 
+         COLOR: #000000; 
+         PADDING-TOP: 0px; 
+         BORDER-BOTTOM: #114263 1px solid; 
+         FONT-FAMILY: ; 
+         BACKGROUND-COLOR: #e8e8e8; 
+     }
+	.tableBorder
+	{
+	border-right: #aaaaaa 1px solid; 
+	border-top: #aaaaaa 1px solid; 
+	border-left: #aaaaaa 1px solid; 
+	border-bottom: #aaaaaa 1px solid;	
+}
+.tdbg
+{
+	background-image:url(/_layouts/DREAM/images/progress_bg_2.gif);
+	background-repeat:repeat-x;
+	height:65px;
+    </style>
+</head>
+<body style="Margin: 0px; Background-Color: white;">               
+    <center>     
+<table cellpadding="0" cellspacing="0" width="100%" class="tableBorder" style="">
+<tr>
+<td align="left" colspan="2" class="title">processing...</td> 
+</tr>            
+<tr class="tdbg">
+<td><img src="/_layouts/DREAM/images/loading.gif" hspace="20" border="1" align="middle"></td>  
+<td align="center" class="text">                  
+<input type="button" name="btnCancel" value="Cancel" onClick="AjaxCancelFn();" /></td>
+</tr>
+</table>
+    </center>    
+</body>
+</html>
+

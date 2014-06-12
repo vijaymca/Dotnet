@@ -1,0 +1,661 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26838B64-9800-4C60-BDEB-C666F35EBC46}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shell.SharePoint.DREAM.Site.UI</RootNamespace>
+    <AssemblyName>Shell.SharePoint.DREAM.Site.UI</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\Shell.SharePoint.DREAM.Strongname.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Publishing, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Security, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="Telerik.Web.Design, Version=2010.1.415.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Dev Folder\Telerik Updated DLLs\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2010.1.415.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Dev Folder\Telerik Updated DLLs\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\GlobalAssemblyInfo.cs">
+      <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="DateTimeConvertorService.asmx.cs">
+      <DependentUpon>DateTimeConvertorService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LayoutFiles\AccessApproval.aspx.cs">
+      <DependentUpon>AccessApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LayoutFiles\AccessApproval.aspx.designer.cs">
+      <DependentUpon>AccessApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AssetTreeConstants.cs" />
+    <Compile Include="AssetTreeHelper.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LayoutFiles\ConfirmUserPreferences.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ConfirmUserPreferences.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutFiles\ConfirmUserPreferences.aspx.designer.cs">
+      <DependentUpon>ConfirmUserPreferences.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutFiles\CsvExport.ashx.cs">
+      <DependentUpon>CsvExport.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutFiles\CSVExport.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>CSVExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutFiles\CSVExport.aspx.designer.cs">
+      <DependentUpon>CSVExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutFiles\Feedbacks.aspx.cs">
+      <DependentUpon>Feedbacks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LayoutFiles\Feedbacks.aspx.designer.cs">
+      <DependentUpon>Feedbacks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutFiles\SuspendAccess.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>SuspendAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutFiles\SuspendAccess.aspx.designer.cs">
+      <DependentUpon>SuspendAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryBuilderHelper.cs" />
+    <Compile Include="RolesProfilesHelper.cs" />
+    <Compile Include="UserControls\InterpolatedLogs.ascx.cs">
+      <DependentUpon>InterpolatedLogs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\InterpolatedLogs.ascx.designer.cs">
+      <DependentUpon>InterpolatedLogs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RolesAndProfiles.ascx.cs">
+      <DependentUpon>RolesAndProfiles.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\RolesAndProfiles.ascx.designer.cs">
+      <DependentUpon>RolesAndProfiles.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SignificantWellEvents.ascx.cs">
+      <DependentUpon>SignificantWellEvents.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SignificantWellEvents.ascx.designer.cs">
+      <DependentUpon>SignificantWellEvents.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WellAdvSearch.ascx.cs">
+      <DependentUpon>WellAdvSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WellAdvSearch.ascx.designer.cs">
+      <DependentUpon>WellAdvSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GeoPressure.ascx.cs">
+      <DependentUpon>GeoPressure.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\GeoPressure.ascx.designer.cs">
+      <DependentUpon>GeoPressure.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ReservoirChronostratPopup.ascx.cs">
+      <DependentUpon>ReservoirChronostratPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ReservoirChronostratPopup.ascx.designer.cs">
+      <DependentUpon>ReservoirChronostratPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SubClause.cs" />
+    <Compile Include="UIControlHandler.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIHelper.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UISaveSearchHandler.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIUtilities.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\AHDTVDConverter.ascx.cs">
+      <DependentUpon>AHDTVDConverter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\AHDTVDConverter.ascx.designer.cs">
+      <DependentUpon>AHDTVDConverter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AHDTVDPopup.ascx.cs">
+      <DependentUpon>AHDTVDPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\AHDTVDPopup.ascx.designer.cs">
+      <DependentUpon>AHDTVDPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AssetTree.ascx.cs">
+      <DependentUpon>AssetTree.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\AssetTree.ascx.designer.cs">
+      <DependentUpon>AssetTree.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BasinAdvSearch.ascx.cs">
+      <DependentUpon>BasinAdvSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\BasinAdvSearch.ascx.designer.cs">
+      <DependentUpon>BasinAdvSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EDMReport.ascx.cs">
+      <DependentUpon>EDMReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\EDMReport.ascx.designer.cs">
+      <DependentUpon>EDMReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EPCatalogFilter.ascx.cs">
+      <DependentUpon>EPCatalogFilter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\EPCatalogFilter.ascx.designer.cs">
+      <DependentUpon>EPCatalogFilter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ExceptionMessage.ascx.cs">
+      <DependentUpon>ExceptionMessage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ExceptionMessage.ascx.designer.cs">
+      <DependentUpon>ExceptionMessage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FeedbackUI.ascx.cs">
+      <DependentUpon>FeedbackUI.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\FeedbackUI.ascx.designer.cs">
+      <DependentUpon>FeedbackUI.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FieldAdvPopup.ascx.cs">
+      <DependentUpon>FieldAdvPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\FieldAdvPopup.ascx.designer.cs">
+      <DependentUpon>FieldAdvPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FieldAdvSearch.ascx.cs">
+      <DependentUpon>FieldAdvSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\FieldAdvSearch.ascx.designer.cs">
+      <DependentUpon>FieldAdvSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FileUpload.ascx.cs">
+      <DependentUpon>FileUpload.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\FileUpload.ascx.designer.cs">
+      <DependentUpon>FileUpload.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FunctionalityUsageAdvReport.ascx.cs">
+      <DependentUpon>FunctionalityUsageAdvReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\FunctionalityUsageAdvReport.ascx.designer.cs">
+      <DependentUpon>FunctionalityUsageAdvReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LogFieldAdvSearch.ascx.cs">
+      <DependentUpon>LogFieldAdvSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\LogFieldAdvSearch.ascx.designer.cs">
+      <DependentUpon>LogFieldAdvSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ManageStaff.ascx.cs">
+      <DependentUpon>ManageStaff.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ManageStaff.ascx.designer.cs">
+      <DependentUpon>ManageStaff.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ManageTeam.ascx.cs">
+      <DependentUpon>ManageTeam.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ManageTeam.ascx.designer.cs">
+      <DependentUpon>ManageTeam.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PARSAdvSearch.ascx.cs">
+      <DependentUpon>PARSAdvSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\PARSAdvSearch.ascx.designer.cs">
+      <DependentUpon>PARSAdvSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\QueryBuilder.ascx.cs">
+      <DependentUpon>QueryBuilder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\QueryBuilder.ascx.designer.cs">
+      <DependentUpon>QueryBuilder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RegionFormatSettings.ascx.cs">
+      <DependentUpon>RegionFormatSettings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\RegionFormatSettings.ascx.designer.cs">
+      <DependentUpon>RegionFormatSettings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ReservoirAdvSearch.ascx.cs">
+      <DependentUpon>ReservoirAdvSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ReservoirAdvSearch.ascx.designer.cs">
+      <DependentUpon>ReservoirAdvSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ReservoirDepositionalEnvPopup.ascx.cs">
+      <DependentUpon>ReservoirDepositionalEnvPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ReservoirDepositionalEnvPopup.ascx.designer.cs">
+      <DependentUpon>ReservoirDepositionalEnvPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TVDepthPopup.ascx.cs">
+      <DependentUpon>TVDepthPopup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\TVDepthPopup.ascx.designer.cs">
+      <DependentUpon>TVDepthPopup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserPreferencesUI.ascx.cs">
+      <DependentUpon>UserPreferencesUI.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserPreferencesUI.ascx.designer.cs">
+      <DependentUpon>UserPreferencesUI.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WellboreAdvSearch.ascx.cs">
+      <DependentUpon>WellboreAdvSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WellboreAdvSearch.ascx.designer.cs">
+      <DependentUpon>WellboreAdvSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WellStatusDiagramFilter.ascx.cs">
+      <DependentUpon>WellStatusDiagramFilter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WellStatusDiagramFilter.ascx.designer.cs">
+      <DependentUpon>WellStatusDiagramFilter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WellTestData.ascx.cs">
+      <DependentUpon>WellTestData.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WellTestData.ascx.designer.cs">
+      <DependentUpon>WellTestData.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutFiles\UserPreferencesUI.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>UserPreferencesUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutFiles\UserPreferencesUI.aspx.designer.cs">
+      <DependentUpon>UserPreferencesUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WhereClause.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\arrow_right.gif" />
+    <Content Include="Images\bullet.gif" />
+    <Content Include="Images\DREAMMap.jpg" />
+    <Content Include="Images\hdrbg_menu.gif" />
+    <Content Include="Images\hdrbg_menu_left.gif" />
+    <Content Include="Images\hdrbg_menu_right.gif" />
+    <Content Include="Images\hdrbg_p1.gif" />
+    <Content Include="Images\hdrbg_p2.gif" />
+    <Content Include="Images\hdrbg_p2_left.gif" />
+    <Content Include="Images\hdrbg_p2_right.gif" />
+    <Content Include="Images\hdrbg_p3.gif" />
+    <Content Include="Images\hdrbg_p4.gif" />
+    <Content Include="Images\header_dotted_underline.gif" />
+    <Content Include="Images\info_off.gif" />
+    <Content Include="Images\info_on.gif" />
+    <Content Include="Images\left_navigation_background.jpg" />
+    <Content Include="Images\nav_horizontal_bg.gif" />
+    <Content Include="Images\nav_level1_active.gif" />
+    <Content Include="Images\nav_level1_active_not_parent.gif" />
+    <Content Include="Images\nav_level1_expand.gif" />
+    <Content Include="Images\nav_level1_minimise.gif" />
+    <Content Include="Images\nav_level2_active.gif" />
+    <Content Include="Images\nav_level2_active_not_parent.gif" />
+    <Content Include="Images\nav_level3_active.gif" />
+    <Content Include="Images\spacer.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LayoutFiles\ConfirmUserPreferences.aspx" />
+    <Content Include="LayoutFiles\Feedbacks.aspx" />
+    <Content Include="Images\arrow.gif" />
+    <Content Include="Images\arrow_bottom.gif" />
+    <Content Include="Images\arrow_left.gif" />
+    <Content Include="Images\arrow_top.gif" />
+    <Content Include="Images\ascending.gif" />
+    <Content Include="Images\bg_table.gif" />
+    <Content Include="Images\breadcrumb_bg.gif" />
+    <Content Include="Images\btn_go.gif" />
+    <Content Include="Images\buffer.gif" />
+    <Content Include="Images\busysymbol.gif" />
+    <Content Include="Images\CLEAR.GIF" />
+    <Content Include="Images\CRPERSPC.GIF" />
+    <Content Include="Images\descending.gif" />
+    <Content Include="Images\DOWN.JPG" />
+    <Content Include="Images\DOWN_ACTIVE.GIF" />
+    <Content Include="Images\DOWN_INACTIVE.GIF" />
+    <Content Include="Images\Dwb.jpg" />
+    <Content Include="Images\edit.gif" />
+    <Content Include="Images\edit1.gif" />
+    <Content Include="Images\ewr210l.gif" />
+    <Content Include="Images\ewr212l.gif" />
+    <Content Include="Images\ewr213l.gif" />
+    <Content Include="Images\ExcelIcon.gif" />
+    <Content Include="Images\feedback1.gif" />
+    <Content Include="Images\feedback2.gif" />
+    <Content Include="Images\full_extent.gif" />
+    <Content Include="Images\hand.gif" />
+    <Content Include="Images\help.gif" />
+    <Content Include="Images\help_faq.gif" />
+    <Content Include="Images\icon_Excel.gif" />
+    <Content Include="Images\icon_help.gif" />
+    <Content Include="Images\icon_help2.gif" />
+    <Content Include="Images\icon_print.gif" />
+    <Content Include="Images\indentity.gif" />
+    <Content Include="Images\iRequest.gif" />
+    <Content Include="Images\left.gif" />
+    <Content Include="Images\left_nav_bg_over.gif" />
+    <Content Include="Images\left_nav_bg_over_1.gif" />
+    <Content Include="Images\left_nav_bg_up.gif" />
+    <Content Include="Images\left_nav_bg_up_1.gif" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\logo.gif" />
+    <Content Include="Images\MapTip.png" />
+    <Content Include="Images\minus.gif" />
+    <Content Include="Images\nav_level2_active_not_parent_old.gif" />
+    <Content Include="Images\pagging_arrow_next.gif" />
+    <Content Include="Images\pagging_arrow_prev.gif" />
+    <Content Include="Images\plus.gif" />
+    <Content Include="Images\pointer.gif" />
+    <Content Include="Images\Pointer.jpg" />
+    <Content Include="Images\Processing.gif" />
+    <Content Include="Images\progress_bg_1.gif" />
+    <Content Include="Images\progress_bg_2.gif" />
+    <Content Include="Images\Resource_Available.gif" />
+    <Content Include="Images\Resource_Unavailable.gif" />
+    <Content Include="Images\Run.gif" />
+    <Content Include="Images\SAVE.GIF" />
+    <Content Include="Images\savedsearch_blue_bg.gif" />
+    <Content Include="Images\selection.gif" />
+    <Content Include="Images\selection_path.gif" />
+    <Content Include="Images\selection_path.png" />
+    <Content Include="Images\SIEPCriteria.jpg" />
+    <Content Include="Images\sorting_down_arrow.gif" />
+    <Content Include="Images\sorting_up_arrow.gif" />
+    <Content Include="Images\top.gif" />
+    <Content Include="Images\up.JPG" />
+    <Content Include="Images\UP_ACTIVE.GIF" />
+    <Content Include="Images\UP_INACTIVE.GIF" />
+    <Content Include="Images\zoom-in.gif" />
+    <Content Include="Images\zoom.gif" />
+    <Content Include="Images\zoom_in_1.gif" />
+    <Content Include="Images\zoom_out.gif" />
+    <Content Include="Images\zoom_search.png" />
+    <Content Include="LayoutFiles\BasinSyncBusyBox.htm" />
+    <Content Include="LayoutFiles\BusyBox.htm" />
+    <Content Include="LayoutFiles\CancelSearch.html" />
+    <Content Include="LayoutFiles\DREAM Feedback.html" />
+    <Content Include="LayoutFiles\EP-Attachment.html" />
+    <Content Include="LayoutFiles\EPRequest.html" />
+    <Content Include="LayoutFiles\Exception.html" />
+    <Content Include="LayoutFiles\InitialBusybox.htm" />
+    <Content Include="LayoutFiles\print.htm" />
+    <Content Include="LayoutFiles\RegionFormatSettings.aspx" />
+    <Content Include="LayoutFiles\Status.html" />
+    <Content Include="SampleTreeView.xml" />
+    <Content Include="UserControls\BasinAdvSearch.ascx" />
+    <Content Include="UserControls\EPCatalogFilter.ascx" />
+    <Content Include="UserControls\ExceptionMessage.ascx" />
+    <Content Include="UserControls\FeedbackUI.ascx" />
+    <Content Include="UserControls\FieldAdvSearch.ascx" />
+    <Content Include="UserControls\FunctionalityUsageAdvReport.ascx" />
+    <Content Include="UserControls\LogFieldAdvSearch.ascx" />
+    <Content Include="UserControls\PARSAdvSearch.ascx" />
+    <Content Include="UserControls\QueryBuilder.ascx" />
+    <Content Include="UserControls\RegionFormatSettings.ascx" />
+    <Content Include="UserControls\UserPreferencesUI.ascx" />
+    <Content Include="UserControls\WellboreAdvSearch.ascx" />
+    <Content Include="LayoutFiles\UserPreferencesUI.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shell.SharePoint.DREAM.Business.Entities\Shell.SharePoint.DREAM.Business.Entities.csproj">
+      <Project>{14301520-F0C1-4C41-8343-2DBA0574C40A}</Project>
+      <Name>Shell.SharePoint.DREAM.Business.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shell.SharePoint.DREAM.Controller\Shell.SharePoint.DREAM.Controller.csproj">
+      <Project>{7CBF91B2-36F2-47AB-9ABA-09479D4458F7}</Project>
+      <Name>Shell.SharePoint.DREAM.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shell.SharePoint.DREAM.SearchHelper\Shell.SharePoint.DREAM.SearchHelper.csproj">
+      <Project>{8F7144EC-FD1F-4AD1-A356-E8E74E88FEB8}</Project>
+      <Name>Shell.SharePoint.DREAM.SearchHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shell.SharePoint.DREAM.Utilities\Shell.SharePoint.DREAM.Utilities.csproj">
+      <Project>{46EB578D-8395-4B8D-96B9-23398ABB1C71}</Project>
+      <Name>Shell.SharePoint.DREAM.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shell.SharePoint.DWB.DualListControl\Shell.SharePoint.DWB.DualListControl.csproj">
+      <Project>{B180731B-C4AF-4753-BF41-29646F92C21B}</Project>
+      <Name>Shell.SharePoint.DWB.DualListControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DateTimeConvertorService.asmx" />
+    <Content Include="Images\assettreeloading.gif" />
+    <Content Include="Images\assettree_go.jpg" />
+    <Content Include="Images\assettree_search.gif" />
+    <Content Include="Images\assettree_search.jpg" />
+    <Content Include="Images\assettree_search.png" />
+    <Content Include="Images\ChronostratDiagram_01.gif" />
+    <Content Include="Images\CMSRemoveImage.GIF" />
+    <Content Include="Images\EPSearchBox.gif" />
+    <Content Include="Images\Reorder_Customize.jpg" />
+    <Content Include="Images\TPMAX1.GIF" />
+    <Content Include="Javascript\AHTVDCalculatorRel2_1.js" />
+    <Content Include="Javascript\CalendarControlRel2_1.js" />
+    <Content Include="Javascript\CastleBusyBoxRel2_1.js" />
+    <Content Include="Javascript\DreamAjaxService.js" />
+    <Content Include="Javascript\DREAMDualListScriptRel2_1.js" />
+    <Content Include="Javascript\DREAMJavaScriptFunctionsRel2_1.js" />
+    <Content Include="Javascript\DREAMJavaScriptFunctionsRel4_0.js" />
+    <Content Include="Javascript\DreamSyncAjaxService.js" />
+    <Content Include="Javascript\EPCatalogFilter.js" />
+    <Content Include="Javascript\sortTableRel2_1.js" />
+    <Content Include="Javascript\SRPJavaScriptFunctionsRel3_0.js" />
+    <Content Include="Javascript\WellStatusDiagram.js" />
+    <Content Include="LayoutFiles\AccessApproval.aspx" />
+    <Content Include="Images\ARRDOWNA.GIF" />
+    <Content Include="Images\ARRUPA.GIF" />
+    <Content Include="Images\chartlink.gif" />
+    <Content Include="Images\edit_sql.gif" />
+    <Content Include="Images\go.gif" />
+    <Content Include="Images\LeftHide.gif" />
+    <Content Include="Images\LeftShow.gif" />
+    <Content Include="Images\reset.gif" />
+    <Content Include="Images\save_search.gif" />
+    <Content Include="Images\view_sql.gif" />
+    <Content Include="Javascript\AssetTreeRel3_0.js" />
+    <Content Include="Javascript\DREAMJavaScriptFunctionsRel3_0.js" />
+    <Content Include="Javascript\ReorderColumnRel3_0.js" />
+    <Content Include="LayoutFiles\AjaxBusyBox.htm" />
+    <Content Include="LayoutFiles\CSVExport.aspx" />
+    <Content Include="LayoutFiles\HorizontalNavigation.sitemap" />
+    <Content Include="LayoutFiles\printDWBListOfBooks.htm" />
+    <Content Include="LayoutFiles\printEDMReport.htm" />
+    <Content Include="LayoutFiles\printMDReport.htm" />
+    <Content Include="LayoutFiles\printWellHistory.htm" />
+    <Content Include="LayoutFiles\SuspendAccess.aspx" />
+    <Content Include="LayoutFiles\SWEDHomeRedirect.html" />
+    <Content Include="PageLayouts\DreamWithTopNav.aspx" />
+    <Content Include="PageLayouts\DreamContent.aspx" />
+    <Content Include="PageLayouts\DreamHelp.aspx" />
+    <Content Include="PageLayouts\DreamHome.aspx" />
+    <Content Include="PageLayouts\DreamPopup.aspx" />
+    <Content Include="PageLayouts\EROHome.aspx" />
+    <Content Include="PageLayouts\ExternalSiteHome.aspx" />
+    <Content Include="PageLayouts\SIESTAHome.aspx" />
+    <Content Include="Styles\CalendarControlRel2_1.css" />
+    <Content Include="Styles\DetailReportRel2_1.css" />
+    <Content Include="Styles\DREAMStyleSheetRel2_1.css" />
+    <Content Include="Styles\DREAMStyleSheetRel4_0.css" />
+    <Content Include="Styles\PrinterStyleRel2_1.css" />
+    <Content Include="Styles\PrintWellHistoryStyleRel2_1.css" />
+    <Content Include="Styles\SearchResultsRel2_1.css" />
+    <Content Include="Styles\WellHistoryStyleRel2_1.css" />
+    <Content Include="UserControls\InterpolatedLogs.ascx" />
+    <Content Include="UserControls\RolesAndProfiles.ascx" />
+    <Content Include="UserControls\SignificantWellEvents.ascx" />
+    <Content Include="UserControls\WellAdvSearch.ascx" />
+    <Content Include="UserControls\GeoPressure.ascx" />
+    <Content Include="UserControls\ReservoirChronostratPopup.ascx" />
+    <Content Include="Styles\AssetTreeRel3_0.css" />
+    <Content Include="UserControls\AHDTVDConverter.ascx" />
+    <Content Include="UserControls\AHDTVDPopup.ascx" />
+    <Content Include="UserControls\AssetTree.ascx" />
+    <Content Include="UserControls\EDMReport.ascx" />
+    <Content Include="UserControls\FieldAdvPopup.ascx" />
+    <Content Include="UserControls\FileUpload.ascx" />
+    <Content Include="UserControls\ManageStaff.ascx" />
+    <Content Include="UserControls\ManageTeam.ascx" />
+    <Content Include="UserControls\ReservoirAdvSearch.ascx" />
+    <Content Include="UserControls\ReservoirDepositionalEnvPopup.ascx" />
+    <Content Include="UserControls\TVDepthPopup.ascx" />
+    <Content Include="UserControls\WellStatusDiagramFilter.ascx" />
+    <Content Include="UserControls\WellTestData.ascx" />
+    <Content Include="XSL\DataOwner.xsl" />
+    <Content Include="XSL\Dream List View.xsl" />
+    <Content Include="XSL\Dream ResourceStatus.xsl" />
+    <Content Include="XSL\Dream EPCatalog Results.xsl" />
+    <Content Include="XSL\EDMHierarchical Results.xsl" />
+    <Content Include="XSL\EDMTabular Results.xsl" />
+    <Content Include="XSL\EPCatalog Results.xsl" />
+    <Content Include="XSL\FunctionalityUsage.xsl" />
+    <Content Include="XSL\MechanicalData DatasheetOld.xsl" />
+    <Content Include="XSL\MechanicalData Datasheet_2_1.xsl" />
+    <Content Include="XSL\MechanicalData Datasheet.xsl" />
+    <Content Include="XSL\MechanicalData TabularOld.xsl" />
+    <Content Include="XSL\MechanicalData Tabular_2_1.xsl" />
+    <Content Include="XSL\MechanicalData Tabular.xsl" />
+    <Content Include="XSL\My Assets.xsl" />
+    <Content Include="XSL\My AssetsOld.xsl" />
+    <Content Include="XSL\PARSDetail Datasheet.xsl" />
+    <Content Include="XSL\PressureSurvey Tabular.xsl" />
+    <Content Include="XSL\RadTransformer.xsl" />
+    <Content Include="XSL\Significant Well Events.xsl" />
+    <Content Include="XSL\Tab Tabular Results.xsl" />
+    <Content Include="XSL\Tabular Results.xsl" />
+    <Content Include="XSL\Tabular ResultsOld.xsl" />
+    <Content Include="XSL\WellboreHeader Datasheet.xsl" />
+    <Content Include="XSL\WellHistory DataSheet.xsl" />
+    <Content Include="XSL\Dream WellSummary.xsl" />
+    <Content Include="XSL\WellTestData Datasheet.xsl" />
+    <Content Include="XSL\WellTestData Tabular.xsl" />
+    <None Include="..\..\Shell.SharePoint.DREAM.Strongname.snk">
+      <Link>Shell.SharePoint.DREAM.Strongname.snk</Link>
+    </None>
+    <None Include="ItemTemplatesCache" />
+    <Content Include="PageLayouts\ExternalSite.master" />
+    <Content Include="LayoutFiles\CsvExport.ashx" />
+    <Content Include="PageLayouts\Dream.master" />
+    <Content Include="PageLayouts\DreamContent.master" />
+    <Content Include="PageLayouts\DreamPopup.master" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2888</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties BuildVersion_UseGlobalSettings="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>Copy "$(ProjectDir)bin\Shell.SharePoint.DREAM.Site.UI.dll"  "%25Dependencies%25"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

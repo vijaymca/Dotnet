@@ -1,0 +1,77 @@
+.show
+{
+	display: block;
+}
+.hide
+{
+	display: none;
+}
+.parentDisable
+{
+	z-index: 999;
+	background-color: #ccc;
+	color: #aaa;
+	opacity: .5;
+	filter: alpha(opacity=50);
+	background: url( "/_layouts/DREAM/Images/assettreeloading.gif" ) no-repeat center center;
+}
+.tableDisable
+{
+	z-index: 999;
+	background-color: #ccc;
+	color: #aaa;
+	opacity: .5;
+	filter: alpha(opacity=50);
+	background: url( "/_layouts/DREAM/Images/assettreeloading.gif" ) no-repeat center center;
+	font-family: Verdana;
+	font-size: 11px;
+	border-right: #BDBDBD 1px solid;
+	border-left: #BDBDBD 1px solid;
+	border-bottom: #BDBDBD 1px solid;
+	width:100%;
+	height:100%
+}
+.tableEnable
+{
+	font-family: Verdana;
+	font-size: 11px;
+	border-right: #BDBDBD 1px solid;
+	border-left: #BDBDBD 1px solid;
+	border-bottom: #BDBDBD 1px solid;
+	width:100%;
+	height:100%
+}
+.tdAssetTreeHeader
+{
+	font-family: Verdana;
+	font-size: 11px;
+	font-weight: bold;
+	color: #404040;
+	background-color: #FFEAA0;
+	height: 20px;
+	border-top: #BDBDBD 1px solid;
+	border-bottom: #BDBDBD 1px solid;
+}
+
+.popup
+{
+	position: absolute;
+	color: #000;
+	background-color: #bdbdbd;
+	border: solid 1px black;
+	display: none;
+}
+.popup div
+{
+	overflow: scroll;
+	width: 150px;
+	height: 200px;
+	color: #000;
+	background-color: #F5F6F7;
+	border: solid 1px black;
+}
+span.pagelink:hover
+{
+	background-image: none;
+	background-color: White;
+}

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+	<Assembly>Shell.SharePoint.WebParts.DREAM.UserControlContainer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9f4da00116c38ec5</Assembly>
+	<TypeName>Shell.SharePoint.WebParts.DREAM.UserControlContainer.UserControlContainer</TypeName>
+	<Title>UserControlContainer</Title>
+<Description></Description></WebPart>

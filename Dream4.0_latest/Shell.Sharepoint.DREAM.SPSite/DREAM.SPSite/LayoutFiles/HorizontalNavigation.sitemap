@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="/" title="DREAM"  description="DREAM">
+    <siteMapNode url="/Pages/Index.aspx" title="DREAM"  description="" />
+    <siteMapNode url="javascript:OpenPopup('/_layouts/dream/UserPreferencesUI.aspx','UserPreferences','width=1024,height=700,scrollbars=yes,resizable');" title="My Preferences" description="" />
+    <siteMapNode url="javascript:OpenPageInContentWindow('/Pages/MyAssets.aspx');" title="My Assets" description="" />
+    <siteMapNode url="javascript:OpenPageInContentWindow('/Pages/ListofTeams.aspx');" title="List of Teams" description="" />
+    <siteMapNode url="javascript:OpenFeedback('/_layouts/dream/Feedbacks.aspx','Feedback',600,550);" title="My Feedback" description="" />
+    <siteMapNode url="/Pages/DWBHomePage.aspx" title="eWB2" description="" />
+    <siteMapNode url="/Style Library/HTML/SWEDHomeRedirect.html" title="SWED" description="" />
+    <siteMapNode  url="/Pages/SIESTAHome.aspx?externalurl=http://amsdc1-s-7606.europe.shell.com/SiestaBuild4/siesta_Main/Pressuresurvey.aspx" title="SIESTA" description="" />
+    <siteMapNode url="/Pages/EROHome.aspx?externalurl=http://sww-discovery.shell.com:500/ERO/" title="ERO Portal" description="" />
+  </siteMapNode>
+</siteMap>
+

@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C32F2834-279D-45BF-AB8B-E0691AF215C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shell.SharePoint.DWB.Business.DataObjects</RootNamespace>
+    <AssemblyName>Shell.SharePoint.DWB.Business.DataObjects</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\Shell.SharePoint.DREAM.Strongname.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GlobalAssemblyInfo.cs">
+      <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Attributes.cs" />
+    <Compile Include="AuditHistory.cs" />
+    <Compile Include="BatchImport.cs" />
+    <Compile Include="BatchImports.cs" />
+    <Compile Include="BookInfo.cs" />
+    <Compile Include="ChapterDetails.cs" />
+    <Compile Include="ChapterInfo.cs" />
+    <Compile Include="ChapterPagesMapping.cs" />
+    <Compile Include="FileFormat.cs" />
+    <Compile Include="FileType.cs" />
+    <Compile Include="FocalPoint.cs" />
+    <Compile Include="ListEntry.cs" />
+    <Compile Include="MasterPageDetails.cs" />
+    <Compile Include="PageComments.cs" />
+    <Compile Include="PageInfo.cs" />
+    <Compile Include="PageName.cs" />
+    <Compile Include="PrintOptions.cs" />
+    <Compile Include="SharedPath.cs" />
+    <Compile Include="StoryBoard.cs" />
+    <Compile Include="Privileges.cs" />
+    <Compile Include="Record.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordHistories.cs" />
+    <Compile Include="RecordHistory.cs" />
+    <Compile Include="RecordInfo.cs" />
+    <Compile Include="Records.cs" />
+    <Compile Include="StaffDetails.cs" />
+    <Compile Include="SystemPrivileges.cs" />
+    <Compile Include="TeamDetails.cs" />
+    <Compile Include="TemplateConfiguration.cs" />
+    <Compile Include="TemplateDetails.cs" />
+    <Compile Include="TreeNodeSelection.cs" />
+    <Compile Include="UserDetails.cs" />
+    <Compile Include="WellBookDetails.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Shell.SharePoint.DREAM.Strongname.snk">
+      <Link>Shell.SharePoint.DREAM.Strongname.snk</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>Copy "$(TargetDir)Shell.SharePoint.DWB.Business.DataObjects.dll"  "%25Dependencies%25"</PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_UseGlobalSettings="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

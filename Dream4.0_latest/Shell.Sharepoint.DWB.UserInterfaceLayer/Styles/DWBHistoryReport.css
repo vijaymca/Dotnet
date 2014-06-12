@@ -1,0 +1,107 @@
+﻿/* Reverted to Version 1404*/
+table, a 
+{
+	color: #000;
+	font: normal normal 11px Verdana;	 	
+}
+td.blankColumn
+{
+	color:White;
+}
+div.tableHistoryContainer 
+{
+	border-top: 1px double #336699;
+	clear: both;	
+	overflow:scroll;
+	position:relative;
+	width:100%;
+	max-height:100px;
+	height:expression(this.scrollHeight>100?"100px":"auto");
+	
+	/*border:1px double #336699;*/
+	/*border-top :1px double #336699;
+	width:60%;
+    /*padding-bottom:18px;
+	clear: both;	
+	overflow:scroll;
+	position:relative;
+	width:80%;*/
+	/*max-height:100px;
+	height:expression(this.scrollHeight>100?"100px":"auto");*/
+}
+html.body div.tableHistoryContainer 
+{
+	/*height:100%;*/
+	padding: 0 16px 0 0;
+	/*height:auto;*/
+	width: 100%;	
+}
+div.tableHistoryContainer table 
+{
+	float: left;
+	/*height:auto;*/
+	background-color:#E0ECF0;
+	/*width:80%;*/
+	/*border-right:1px double #336699;*/
+}
+head:first-child+body tbody[class].scrollContentHistory {
+	display: block;	
+	overflow: auto;
+	position:relative;
+	/*width: 80%;	*/
+}
+
+tbody.scrollContentHistory td, tbody.scrollContentHistory tr.normalRow td 
+{
+	border-bottom: 1px double #336699;
+ 	border-left: 1px double #336699;	
+	/*border: 1px double #336699;	*/
+	padding: 2px 2px 2px 2px;
+	white-space:nowrap;
+	/*position:relative;*/
+}
+
+thead th	
+{	
+	top: expression(document.getElementById("tableContainer").scrollTop);
+	font-size: 11px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #E0ECF0;
+	color: Black;	
+	border-left: 1px double #9B9797;
+	border-bottom:1px double #9B9797;
+	position:relative;
+	height:25px;
+	/*width:100%;
+	white-space:nowrap;*/
+	padding: 2px 2px 2px 2px
+}	
+thead.fixedHeaderHistory th 
+{
+	font-weight: bold;
+	text-align:center;	
+	background-color:#E0ECF0;
+	/*padding: 2px 2px 2px 5px;*/	
+	border-bottom: 1px solid #336699;
+	border-top: 1px solid #336699;
+	top: expression(document.getElementById("tableHistoryContainer").scrollTop);
+	white-space:nowrap;
+	height: auto;
+	padding:2px 2px 2px 2px;
+}
+
+head:first-child+body div[class].tableHistoryContainer {
+	/*height:300px;*/
+	overflow:scroll;
+	width:99%;
+	border-bottom:1px solid #E0ECF0;
+	max-height:200px;
+	height:	height:expression(this.scrollHeight>200?"200px":"auto");
+	border-bottom:1px solid #E0ECF0;
+}
+
+.HistoryRowCSS
+{
+	background-color: #FFFFFF;
+}

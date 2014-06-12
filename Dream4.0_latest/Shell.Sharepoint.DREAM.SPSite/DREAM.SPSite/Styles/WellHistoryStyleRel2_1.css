@@ -1,0 +1,21 @@
+﻿td {font-size: 0.9em;}
+td.priority { text-align: center;}
+td.blank { background-color: white;}
+td.type { white-space: nowrap;}
+td.number { white-space: nowrap;text-align: center;}
+td.date { white-space: nowrap;text-align: center;}
+td.owner { white-space: nowrap;}
+td.resource { white-space: nowrap;text-align: center;}
+td.timing { white-space: nowrap;text-align: center;}
+td.unit { white-space: nowrap;text-align: center;border: #bdbdbd solid thin;}
+td.gain { white-space: nowrap;text-align: right;}
+td.pos { white-space: nowrap;text-align: right;}
+td.cost { white-space: nowrap;text-align: right;}
+td.head { white-space: nowrap;text-align: right; font-weight:bold;}
+td.data { background-color: #D3D3D3;}
+tr.odd {background-color: #FFFFFF;}
+tr.even {background-color: #EFEFEF;}
+tr.heading {background-color: #BDBDBD;}
+tr.heading th {color:#000;padding: 4px 6px;font-weight: bold;font-size: 0.9em;}
+tr.heading th.left {text-align: left;padding-left: 10px;}
+

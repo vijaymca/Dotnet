@@ -1,0 +1,11 @@
+﻿<solution  id="29509428-02e5-46b8-b17b-f357311413c2" name="Shell.SharePoint.WebParts.DREAM.LeftNavigation" >
+  <features>
+    <feature  id="43aefa45-c5f3-4978-a672-317e60282d59" name="LeftNavigation" title="LeftNavigation" description="" version="1.0.0.0" scope="Site" hidden="False" defaultresourcefile="core" >
+      <element  id="43aefa45-c5f3-4978-a672-317e60282d59" title="LeftNavigation Web Part" description="" importerrormessage="Cannot import LeftNavigation Web Part." />
+    </feature>
+  </features>
+  <templates>
+  </templates>
+  <sitedefinitions>
+  </sitedefinitions>
+</solution>

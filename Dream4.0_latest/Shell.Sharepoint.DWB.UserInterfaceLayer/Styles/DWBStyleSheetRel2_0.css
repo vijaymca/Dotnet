@@ -1,0 +1,359 @@
+/* Reverted to Version 1404*/
+.DWBresultHyperLink
+{
+	cursor:hand;
+	text-decoration:underline;
+	color:Blue;
+}
+.DWBtdAdvSrchSubHeader
+{
+	font-family:Verdana;
+	font-size:11px;
+	background-color:#BDBDBD;
+	font-weight:bold;
+	border-top:solid 1px #BDBDBD; 
+	border-right:solid 1px #BDBDBD;
+	border-left:solid 1px #BDBDBD;
+    border-bottom:solid 1px #BDBDBD;
+	color:#000;
+}
+.DWBtableAdvSrchBorder
+{
+	font-family:Verdana;
+	font-size:11px;
+	BORDER-RIGHT: #BDBDBD 1px solid; 
+	BORDER-TOP: #BDBDBD 1px solid; 
+	BORDER-LEFT: #BDBDBD 1px solid; 
+	BORDER-BOTTOM: #BDBDBD 1px solid;
+}
+.DWBdropdownAdvSrch
+{
+	font-family:Verdana;
+	font-size:11px;	
+	color:#000;
+	background-color:#FFF;
+}
+.DWBtdAdvSrchHeader
+{
+	font-family:Verdana;
+	font-size:11px;
+	font-weight:bold;	
+	background-position:bottom;
+	background-position:left;		
+	background-repeat:repeat-x;	
+	background-color:#FFEAA0;
+	height:20px;	
+} 
+.DWBtdAdvSrchItem 
+{
+	font-family:Verdana;
+	font-size:11px;
+	color:#000;
+	/*border-bottom: 1px solid #bdbdbd;*/
+	/*border-bottom:solid 1px #b1c7de;	*/
+} 
+.DWItemText
+{
+	font-family:Verdana;
+	font-size:11px;
+	text-align: right;
+}
+.DWBbuttonAdvSrch
+{
+  border-style:solid;
+  border-width:1px;
+  border-color:#BDBDBD;
+  background-color:#EFEFEF;
+  font-family:Verdana;
+  font-size:11px;
+  font-weight:normal;
+  color:#000;
+}
+.DWBdropdownAdvSrch
+{
+	font-family:Verdana;
+	font-size:11px;	
+	color:#000;
+	background-color:#FFF;
+}
+.DWBqueryfieldmini
+{
+	FONT-WEIGHT: normal; 
+	FONT-SIZE: 1em; 
+	COLOR: #000000; 
+	FONT-FAMILY: verdana;
+	width:105px;
+	border:double 1px #BDBDBD		
+}
+.DWBtdAdvSrchSubHeader
+{
+	font-family:Verdana;
+	font-size:11px;
+	background-color:#BDBDBD;
+	font-weight:bold;
+	border-top:solid 1px #BDBDBD; 
+	border-right:solid 1px #BDBDBD;
+	border-left:solid 1px #BDBDBD;
+    border-bottom:solid 1px #BDBDBD;
+	color:#000;
+}
+.DWBSetWidth
+{
+	width:15px;
+}
+.DWBmasterPagesContainer
+{
+	font-weight: bold;
+	text-align:center;	
+	background-color:#E0ECF0;
+	/*padding: 2px 2px 2px 5px;*/	
+	border-bottom: 1px solid #336699;
+	
+	white-space:nowrap;
+	height: auto;
+	padding:2px 2px 2px 2px;
+}
+
+.oddRowStyle
+{
+	background-Color:  #ECECEC; 
+}
+.evenRowStyle
+{
+	background-color: #FFFFFF;
+
+}
+.oddHistoryRowStyle
+{
+	background-Color:ButtonShadow;
+}
+.evenHistoryRowStyle
+{
+	background-color: #FFFFFF;
+}
+.DWBDlstLefttList
+{
+ min-width :50px;
+}
+
+.DWBDlstLeftListHide
+{
+	display:none;
+}
+.DWBDlstRightList
+{
+	min-width:100px;
+}
+.DWBDualListButton
+{
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,startColorstr=#c7dcf2,endColorstr=#ffffff); 
+	border-style:solid;
+	border-width: 1px;	
+	border-color: #114263;
+	background-color:#e8e8e8;
+	font-family:Verdana;
+	font-size:11px;
+	font-weight:normal;
+	color:#000000;
+	padding:0px;
+	font-weight:bold;
+}
+
+.DWBDualListUpButton
+{
+	width:40px;
+}
+.DWBDualListMoveLefttButton,
+.DWBDualListMoveRightButton,
+.DWBDualListMoveAllLefttButton,
+.DWBDualListMoveAllRightButton
+{
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,startColorstr=#c7dcf2,endColorstr=#ffffff); 
+	border-style:solid;
+	border-width: 1px;	
+	border-color: #114263;
+	background-color:#e8e8e8;
+	font-family:Verdana;
+	font-size:11px;
+	font-weight:normal;
+	color:#000000;
+	padding:0px;
+	font-weight:bold;
+	width:60px;
+}
+
+
+.DWBlabel
+{
+	FONT-WEIGHT: normal; 
+	FONT-SIZE: 1em; 
+	COLOR: #000000; 
+	FONT-FAMILY: verdana;	
+	border:double 1px #8cccd9;
+	white-space:nowrap;
+}
+
+.DWBqueryfieldmini
+{
+	FONT-WEIGHT: normal; 
+	FONT-SIZE: 1em; 
+	COLOR: #000000; 
+	FONT-FAMILY: verdana;
+	width:105px;
+	border:double 1px #BDBDBD	
+}
+.DWBMandatory {
+color: red;
+font-weight: bold;
+font-size:11px;
+text-align : right ;
+}
+
+.DWBMandatoryMessage {
+color: red;
+
+font-size:11px;
+text-align : right ;
+}
+
+.SearchResultFixedHeader
+{
+	width:780px; z-index: 30;
+}
+
+.SearchResultFixedHeader th
+{
+	z-index: 30;
+	font-weight:normal; position:relative;white-space:nowrap; text-align:center; font-weight:bold;	
+	/*top: expression(document.getElementById("tableContainer").scrollTop); */
+	top: expression(this.parentNode.scrollTop);
+
+}
+.ResultFixedHeader
+{
+	width:780px; z-index: 30;
+}
+
+.ResultFixedHeader th
+{
+	z-index: 30;
+	/*background-color :#E0ECF0;*/
+	background-color :#BDBDBD;
+	font-weight:normal; position:relative;white-space:nowrap; text-align:center; font-weight:bold;	
+	border:inherit;
+	       top: expression(this.parentNode.scrollTop);
+
+}
+.DWBWellBookSummaryGridViewCSS
+{
+	border:#336699;
+}
+
+.DWBAuditTrailFixedheader
+{
+height:expression(this.scrollHeight>500?"500px":"auto");
+text-align:center;
+width:100%; 
+overflow:auto;
+left: 0px; 
+top: 0px
+}
+
+.DWBBookViewRootNode
+{
+	width:300px;
+}
+.DWBBookViewLeafNode
+{
+	width:500px;
+}
+.DWBBookViewPanel
+{
+	vertical-align:top;
+	width:20%;
+}
+.ListViewerOptionsCSS
+{ 
+	width:25%;
+}
+.grdPanelStyle
+{
+	height:expression(this.scrollHeight>486?"486px":"auto");
+	overflow-y:auto;
+}
+.DWBBatchImportConfigurationPanel
+{
+	height:expression(this.scrollHeight>598?"598px":"auto");
+	overflow-y:auto;
+	
+}
+
+.DeleteOptions 
+{
+	z-index:999; 
+	/*width:30%;
+	height:20%;*/
+	width:321px;
+	height:120px;
+	position:absolute;
+	color: #000; 
+	/*background-color:#bdbdbd;*/
+	background-color:#FCFEDF;
+	border:solid 1px black;
+	display:none;
+	text-align:left;
+}
+
+.DeleteOptions div
+{
+
+/*width:100%;
+height:100%;*/
+width:321px;
+height:60px;
+color: #000; 
+/*background-color:#F5F6F7;*/
+/*border:solid 1px black;*/
+text-align:left;
+}
+.DeleteDivHeader
+{
+	border:solid 1px black;
+	font-family:Verdana;
+	font-size:11px;
+	font-weight:bold;	
+	background-position:bottom;
+	background-position:left;		
+	background-repeat:repeat-x;	
+	background-color:#FFEAA0;
+	/*height:20px;*/
+}
+.ExportDivLegend
+{
+ color:#000;
+}
+
+/* DREAM 4.0 - eWB 2.0 - Customise Chapters */
+.popup 
+{
+	z-index:9999; 
+	width:230px;
+	height:280px;
+	position:absolute;
+	color: #000; 
+	background-color:#bdbdbd;
+	border:solid 1px black;
+	display:none;
+	text-align:left;
+}
+.popup div
+{
+overflow:scroll;
+width:160px;
+height:180px;
+color: #000; 
+background-color:#F5F6F7;
+border:solid 1px black;
+text-align:left;
+}
+/* DREAM 4.0 - eWB 2.0 - Customise Chapters */

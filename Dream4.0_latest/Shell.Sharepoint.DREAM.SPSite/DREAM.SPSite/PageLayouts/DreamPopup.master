@@ -1,0 +1,237 @@
+﻿<%-- Identifies this page as a .master page written in Microsoft Visual C# and registers tag prefixes, namespaces, assemblies, and controls. --%>
+<%@ Master Language="C#" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ Import Namespace="Microsoft.SharePoint" %>
+<%@ Register TagPrefix="SPSWC" Namespace="Microsoft.SharePoint.Portal.WebControls"
+    Assembly="Microsoft.SharePoint.Portal, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls"
+    Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages"
+    Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="PublishingWebControls" Namespace="Microsoft.SharePoint.Publishing.WebControls"
+    Assembly="Microsoft.SharePoint.Publishing, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="PublishingNavigation" Namespace="Microsoft.SharePoint.Publishing.Navigation"
+    Assembly="Microsoft.SharePoint.Publishing, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="PublishingVariations" TagName="VariationsLabelMenu" Src="~/_controltemplates/VariationsLabelMenu.ascx" %>
+<%@ Register TagPrefix="PublishingConsole" TagName="Console" Src="~/_controltemplates/PublishingConsole.ascx" %>
+<%@ Register TagPrefix="PublishingSiteAction" TagName="SiteActionMenu" Src="~/_controltemplates/PublishingActionMenu.ascx" %>
+<!-- Telerik Assembly -->
+<%@ Register Assembly="Telerik.Web.UI, Version=2010.1.415.35, Culture=neutral,PublicKeyToken=121fae78165ba3d4"
+    Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!--Top Navigation-->
+<%@ Register TagPrefix="TopNavigation" Namespace="Shell.SharePoint.WebParts.DREAM.TopNavigation"
+    Assembly="Shell.SharePoint.WebParts.DREAM.TopNavigation" %>
+<!--Top Navigation-->
+<!-- Shell Tags -->
+<%@ Register TagPrefix="Utilities" Namespace="Microsoft.SharePoint.Utilities" Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<!-- Shell Tags -->
+<!--Shell UI Navigation-->
+<%@ Register TagPrefix="SingleUI" Assembly="Shell.SharePoint.SingleUI, Version=1.2.0.0, Culture=neutral, PublicKeyToken=7add1cd5e87a8353"
+    Namespace="Shell.SharePoint.SingleUI.Navigation" %>
+<!--Shell UI Navigation-->
+<%-- Uses the Microsoft Office namespace and schema. --%>
+<html>
+<SharePoint:RobotsMetaTag ID="RobotsMetaTag1" runat="server" />
+<%-- The head section includes a content placeholder for the page title and links to CSS and ECMAScript (JScript, JavaScript) files that run on the server. --%>
+<head id="Head1" runat="server">
+    <asp:contentplaceholder runat="server" id="head">
+		<title><asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server" /> </title>
+    </asp:contentplaceholder>
+    <SharePoint:CssLink ID="CssLink1" runat="server" />
+    <asp:contentplaceholder id="PlaceHolderAdditionalPageHead" runat="server" />
+    <!-- Shell Scripts -->
+    <link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/spshell.css" />
+    <link rel="stylesheet" type="text/css" href="/_layouts/DREAM/styles/DREAMStyleSheetRel2_1.css" />
+    <link rel="stylesheet" type="text/css" href="/_layouts/DREAM/styles/DREAMStyleSheetRel4_0.css" />
+    <link rel="stylesheet" type="text/css" href="/_layouts/DREAM/styles/DetailReportRel2_1.css" />
+     <link rel="stylesheet" type="text/css" href="/_layouts/DREAM/styles/CalendarControlRel2_1.css" />
+
+    <script language="javascript" type="text/javascript" src="/_layouts/DREAM/Javascript/DREAMJavaScriptFunctionsRel2_1.js"></script>
+
+    <script language="javascript" type="text/javascript" src="/_layouts/DREAM/Javascript/DREAMJavaScriptFunctionsRel3_0.js"></script>
+
+    <script language="javascript" type="text/javascript" src="/_layouts/DREAM/Javascript/jquery-1.3.2.min.js"></script>
+
+    <script language="javascript" type="text/javascript" src="/_layouts/DREAM/Javascript/sortTableRel2_1.js"></script>
+
+    <script language="javascript" type="text/javascript" src="/_layouts/DREAM/Javascript/CastleBusyBoxRel2_1.js"></script>
+
+    <script language="javascript" type="text/javascript" src="/_layouts/DREAM/Javascript/ReorderColumnRel3_0.js"></script>
+
+    <script language="javascript" type="text/javascript" src="/_layouts/DREAM/Javascript/DREAMJavaScriptFunctionsRel4_0.js"></script>
+    
+    <script language="javascript" type="text/javascript" src="/_layouts/DREAM/Javascript/CalendarControlRel2_1.js"></script>
+
+    <SharePoint:CustomJSUrl ID="CustomJSUrl1" runat="server" />
+    <SharePoint:SoapDiscoveryLink ID="SoapDiscoveryLink1" runat="server" />
+    <!-- Shell Scripts -->
+    <style type="text/css"> 
+    .navigation_panel_right{background:url('/_layouts/images/shell.sharepoint.singleui/footer_topright.gif') right top no-repeat;	height:auto;	width:100%;	padding-left:0px;	padding-right:0px;	padding-top:11px;	padding-bottom:0px;	}
+    .ms-topnav a{display:block;background:none;white-space:nowrap;padding:3px 12px 6px 12px;height:13px;font-size:8pt;color:#FFFFFF;}
+    .ms-topnavglobal a{	display:block;	background-image: url( "/_layouts/images/shell.sharepoint.singleui/globalnav_tabright_unselected.gif" );	background-position: top right;	background-repeat: no-repeat;	white-space:nowrap;	padding:3px 1px 6px 9px;height:13px;font-size:8pt;color:#024F69;}
+    .ms-topnavglobalselected a{	display:block;	background-image: url( "/_layouts/images/shell.sharepoint.singleui/globalnav_tabright_selected.gif" );	background-position: top right;	background-repeat: no-repeat;	white-space:nowrap;	padding:3px 1px 6px 9px;height:13px;font-size:8pt;color:#FFFFFF;font-weight: bold;}
+    .footerItem {	font-weight:normal;	font-family:verdana;	font-size:8pt;	color:#000;	text-decoration:none;}
+    .ms-bodyareaframe{vertical-align:top;width:100%;border-top:1px solid #AAAAAA;border-right:1px solid #AAAAAA;border-bottom:1px solid #AAAAAA;border-left:0px;background:#FFFFFF;}
+    .ms-navframe{	background-color:#FFFFFF;	border-left:solid 0px #AAAAAA;	border-right:solid 0px #AAAAAA;	border-bottom:solid 0px #AAAAAA;	width:157px;	}
+.DREAMtopNavglobalFlyOuts
+{
+	background-color: #23699A;
+	font-family: verdana;
+	font-size: 11px;
+	color: white;
+	width: 100%;
+	border-right: #0F4C75 1px solid;
+	border-top: medium none;
+	border-left: #0F4C75 1px solid;
+	border-bottom: #0F4C75 1px solid;
+	width: 100%;
+}
+.DREAMtopNavglobalFlyOuts a
+{
+	display: block;
+	background: none;
+	white-space: nowrap;
+	padding: 3px 12px 3px 12px;
+	height: 14px;
+	font-size: 8pt;
+	color: white;
+}
+.DREAMtopNavglobalFlyOutsHover{background-color: #0F4C75;}
+.DREAMtopNavglobalFlyOutsHover a{display: block;	white-space: nowrap;	padding: 3px 12px 3px 12px;	height: 14px;	font-size: 8pt;	}
+    </style>
+</head>
+<%-- When loading the body of the .master page, SharePoint Server 2007 also loads the SpBodyOnLoadWrapper class. This class handles .js calls for the master page. --%>
+<body onload="javascript:_spBodyOnLoadWrapper();javascipt:HideSiteActions();">
+    <%-- The SPWebPartManager manages all of the Web part controls, functionality, and events that occur on a Web page. --%>
+    <form id="Form1" runat="server" onsubmit="return _spFormOnSubmitWrapper();">
+        <asp:ScriptManager runat="server" ID="RadScriptManager1">
+            <services>
+                    <asp:ServiceReference InlineScript="true" path="~/_vti_bin/DREAM/DateTimeConvertorService.asmx" />
+                </services>
+            <scripts>
+                    <asp:ScriptReference Path="/_layouts/DREAM/Javascript/DreamAjaxService.js"/>
+                   <asp:ScriptReference Path="/_layouts/DREAM/Javascript/DreamSyncAjaxService.js"/>
+                </scripts>
+        </asp:ScriptManager>
+        <WebPartPages:SPWebPartManager ID="SPWebPartManager1" runat="server" />
+        <table id="MainTable" style="width: 100%;" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td valign="top">
+                    <table id="HeaderTable" width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td>
+                                <asp:ContentPlaceHolder ID="PlaceHolderGlobalNavigation" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table id="NavigationHeaderTable" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                    <tr>
+                                        <td class="ms-bannerContainerLeft">
+                                        </td>
+                                        <td id="onetIdTopNavBarContainer" width="100%" class="ms-bannerContainer">
+                                            <asp:ContentPlaceHolder ID="PlaceHolderTopNavBar" runat="server">
+                                                <div id="divBannerFrame">
+                                                    <table class="ms-bannerframe" border="0" cellspacing="0" cellpadding="0" width="100%">
+                                                        <tr>
+                                                            <td valign="top" align="right">
+                                                                <table class="ms-siteaction" cellpadding="0" cellspacing="0" width="100%" border="0">
+                                                                    <tr>
+                                                                        <td class="ms-siteactionsmenu" id="siteactiontd" align="right">
+                                                                            <PublishingSiteAction:SiteActionMenu runat="server" />
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </asp:ContentPlaceHolder>
+                                        </td>
+                                        <td class="ms-bannerContainerRight">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table id="PageHeaderTable" width="100%" cellspacing="0" cellpadding="1">
+                                    <tr>
+                                        <td>
+                                            <asp:ContentPlaceHolder ID="WSSDesignConsole" runat="server">
+                                                <PublishingWebControls:AuthoringContainer ID="authoringcontrols" runat="server">
+                                                    <PublishingConsole:Console runat="server" />
+                                                </PublishingWebControls:AuthoringContainer>
+                                            </asp:ContentPlaceHolder>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" id="onetidPageTitle" class="ms-pagetitle">
+                                            <h2 class="ms-pagetitle">
+                                                <asp:ContentPlaceHolder ID="PlaceHolderPageTitleInTitleArea" runat="server" />
+                                            </h2>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100%" class="ms-titlearea">
+                                            <asp:ContentPlaceHolder ID="PlaceHolderTitleBreadcrumb" runat="server">
+                                                <!-- Bread Crumb -->
+                                            </asp:ContentPlaceHolder>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%" valign="top">
+                    <asp:ContentPlaceHolder ID="PlaceHolderPageDescription" runat="server" />
+                    <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
+                </td>
+            </tr>
+        </table>
+        <asp:ContentPlaceHolder ID="PlaceHolderFormDigest" runat="server">
+            <SharePoint:FormDigest ID="FormDigest1" runat="server" />
+        </asp:ContentPlaceHolder>
+        <input type="text" name="__spDummyText1" style="display: none;" size="1" />
+        <input type="text" name="__spDummyText2" style="display: none;" size="1" />
+        <asp:Panel ID="Panel2" Visible="false" runat="server">
+            <asp:ContentPlaceHolder ID="PlaceHolderUtilityContent" runat="server" />
+            <%--<asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" runat="server"/>
+	    <asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" runat="server"/>
+	    <asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" runat="server"/>
+	    <asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" runat="server"/>
+	    <asp:ContentPlaceHolder id="PlaceHolderPageImage" runat="server"/>
+	    <asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" runat="server"/>
+		<asp:ContentPlaceHolder id="PlaceHolderMiniConsole" runat="server"/>--%>
+            <asp:ContentPlaceHolder ID="PlaceHolderTitleRightMargin" runat="server" />
+            <%--<asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" runat="server"/>--%>
+        </asp:Panel>
+        <%-- The PlaceHolderMain content placeholder defines where to place the page content for all the content from the page layout. The page layout can overwrite any content placeholder from the master page. Example: The PlaceHolderLeftNavBar can overwrite the left navigation bar. --%>
+        <%--<asp:ContentPlaceHolder id="PlaceHolderMain" runat="server" />--%>
+        <asp:Panel ID="Panel1" Visible="false" runat="server">
+            <%-- These ContentPlaceHolders ensure all default SharePoint Server pages render with this master page. If the system master page is set to any default master page, the only content placeholders required are those that are overridden by your page layouts. --%>
+            <%--<asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server"/>
+<asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" runat="server"/>
+<asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea"  runat="server"/>--%>
+            <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBar" runat="server" />
+            <asp:ContentPlaceHolder ID="PlaceHolderPageImage" runat="server" />
+            <asp:ContentPlaceHolder ID="PlaceHolderBodyLeftBorder" runat="server" />
+            <asp:ContentPlaceHolder ID="PlaceHolderNavSpacer" runat="server" />
+            <asp:ContentPlaceHolder ID="PlaceHolderTitleLeftBorder" runat="server" />
+            <asp:ContentPlaceHolder ID="PlaceHolderTitleAreaSeparator" runat="server" />
+            <asp:ContentPlaceHolder ID="PlaceHolderMiniConsole" runat="server" />
+            <asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" runat="server" />
+            <asp:ContentPlaceHolder ID="PlaceHolderLeftActions" runat="server" />
+            <%--<asp:ContentPlaceHolder id="PlaceHolderPageDescription" runat ="server"/>--%>
+            <asp:ContentPlaceHolder ID="PlaceHolderBodyAreaClass" runat="server" />
+            <asp:ContentPlaceHolder ID="PlaceHolderTitleAreaClass" runat="server" />
+            <asp:ContentPlaceHolder ID="PlaceHolderBodyRightMargin" runat="server" />
+        </asp:Panel>
+    </form>
+</body>
+</html>

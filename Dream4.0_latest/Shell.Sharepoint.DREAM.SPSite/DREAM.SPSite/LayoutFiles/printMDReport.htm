@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Data Retrieval EPICURE Application</title>
+    <link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/spshell.css" />
+
+    <script language="javascript" type="text/javascript" src="/_layouts/DREAM/Javascript/DREAMJavaScriptFunctionsRel2_1.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/_layouts/DREAM/styles/PrinterStyleRel2_1.css" />
+</head>
+<body onclick="javascript:return false;" scroll="auto">
+
+    <script type="text/javascript" language="javascript">
+   
+        var div = document.createElement('div'); 
+        var arrTable =window.opener.document.getElementsByTagName("table");	
+        var counter =0;
+        var strTitle ="";
+        var strID    ="";
+        div.innerHTML +="<table>"
+	for(var i=0;i<arrTable.length;i++)
+	{
+
+      if((arrTable[i].id !=null)&&(arrTable[i].id.indexOf("tbl")>=0))
+		{
+		
+		    var arrSpan  = window.opener.document.getElementsByTagName("span");	
+		    for(var j=0;j<arrSpan.length;j++)
+		    {
+		       if((arrSpan[j].className !="")&&(arrSpan[j].className==arrTable[i].parentElement.parentElement.id))
+		        {
+		            strTitle  = arrSpan[j].innerText;
+		            break;
+		        }
+		        else
+		        {
+		            strTitle ="";
+		        }
+		    }	
+			div.innerHTML +="<tr><td ><br/><span><b>" + strTitle + "</b></span>" + arrTable[i].parentElement.outerHTML.replace(/none/g,'block').replace(/tableContainer/g,'') +"</td></tr>";
+			counter++;
+		}
+	}   
+	 div.innerHTML +="</table>"  
+        document.body.innerHTML = div.outerHTML;       
+       window.print();		
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>eWB2</title>
+    <link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/spshell.css" />
+    <script language="javascript" src="/_layouts/DREAM/Javascript/DREAMJavaScriptFunctionsRel2_1.js"></script>
+     <script language="javascript" src="/_layouts/DREAM/Javascript/DWBJavascriptFunctionRel2_0.js"></script>
+    <link rel="stylesheet" type="text/css" href="/_layouts/DREAM/styles/DWBPrinterStyles.css" />
+</head>
+<body onclick ="javascript:return false;">    
+
+<table style="width :100%;height:100%">
+<tr>
+<td id="tdHeader" style=" font-weight :bold; font-size :small; text-align :left; font-family:Verdana;">
+
+</td>
+<td id="tdDate" style="text-align :right">
+</td>
+</tr>
+<tr>
+<td id="tdContent" colspan ="2">
+</td></tr>
+</table>
+
+    <script type="text/JavaScript" language="javascript">
+    try
+    {
+     tdDate.innerText = today();
+      tdHeader.innerHTML = window.opener.document.getElementById(GetParentObjectID('hdnReportType',"input")).value;
+      tdContent.innerHTML = window.opener.document.getElementById("tableContainer").innerHTML;
+        disablehref();
+        window.print();		
+    }
+    catch(ex)
+    {
+    window.print();
+    }
+    
+    function disablehref()
+    {
+
+        var input = document.getElementsByTagName("a");
+
+        var count = input.length;
+
+        for(var i =0; i < count; i++)
+        {
+            document.getElementsByTagName("a")[i].removeAttribute("href"); //OBS thisworks but also stops the request and the next page does not get loaded, just hangs in the first page
+        }
+        return true;
+    }
+    </script>
+</body>
+</html>

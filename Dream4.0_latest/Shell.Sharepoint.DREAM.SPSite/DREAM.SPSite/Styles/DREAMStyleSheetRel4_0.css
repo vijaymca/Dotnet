@@ -1,0 +1,60 @@
+/* 
+ * *******************************************************************************
+ * File Name        :   DREAMStyleSheetRel4_0.css
+ * Project Name     :   SHELL DREAM
+ * Type             :   Style Sheet for the site  
+ * Date_Created     :   Jan 10 2010
+ * Version          :   4.0 
+ * *******************************************************************************
+ */
+.rolesProfilesLabel
+{
+	word-spacing : normal;
+    font-weight : bold;
+}
+.makebold
+{
+	font-weight :bold;
+}
+
+.makenormal
+{
+	font-weight :normal;
+}
+.borderRightStyle
+{
+	border-right:#bdbdbd 1px solid;
+}
+.ddlSignificantWellEvents
+{
+	font-family:Verdana;
+	font-size:11px;	
+	width :155px;
+}
+/*Classes Added for EPCatalog filter options*/
+.epcatalogTxtBxSearch
+{
+	width:218px;
+	background-image: url(/_layouts/DREAM/images/EPSearchBox.gif); 
+	background-position:right; 
+	background-repeat:no-repeat;
+	border-right:solid 1px #bdbdbd; 
+	border-left:solid 1px #bdbdbd; 
+	border-top:solid 1px #bdbdbd; 
+	border-bottom:solid 1px #bdbdbd;
+}
+.epcatalogTblSearchBox
+{
+	border:solid 1px #bdbdbd;
+	width:235px;
+}
+/*Classes Added for EPCatalog filter options end*/
+
+/*Class Added for List of teams Data view webpart*/
+.tdListofTeams 
+{
+	border-left:1px solid #BDBDBD;
+	border-bottom:1px solid #BDBDBD;
+	padding:2px 2px 2px 2px;
+}
+/*Class Added for List of teams Data view webpart end*/

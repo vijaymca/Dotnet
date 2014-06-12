@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Data Retrieval EPICURE Application</title>
+    <link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/spshell.css" />
+     <script language="javascript" src="/_layouts/DREAM/Javascript/DREAMJavaScriptFunctionsRel2_1.js"></script>
+        <link rel="stylesheet" type="text/css" href="/_layouts/DREAM/styles/PrinterStyleRel2_1.css" />
+</head>
+<body onclick ="javascript:return false;">    
+    <script type="text/JavaScript" language="javascript" runat="server">
+   try
+    {
+        var div = document.createElement('div'); 
+        div.innerHTML = window.opener.document.getElementById("tableContainer").innerHTML;
+        document.body.innerHTML = div.innerHTML.replace(/ececec/g,'ffffff');
+        
+        var hiddenCols = document.getElementsByName("hidePrintCol");
+        
+        for(var i=0; i<hiddenCols.length;i++)
+        {
+        hiddenCols[i].style.display="none";
+        }
+         disablehref();
+        window.print();		
+        }
+    catch(ex)
+    {
+    window.print();
+    }
+        
+    function disablehref()
+    {    
+        var input = document.getElementsByTagName("A");
+        var count = input.length;
+
+        for(var i =0; i < count; i++)
+        {       
+        if(document.getElementsByTagName("A")[i].getAttribute("href") != null)
+        {  
+          document.getElementsByTagName("A")[i].removeAttribute("href");
+          document.getElementsByTagName("A")[i].setAttribute("style","font-style:normal")
+        }
+       
+        }
+        return true;
+    }
+    </script>
+</body>
+</html>

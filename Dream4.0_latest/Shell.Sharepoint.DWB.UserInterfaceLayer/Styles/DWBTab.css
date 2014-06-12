@@ -1,0 +1,51 @@
+
+.gray_embossed_tabs_r {
+    width:100%;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:normal;
+ }
+
+.gray_embossed_tabs_r ul {
+    margin:0;
+    list-style:none;
+    padding:10px 10px 0;
+    }
+    
+.gray_embossed_tabs_r li {
+    float:left;
+    background:url("/_layouts/DREAM/images/Gray3D-1Rh.gif")
+      no-repeat right top;
+    border-bottom: 1px black solid;
+    margin:0;
+    padding:0;
+    }
+
+.gray_embossed_tabs_r a:link,
+.gray_embossed_tabs_r a:visited,
+.gray_embossed_tabs_r a {
+    display:block;
+    background:url("/_layouts/DREAM/images/Gray3D-1Lh.gif")
+      no-repeat left top;
+    color: white!important;
+    padding: 5px 9px 2px 9px;
+    text-decoration: none;
+    }
+    
+.gray_embossed_tabs_r .underline {
+	background-image:url('/_layouts/DREAM/images/Gray3D-2Fh.gif');
+	background-position:left top;
+	background-repeat:repeat-x;
+	height:10px;
+}
+
+.gray_embossed_tabs_r .selected {
+    background-image:url("/_layouts/DREAM/images/Gray3D-2Rh.gif");
+    border-bottom: none;
+    }
+    
+.gray_embossed_tabs_r .selected a {
+	color:black!important;
+	padding: 5px 9px 4px 9px;
+    background-image:url("/_layouts/DREAM/images/Gray3D-2Lh.gif");
+    }
+   

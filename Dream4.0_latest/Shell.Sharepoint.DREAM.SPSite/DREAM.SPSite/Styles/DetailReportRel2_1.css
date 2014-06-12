@@ -1,0 +1,489 @@
+﻿table, a 
+{
+	color: #000;
+	font: normal normal 11px Verdana;	
+}
+td.blankColumn
+{
+	color:White;
+}
+div.tableContainer 
+{
+	border:1px double #9B9797;
+	clear: both;	
+	overflow:scroll;
+	position:relative;
+	width:100%;
+	max-height:550px;
+	height:expression(this.scrollHeight>500?"500px":"auto");
+}
+html.body div.tableContainer 
+{
+	padding: 0 16px 0 0;
+	width: 98%;	
+}
+div.tableContainer table 
+{
+	float: left;
+	width:100%;
+	border-right:1px double #BDBDBD;
+}
+td.locked, th.locked
+{			
+	left: expression(parentNode.parentNode.parentNode.parentNode.scrollLeft);
+	white-space:nowrap; /* IE5+ only */
+	color:#000;
+}
+td.checkLocked, th.checkLocked
+{			
+	left: expression(parentNode.parentNode.parentNode.parentNode.scrollLeft); /* IE5+ only */
+	position:relative;
+	border-right:1px double #BDBDBD;
+	white-space:nowrap;
+	color:#000;
+}
+thead th.checkLocked	
+{
+	left: expression(parentNode.parentNode.parentNode.parentNode.scrollLeft); /* IE5+ only */
+	position:relative;
+	white-space:nowrap;
+	color:#000;
+
+}
+thead th.checkLocked 
+{
+	text-align:center; 
+	z-index: 30; 
+	white-space:nowrap;
+	color:#000;
+	}
+td.locked
+{
+	color:#000;
+	background-color:#DADADA;
+	font-weight:bold;
+	position:relative;	
+	border-bottom: 1px double #BDBDBD;
+	border-left: 1px double #BDBDBD;
+	border-right:1px double #BDBDBD;
+	text-align:left;
+	white-space:nowrap;
+}
+head:first-child+body tbody[class].scrollContent {
+	display: block;	
+	overflow: auto;
+	position:relative;
+	width: 99%;	
+}
+
+tbody.scrollContent td, tbody.scrollContent tr.normalRow td 
+{
+	border-bottom: 1px double #BDBDBD;
+	border-left: 1px double #BDBDBD;	
+	padding: 2px 2px 2px 2px;
+	white-space:nowrap;
+}
+
+thead th	
+{
+	top: expression(document.getElementById("tableContainer").scrollTop);
+	font-size: 11px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #E0ECF0;
+	color: Black;	
+	border-left: 1px double #9B9797;
+	border-bottom:1px double #9B9797;
+	position:relative;
+	height:25px;
+	/*width:100%;
+	white-space:nowrap;*/
+	padding: 2px 2px 2px 2px
+}	
+
+thead th.locked	
+{
+	font-size: 11px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #E0ECF0;
+	color: Black;
+	border-top: 1px double #BDBDBD;
+	border-left: 1px double #BDBDBD;	
+	border-bottom:1px double #BDBDBD;
+	border-right:1px double #BDBDBD;
+	position:relative;
+	height:25px;
+	/*width:100%;	
+	white-space:nowrap;*/
+	padding: 2px 2px 2px 2px;
+	color:#000;	
+}	
+
+thead.fixedHeader th 
+{
+	font-weight: bold;
+	text-align:center;	
+	background-color:#BDBDBD;	
+	border-bottom: 1px solid #9B9797;
+	border-left: 1px double #9B9797;
+	border-right: 1px double #9B9797;
+	/*added by dev*//**** added for EDM and MDR report*/
+	top: expression(this.parentNode.parentNode.parentNode.parentNode.scrollTop);
+	white-space:nowrap;
+	height: auto;
+	padding:2px 2px 2px 2px;
+}
+.Header
+{
+	text-align:center;	
+	background-color:#BDBDBD;
+	border-bottom: 1px solid #9B9797;
+	border-right: 1px solid #9B9797;
+    font-family:Verdana;
+	font-size:11px;
+	color:#000;
+	font-weight:normal;
+
+}
+.EDMTblBorder
+{
+	
+	border-top:2px solid #9B9797;
+	border-bottom:2px solid #BDBDBD;
+   border-left:2px solid #BDBDBD;
+   border-right:2px solid #BDBDBD;
+   border-collapse:collapse;
+
+}
+
+thead th.locked {text-align:center; z-index: 30;white-space:nowrap; color:#000;}
+
+head:first-child+body div[class].tableContainer {
+	overflow:scroll;
+	width:99%;
+	border-bottom:1px solid #E0ECF0;
+	max-height:550px;
+	height:	height:expression(this.scrollHeight>500?"500px":"auto");
+}
+
+/*********Datasheet css classes************/
+td.NameColumn1
+{
+	border-bottom:1px solid #D8D7D7;
+	border-right:1px solid #D8D7D7;	
+	text-align:right;
+	font-weight:bold;
+	font-size:11px;
+	background-color:white;
+}
+td.NameColumn
+{
+	border-bottom:1px solid #D8D7D7;
+	border-right:1px solid #D8D7D7;	
+	text-align:right;
+	font-weight:bold;
+	font-size:11px;
+	background-color:#EFEFEF;
+}
+td.ValueColumn
+{
+	border-bottom:1px solid #D8D7D7;
+	width:200px;
+	font-size:11px;
+	word-wrap: break-word;
+}
+td.GroupColumn
+{
+	vertical-align:top;
+	height:100%;
+	width:50%;	
+}
+tr.BlockRow
+{
+	font-size:13px;
+	font-weight:bold;
+}
+tr.GroupRow
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:Silver;
+	letter-spacing:1pt;
+}
+td.GroupRow
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:Silver;
+	letter-spacing:1pt;
+}
+
+table.RecordTable
+{
+	border:1px solid #BDBDBD;
+	width:100%;
+}
+table.BlockTable
+{
+	width:100%;
+}
+table.GroupTable
+{	
+	width:100%;
+	height:100%;
+}
+tr.GroupRow1
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:Silver;
+	letter-spacing:1pt;
+	width:100%;	
+}
+td.GroupRow1
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:Silver;
+	letter-spacing:1pt;
+}
+
+td.ValueColumn1
+{
+	border-bottom:1px solid #D8D7D7;
+	border-top:1px solid #D8D7D7;
+	border-right:1px solid #D8D7D7;
+	width:200px;
+	font-size:11px;
+	word-wrap: break-word;
+}
+
+/************************** DataOwner style sheet**********/
+.tblDataOwner
+{
+	border-top:1px solid #bdbdbd;
+	border-left:1px solid #bdbdbd; 
+	border-right:1px solid #bdbdbd;
+	font:normal normal 11px Verdana;
+}
+.thDataOwner
+{
+	font-weight:bold;	
+	text-align:center;
+	background-color:#bdbdbd;	
+	border-bottom: 1px solid #9B9797; 	
+	white-space:nowrap;	padding:4px 4px 4px 4px;	
+	
+}
+.tdDataOwnerContactDetails
+{
+	border-bottom:1px solid #bdbdbd; 
+	border-left: 1px solid #bdbdbd;
+	padding:4px 4px 4px 4px;
+}
+
+.tdDataOwnerNames
+{
+	border-bottom:1px solid #bdbdbd;
+	padding:4px 4px 4px 4px;
+	font-weight: bold;
+}
+/****************************For EDM Report TAB options********************************/
+
+.gray_embossed_tabs_r {
+    width:100%;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:normal;
+ }
+
+.gray_embossed_tabs_r ul {
+    margin:0;
+    list-style:none;
+    padding:10px 10px 0;
+    }
+    
+.gray_embossed_tabs_r li {
+    float:left;
+    background:url("/_layouts/DREAM/Images/Gray3D-1Rh.gif")
+      no-repeat right top;
+    border-bottom: 1px black solid;
+    margin:0;
+    padding:0;
+    }
+
+.gray_embossed_tabs_r a:link,
+.gray_embossed_tabs_r a:visited,
+.gray_embossed_tabs_r a:hover,
+.gray_embossed_tabs_r a {
+    display:block;
+    background:url("/_layouts/DREAM/Images/Gray3D-1Lh.gif")
+      no-repeat left top;
+    color: white!important;
+    padding: 5px 9px 2px 9px;
+    text-decoration: none;
+    }
+    
+.gray_embossed_tabs_r .underline {
+	background-image:url('/_layouts/DREAM/Images/Gray3D-2Fh.gif');
+	background-position:left top;
+	background-repeat:repeat-x;
+	height:10px;
+}
+
+.gray_embossed_tabs_r .selected {
+    background-image:url("/_layouts/DREAM/Images/Gray3D-2Rh.gif");
+    border-bottom: none;
+    }
+    
+.gray_embossed_tabs_r .selected a {
+	color:black!important;
+	padding: 5px 9px 4px 9px;
+    background-image:url("/_layouts/DREAM/Images/Gray3D-2Lh.gif");
+    }
+   
+
+/***************Reorder css***************/
+.show
+{
+	display:block;
+}
+.hide
+{
+	display:none;
+}
+.showHideDiv
+{
+	border:1px double #BDBDBD;
+	width:150px;
+	height:200px;
+	display:block;
+	z-index:-100;
+	overflow:scroll;
+}
+.parentDisable {
+
+z-index:999; 
+
+width:1000px;
+
+height:600px; 
+
+display:none;
+
+position:absolute; 
+
+top:0; 
+
+left:0;
+
+background-color:#ccc;
+
+color: #aaa;
+
+opacity: .5;
+
+filter: alpha(opacity=50); 
+
+}
+
+.popup 
+{
+	z-index:999; 
+	width:210px;
+	height:250px;
+	position:absolute;
+	color: #000; 
+	background-color:#bdbdbd;
+	border:solid 1px black;
+	display:none;
+	text-align:left;
+}
+.popup div
+{
+overflow:scroll;
+width:160px;
+height:180px;
+color: #000; 
+background-color:#F5F6F7;
+border:solid 1px black;
+text-align:left;
+}
+.btnUpDown
+{
+	border:solid 1px black;
+}
+.reorderHeader
+{
+	text-align:center;
+	font-size:11px;
+}
+
+
+.classFieldset
+{
+	border:solid 1px  #bdbdbd
+}
+.classLegend
+{
+	font-weight:bold;
+}
+.searchFilterHeader
+{	
+	font-family:Verdana;
+	font-size:11px;
+	background-color:#BDBDBD;
+	font-weight:bold;
+	border-top:solid 1px #BDBDBD; 
+	border-right:solid 1px #BDBDBD;
+	border-left:solid 1px #BDBDBD;
+	border-bottom:solid 1px #BDBDBD;
+	color:#000;
+}
+
+.popupExportOptions 
+{
+	z-index:999; 
+	/*width:30%;
+	height:20%;*/
+	width:305px;
+	height:120px;
+	position:absolute;
+	color: #000; 
+	/*background-color:#bdbdbd;*/
+	background-color:#FCFEDF;
+	border:solid 1px black;
+	display:none;
+	text-align:left;
+}
+
+.popupExportOptions div
+{
+
+/*width:100%;
+height:100%;*/
+width:140px;
+height:60px;
+color: #000; 
+/*background-color:#F5F6F7;*/
+/*border:solid 1px black;*/
+text-align:left;
+}
+.ExportDivHeader
+{
+	border:solid 1px black;
+	font-family:Verdana;
+	font-size:11px;
+	font-weight:bold;	
+	background-position:bottom;
+	background-position:left;		
+	background-repeat:repeat-x;	
+	background-color:#FFEAA0;
+	/*height:20px;*/
+}
+.ExportDivLegend
+{
+ color:#000;
+}
+
+/****************************End*********************************/
